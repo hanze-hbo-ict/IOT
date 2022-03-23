@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. MicroPython &#8212; Workshop Internet of Things</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="3. Aansluitingen" href="3_aansluitingen.html" />
+    <link rel="prev" title="1. Voorbereiding" href="1_voorbereiding.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nl">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo_iot.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Workshop Internet of Things</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="0_introductie.html">
+   Internet of Things
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1_voorbereiding.html">
+   1. Voorbereiding
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. MicroPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_aansluitingen.html">
+   3. Aansluitingen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_sensoren.html">
+   4. Sensoren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_project.html">
+   5. Project
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
+                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/2_micro_python.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
+        title="Volledig scherm"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhoud
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connectiviteit">
+   2.1. Connectiviteit
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#seriele-connectie">
+     2.1.1. Seriële connectie
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#terminal">
+     2.1.2. Terminal
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   2.2. MicroPython
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-module-machine">
+     2.2.1. De module
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       machine
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ampy">
+     2.2.2.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ampy
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#een-project">
+     2.2.3. Een project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#debuggen">
+   2.3. Debuggen
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>MicroPython</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhoud </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connectiviteit">
+   2.1. Connectiviteit
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#seriele-connectie">
+     2.1.1. Seriële connectie
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#terminal">
+     2.1.2. Terminal
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   2.2. MicroPython
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-module-machine">
+     2.2.1. De module
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       machine
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ampy">
+     2.2.2.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ampy
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#een-project">
+     2.2.3. Een project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#debuggen">
+   2.3. Debuggen
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="micropython">
+<h1><span class="section-number">2. </span>MicroPython<a class="headerlink" href="#micropython" title="Permalink naar deze titel">¶</a></h1>
+<div class="section" id="connectiviteit">
+<h2><span class="section-number">2.1. </span>Connectiviteit<a class="headerlink" href="#connectiviteit" title="Permalink naar deze titel">¶</a></h2>
+<p>Sluit de ESP32 aan op de micro USB poort, je zal een rode led zien branden. In de vorige stap heb je gezien hoe je de seriële poortnaam op jouw systeem kan bepalen, deze zal je nu ook nodig hebben om te kunnen communiceren met het bord.</p>
+<p>Net als met Python op jouw systeem kan je MicroPython op twee manieren gebruiken:</p>
+<ul class="simple">
+<li><p>code in een bestand uitvoeren</p></li>
+<li><p>interactief code uitvoeren</p></li>
+</ul>
+<p>Bij de eerste manier schrijf je de code voor jouw programma in een bestand en laat je het vervolgens uitvoeren. Dit is wat je straks gaat doen om bijvoorbeeld een led te bedienen of een sensor op het bord uit te lezen.</p>
+<p>De tweede manier is wat je kent van bijvoorbeeld IPython, een interactieve Python prompt (REPL) en daar ga je nu eerst kennis mee maken.</p>
+<div class="section" id="seriele-connectie">
+<h3><span class="section-number">2.1.1. </span>Seriële connectie<a class="headerlink" href="#seriele-connectie" title="Permalink naar deze titel">¶</a></h3>
+<p>De micro USB aansluiting met het bord is een seriële connectie en deze is <em>bidirectioneel</em>, er kunnen zowel gegevens mee worden verstuurd als mee worden ontvangen. In het verleden werden seriële connecties gebruikt om bijvoorbeeld een muis of modem aan te sluiten, maar ook een beeldscherm (of <em>terminal</em>). Een beeldscherm kan natuurlijk niet op het bord worden aangesloten, maar kan wél met software worden geëmuleerd.</p>
+</div>
+<div class="section" id="terminal">
+<h3><span class="section-number">2.1.2. </span>Terminal<a class="headerlink" href="#terminal" title="Permalink naar deze titel">¶</a></h3>
+<p>Een bekende terminal-emulator is <a class="reference external" href="https://www.putty.org/">PuTTY</a> die voor zowel Windows, Linux en macOS beschikbaar is. Download en installeer PuTTY, en als je het opstart zal het je vragen om een configuratie voor de verbinding die je wilt maken, zie figuur <a class="reference internal" href="#putty-config"><span class="std std-numref">Fig. 2.1</span></a>.</p>
+<div class="figure align-default" id="putty-config">
+<img alt="../_images/putty_config.png" src="../_images/putty_config.png" />
+<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">PuTTY configuratie</span><a class="headerlink" href="#putty-config" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p>Kies voor <em>Serial</em> als type connectie en vul bij <em>Serial line</em> de poortnaam in (bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">COM2</span></code> onder Windows of <code class="docutils literal notranslate"><span class="pre">/dev/ttyUSB0</span></code> onder Linux). De snelheid (<em>Speed</em>) van de verbinding op zet je op 115200. Tip, geef deze configuratie een naam en bewaar het zodat je dit niet elke keer weer moet instellen.</p>
+<p>Open nu de connectie en je zal een interactieve Python prompt zien (<code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>). Probeer dit nu uit door de volgende Python code te typen om de wereld te begroeten!</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt; print(&quot;Hello world!&quot;)</span>
+<span class="go">Hello world!</span>
+</pre></div>
+</div>
+<p>Sluit de sessie nog niet af want je hebt deze nodig voor de volgende stap!</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">2.2. </span>MicroPython<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h2>
+<p>Zoals eerder is gezegd, MicroPython heeft een aantal modulen die heel specifiek zijn voor een microcontroller als de ESP32, onder andere voor het kunnen gebruiken van de pins. Twee van deze pins zijn <em>intern</em> aangesloten, dat wil zeggen dat je ze niet een fysieke pin hebben op het bord.</p>
+<p>Met de eerste interne pin heb je al kennisgemaakt, dit is waar de <em>rode</em> led op aangesloten is (en gaat branden zodra je het bord aansluit). Op de tweede interne pin is een <em>blauwe</em> led aangesloten (tegenover de rode led, zie figuur <a class="reference internal" href="#esp32-devkit"><span class="std std-numref">Fig. 2.2</span></a>).</p>
+<div class="figure align-default" id="esp32-devkit">
+<img alt="../_images/esp32.png" src="../_images/esp32.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">ESP32 Devkit V1</span><a class="headerlink" href="#esp32-devkit" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
+<p>Standaard staat deze blauwe led uit, in de volgende stap ga je deze led aan- en uitzetten.</p>
+<div class="section" id="de-module-machine">
+<h3><span class="section-number">2.2.1. </span>De module <code class="docutils literal notranslate"><span class="pre">machine</span></code><a class="headerlink" href="#de-module-machine" title="Permalink naar deze titel">¶</a></h3>
+<p>De MicroPython module <a class="reference external" href="https://docs.micropython.org/en/v1.9.3/wipy/library/machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code></a> bevat functies en klassen voor toegang tot de hardware, onder andere de klasse <a class="reference external" href="https://docs.micropython.org/en/v1.9.3/wipy/library/machine.Pin.html"><code class="docutils literal notranslate"><span class="pre">Pin</span></code></a> die alles te maken heeft met het kunnen gebruiken van de pins op het bord.</p>
+<p>Alle pins zijn genummerd, zoals je ook op de zijkant van het bord kan zien (bijvoorbeeld D32, D33 etc.). Over wát de verschillende pins (kunnen) doen volgt later meer.</p>
+<p>Importeer nu de klasse <code class="docutils literal notranslate"><span class="pre">Pin</span></code> uit de module <code class="docutils literal notranslate"><span class="pre">machine</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; from machine import Pin
+</pre></div>
+</div>
+<p>en maak als volgt een nieuwe instantie aan van deze klasse die je <code class="docutils literal notranslate"><span class="pre">led</span></code> noemt:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; led = Pin(2, Pin.OUT)
+</pre></div>
+</div>
+<p>De interne pin waar de blauwe led op is aangesloten heeft nummer 2, en dit is het eerste argument dat je hier ziet. Het tweede argument betreft de <em>modus</em> van de pin, in dit geval <code class="docutils literal notranslate"><span class="pre">Pin.OUT</span></code> waarmee de pin wordt geconfigureerd voor output (stroom uit). Later zal je ook <code class="docutils literal notranslate"><span class="pre">Pin.IN</span></code> gebruiken voor invoer (stroom in), bijvoorbeeld als op een pin een sensor wordt aangesloten.</p>
+<p>Zet nu als volgt de blauwe led aan</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; led.on()
+</pre></div>
+</div>
+<p>en vervolgens weer uit:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; led.off()
+</pre></div>
+</div>
+<p>Gefeliciteerd, je hebt jouw eerste handeling op de ESP32 uitgevoerd! Maar je kan je voorstellen dat je dit niet steeds handmatig wilt gaan herhalen, en het is nu tijd om een eerste programma te schrijven, dit op de ESP32 te plaatsen en vervolgens te laten uitvoeren.</p>
+<p>De terminal sessie kan je nu beëindigen (maar laat de ESP32 wel aangesloten), je gaat in de volgende stappen op jouw laptop of computer verder werken.</p>
+</div>
+<div class="section" id="ampy">
+<h3><span class="section-number">2.2.2. </span><code class="docutils literal notranslate"><span class="pre">ampy</span></code><a class="headerlink" href="#ampy" title="Permalink naar deze titel">¶</a></h3>
+<p>MicroPython heeft een klein bestandssysteem waar je jouw bestanden op kan plaatsen. Tijdens de voorbereiding heb je ook de Python package <a class="reference external" href="https://pypi.org/project/adafruit-ampy/"><code class="docutils literal notranslate"><span class="pre">adafruit-ampy</span></code></a> geïnstalleerd en deze bevat het programma <code class="docutils literal notranslate"><span class="pre">ampy</span></code> die je zal gaan gebruiken voor bestandsbeheer en een aantal andere eenvoudige taken. Controleer als volgt of <code class="docutils literal notranslate"><span class="pre">ampy</span></code> correct is geïnstalleerd</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ampy --help
+</pre></div>
+</div>
+<p>de uitvoer zal vergelijkbaar met het volgende zijn:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Usage: ampy [OPTIONS] COMMAND [ARGS]...</span>
+
+<span class="go">  ampy - Adafruit MicroPython Tool</span>
+
+<span class="go">  Ampy is a tool to control MicroPython boards over a serial connection.</span>
+<span class="go">  Using ampy you can manipulate files on the board&#39;s internal filesystem and</span>
+<span class="go">  even run scripts.</span>
+
+<span class="go">Options:</span>
+<span class="go">  -p, --port PORT    Name of serial port for connected board.  Can optionally</span>
+<span class="go">                     specify with AMPY_PORT environment variable.  [required]</span>
+<span class="go">  -b, --baud BAUD    Baud rate for the serial connection (default 115200).</span>
+<span class="go">                     Can optionally specify with AMPY_BAUD environment</span>
+<span class="go">                     variable.</span>
+<span class="go">  -d, --delay DELAY  Delay in seconds before entering RAW MODE (default 0).</span>
+<span class="go">                     Can optionally specify with AMPY_DELAY environment</span>
+<span class="go">                     variable.</span>
+<span class="go">  --version          Show the version and exit.</span>
+<span class="go">  --help             Show this message and exit.</span>
+
+<span class="go">Commands:</span>
+<span class="go">  get    Retrieve a file from the board.</span>
+<span class="go">  ls     List contents of a directory on the board.</span>
+<span class="go">  mkdir  Create a directory on the board.</span>
+<span class="go">  put    Put a file or folder and its contents on the board.</span>
+<span class="go">  reset  Perform soft reset/reboot of the board.</span>
+<span class="go">  rm     Remove a file from the board.</span>
+<span class="go">  rmdir  Forcefully remove a folder and all its children from the board.</span>
+<span class="go">  run    Run a script and print its output.</span>
+</pre></div>
+</div>
+<p>Met <code class="docutils literal notranslate"><span class="pre">ampy</span></code> kan je een aantal commando’s uitvoeren, onder andere voor het tonen (<code class="docutils literal notranslate"><span class="pre">ls</span></code>) en plaatsen (<code class="docutils literal notranslate"><span class="pre">put</span></code>) van bestanden. Je ziet dat je ook hier weer een poortnaam moet opgeven. Voer nu het volgende uit om de bestanden te tonen:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ampy -p &lt;portname&gt; ls
+</pre></div>
+</div>
+<p>Vervang ook hier <code class="docutils literal notranslate"><span class="pre">&lt;portname&gt;</span></code> met de naam van jouw seriële poort. De uitvoer zal <em>twee</em> bestandsnamen tonen,</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">boot.py</span></code></p>
+<p>Als dit bestand aanwezig is dan zal het altijd als eerste worden uitgevoerd bij het opstarten van de microcontroller. Dit is een goede plek om code uit te laten voeren die <em>altijd</em> nodig is, bijvoorbeeld voor het configureren van een draadloze netwerkverbinding.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">main.py</span></code></p>
+<p>Als dit bestand aanwezig is dan zal het worden uitgevoerd <em>nadat</em> <code class="docutils literal notranslate"><span class="pre">boot.py</span></code> is uitgevoerd. Dit is de plek waar jij jouw programma zal gaan schrijven.</p>
+</li>
+</ul>
+<p>Deze twee bestanden zijn dus al aanwezig, maar zullen door jou moeten worden aangepast! Als je nieuwsgierig bent naar de inhoud van deze bestanden kan je ze met het <code class="docutils literal notranslate"><span class="pre">put</span></code> comando naar jouw machine “downloaden”, bijvoorbeeld:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ampy -p &lt;portname&gt; get main.py
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Je zal <code class="docutils literal notranslate"><span class="pre">ampy</span></code> vaak gaan gebruiken, en het kan handig zijn een configuratiebestand aan te maken waar je een aantal opties in kan definiëren, bijvoorbeeld de poortnaam.</p>
+<p>Maak in jouw home directory een bestand <code class="docutils literal notranslate"><span class="pre">.ampy</span></code> aan met de volgende inhoud en vervang <code class="docutils literal notranslate"><span class="pre">&lt;portname&gt;</span></code> met de naam van jouw seriële poort:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>AMPY_PORT=&lt;portname&gt;
+</pre></div>
+</div>
+<p>De eerstvolgende keer dat je <code class="docutils literal notranslate"><span class="pre">ampy</span></code> gebruikt kan je de poortnaam nu weglaten, bijvoorbeeld:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ampy get main.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="een-project">
+<h3><span class="section-number">2.2.3. </span>Een project<a class="headerlink" href="#een-project" title="Permalink naar deze titel">¶</a></h3>
+<p>Het is nu tijd om een projectomgeving op te zetten, een directory waar je Python code gaat schrijven voor deze workshop. Maak in deze directory een nieuw bestand <code class="docutils literal notranslate"><span class="pre">main.py</span></code> aan en kopieer daar het volgende in:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+<span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
+
+<span class="n">led</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">led</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">led</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Dit eenvoudige programma zal de blauwe led op het bord 5 keer laten knipperen. Plaats dit bestand nu op het bord met het volgende commando:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ampy</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span><span class="n">portname</span><span class="o">&gt;</span> <span class="n">put</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Als het bestand is overgezet zal de blauwe led gaan knipperen, <code class="docutils literal notranslate"><span class="pre">main.py</span></code> is uitgevoerd! Het bord heeft ook twee knoppen, EN en BOOT, zie figuur  <a class="reference internal" href="#esp32-devkit"><span class="std std-numref">Fig. 2.2</span></a>. BOOT zal het bord opnieuw opstarten, en daarmee opnieuw <code class="docutils literal notranslate"><span class="pre">main.py</span></code> uitvoeren.</p>
+</div>
+</div>
+<div class="section" id="debuggen">
+<h2><span class="section-number">2.3. </span>Debuggen<a class="headerlink" href="#debuggen" title="Permalink naar deze titel">¶</a></h2>
+<p>Het proces van code schrijven op jouw machine, het overzetten naar het bord en vervolgens laten uitvoeren zal je vaak gaan herhalen. Het is een lastig proces omdat je niet op jouw machine kan testen of het werkt. Probeer daarom vertrouwd te raken met de MicroPyton REPL, de interactieve prompt, om fragmenten uit te proberen die je later in jouw code kan opnemen.</p>
+<p>Gebruik de seriële connectie ook om foutmeldingen te laten tonen, bij het opnieuw opstarten of resetten van het bord (de EN knop) zullen deze berichten zichtbaar worden. Het is om deze reden ook een goed idee om eventueel print statements in jouw code op te nemen, deze zullen ook zichtbaar zijn.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="1_voorbereiding.html" title="vorige pagina">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">vorige</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Voorbereiding</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="3_aansluitingen.html" title="volgende pagina">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Aansluitingen</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Door Hanzehogeschool Groningen<br/>
+    
+        &copy; auteursrechten CC BY-NC-SA 4.0.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

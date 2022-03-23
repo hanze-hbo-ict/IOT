@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Voorbereiding &#8212; Workshop Internet of Things</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="2. MicroPython" href="2_micro_python.html" />
+    <link rel="prev" title="Internet of Things" href="0_introductie.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nl">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo_iot.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Workshop Internet of Things</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Zoek in dit boek ..." aria-label="Zoek in dit boek ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="0_introductie.html">
+   Internet of Things
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Voorbereiding
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2_micro_python.html">
+   2. MicroPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_aansluitingen.html">
+   3. Aansluitingen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_sensoren.html">
+   4. Sensoren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_project.html">
+   5. Project
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Schakel navigatie" aria-controls="site-navigation"
+                title="Schakel navigatie" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download deze pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/1_voorbereiding.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download het bronbestand" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Afdrukken naar pdf"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Volledig scherm"
+        title="Volledig scherm"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhoud
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hardware">
+   1.1. Hardware
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software">
+   1.2. Software
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ontwikkelomgeving">
+     1.2.1. Ontwikkelomgeving
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#firmware">
+   1.3. Firmware
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#firmware-downloaden">
+     1.3.1. Firmware downloaden
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#seriele-communicatie">
+     1.3.2. Seriële communicatie
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geheugen-wissen">
+     1.3.3. Geheugen wissen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#firmware-flashen">
+     1.3.4. Firmware flashen
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Voorbereiding</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhoud </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hardware">
+   1.1. Hardware
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software">
+   1.2. Software
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ontwikkelomgeving">
+     1.2.1. Ontwikkelomgeving
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#firmware">
+   1.3. Firmware
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#firmware-downloaden">
+     1.3.1. Firmware downloaden
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#seriele-communicatie">
+     1.3.2. Seriële communicatie
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geheugen-wissen">
+     1.3.3. Geheugen wissen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#firmware-flashen">
+     1.3.4. Firmware flashen
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="voorbereiding">
+<h1><span class="section-number">1. </span>Voorbereiding<a class="headerlink" href="#voorbereiding" title="Permalink naar deze titel">¶</a></h1>
+<p>Voor deze workshop heb je zowel <em>hardware</em>, <em>software</em> als <em>firmware</em> nodig. De hardware is (onder andere) de ESP32 microcontroller, de software heeft alles te maken met het voorbereiden en kunnen gebruiken van deze hardware met jouw systeem (jouw machine en ontwikkelomgeving) en de firmware om de microcontroller te kunnen besturen.</p>
+<div class="section" id="hardware">
+<h2><span class="section-number">1.1. </span>Hardware<a class="headerlink" href="#hardware" title="Permalink naar deze titel">¶</a></h2>
+<p>Je hebt het volgende nodig om deze workshop te kunnen volgen</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.espressif.com/en/products/socs/esp32">ESP32</a> ontwikkelbord (30 pins)</p></li>
+<li><p>5mm LED</p></li>
+<li><p>Eén weerstand (minimaal 220 <span class="math notranslate nohighlight">\(\Omega\)</span>)</p></li>
+<li><p><a class="reference external" href="https://www.analog.com/en/products/tmp36.html">tmp36</a> temperatursensor</p></li>
+<li><p>Een <a class="reference external" href="https://en.wikipedia.org/wiki/Breadboard">breadboard</a> (<em>half-size</em>)</p></li>
+<li><p>Minimaal 6 draadverbindingen (<em>jumper wires</em>)</p></li>
+</ul>
+<p>Al deze onderdelen zal je kunnen vinden in de aanbevolen Hanze IoT workshop <a class="reference external" href="https://www.okaphone.com/artikel.asp?id=493625">configuratie</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Belangrijk</p>
+<p>Het kan zijn dat je al een onwikkelbord hebt, misschien een eerdere versie van de ESP32 (bijvoorbeeld een <a class="reference external" href="https://en.wikipedia.org/wiki/ESP8266">ESP8266</a>) of misschien een <a class="reference external" href="https://www.arduino.cc/">Arduino</a>- of <a class="reference external" href="https://www.raspberrypi.com/">Rasberry</a>. Je kan deze gebruiken voor de workshop, maar houd wel rekening met het volgende:</p>
+<ul class="simple">
+<li><p>het moet kunnen worden aangesloten op sensoren en bijvoorbeeld LED’s</p></li>
+<li><p>het moet kunnen worden geprogrammeerd met Python (een generieke- of bord specifieke versie)</p></li>
+</ul>
+<p>In deze workshop gebruiken we <a class="reference external" href="https://micropython.org/">MicroPython</a>, maar <a class="reference external" href="https://circuitpython.org/">CircuitPython</a> zou misschien voor jouw bord beter geschikt zijn. In ieder geval, we verwachten dat als je een eigen bord gebruikt dat je weet wat je doet en zullen daar verder geen aanvullende instructies voor geven.</p>
+</div>
+</div>
+<div class="section" id="software">
+<h2><span class="section-number">1.2. </span>Software<a class="headerlink" href="#software" title="Permalink naar deze titel">¶</a></h2>
+<p>Je zal jouw systeem én de microcontroller eerst moeten voorbereiden voor gebruik en je gaat daar de volgende stappen voor doorlopen</p>
+<ul class="simple">
+<li><p><em>Software</em> installeren op jouw machine</p></li>
+<li><p><em>Firmware</em> plaatsen op de ESP32</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Notitie</p>
+<p>Houd er rekening mee dat je deze stappen en alles wat verder gaat volgen met een <em>command line</em> gaat uitvoeren. Een editor als <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> (VSCode) is voor deze workshop geschikt omdat je én Python code gaat schrijven en met de ingebouwde terminal met de microcontroller gaat communiceren.</p>
+</div>
+<div class="section" id="ontwikkelomgeving">
+<h3><span class="section-number">1.2.1. </span>Ontwikkelomgeving<a class="headerlink" href="#ontwikkelomgeving" title="Permalink naar deze titel">¶</a></h3>
+<p>Je gaat in deze workshop Python code schrijven voor het aansturen van de microcontroller. Later zal je een Python versie op de microcontroller installeren die speciaal voor dit type processoren geschikt is, <a class="reference external" href="https://micropython.org/">MicroPyhon</a>.</p>
+<p>MicroPython is een voor microcontrollers geoptimaliseerde versie van Python en bevat een aantal modules die heel specifiek zijn voor microcontrollers, bijvoorbeeld het kunnen gebruiken van de pinnen of WiFi. Deze zijn <em>niet</em> om jouw systeem geïnstalleerd, editors als VSCode zullen je daarom voor deze specifieke MicroPython modules geen <em>contextuele</em> hulp kunnen bieden (bijvoorbeeld functies aanvullen) want ze kennen alleen maar modules uit jouw geïnstalleerde (standaard) Python versie.</p>
+<p>Installeer met het volgende een aparte Python package om jouw editor wél kennis te laten hebben van MicroPython specfieke modules:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pip install huas-micropython[all]
+</pre></div>
+</div>
+<p>Dit zal tegelijkertijd voor jou <em>twee</em> andere packages installeren, <a class="reference external" href="https://pypi.org/project/adafruit-ampy/"><code class="docutils literal notranslate"><span class="pre">adafruit-ampy</span></code></a> en <a class="reference external" href="https://pypi.org/project/esptool/"><code class="docutils literal notranslate"><span class="pre">esptool</span></code></a>. De <em>eerste</em> heb je nodig voor het kunnen overzetten van de code die je gaat schrijven naar de microcontroller, de <em>tweede</em> is nodig voor het plaatsen van MicroPython (de <em>firmware</em>) op de microntroller en dit is de eerstvolgende stap die je gaat uitvoeren.</p>
+<div class="admonition note">
+<p class="admonition-title">Notitie</p>
+<p>Het kan zijn dat je <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> gebruikt in combinatie met de Micropython <a class="reference external" href="https://plugins.jetbrains.com/plugin/9777-micropython">plugin</a>. Deze plugin installeert dezelfde MicroPyton type informatie als <a class="reference external" href="https://pypi.org/project/huas-micropython/"><code class="docutils literal notranslate"><span class="pre">huas-micropython</span></code></a> en verder <code class="docutils literal notranslate"><span class="pre">adafruit-ampy</span></code>, maar niet <code class="docutils literal notranslate"><span class="pre">esptool</span></code>. De laatste zal je zelf moeten installeren met:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pip install esptool
+</pre></div>
+</div>
+</div>
+<p>Controleer voordat je naar de volgende stap gaat eerst of alles correct is geïnstalleerd. Voor het plaatsen van de <em>firmware</em> op de microcontroller zal je straks <code class="docutils literal notranslate"><span class="pre">esptool.py</span></code> op de command line het moeten kunnen uitvoeren, probeer dit nu met</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>esptool.py -h
+</pre></div>
+</div>
+<p>en als het goed is zal je een uitvoer zien vergelijkbaar met het volgende:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">usage: esptool [-h]</span>
+<span class="go">               [--chip {auto,esp8266,esp32,esp32s2,esp32s3beta2,esp32s3,esp32c3,esp32c6beta,esp32h2,esp8684}]</span>
+<span class="go">               [--port PORT] [--baud BAUD]</span>
+<span class="go">               [--before {default_reset,usb_reset,no_reset,no_reset_no_sync}]</span>
+<span class="go">               [--after {hard_reset,soft_reset,no_reset,no_reset_stub}]</span>
+<span class="go">               [--no-stub] [--trace] [--override-vddsdio [{1.8V,1.9V,OFF}]]</span>
+<span class="go">               [--connect-attempts CONNECT_ATTEMPTS]</span>
+<span class="go">               {load_ram,dump_mem,read_mem,write_mem,write_flash,run,image_info,make_image,elf2image,read_mac,chip_id,flash_id,read_flash_status,write_flash_status,read_flash,verify_flash,erase_flash,erase_region,merge_bin,version,get_security_info}</span>
+<span class="go">               ...</span>
+
+<span class="go">esptool.py v3.2 - ESP8266 ROM Bootloader Utility</span>
+<span class="go">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="firmware">
+<h2><span class="section-number">1.3. </span>Firmware<a class="headerlink" href="#firmware" title="Permalink naar deze titel">¶</a></h2>
+<p>De microcontroller heeft ook software nodig (een besturingssysteem) en dit is MicroPython. MicroPython is <em>firmware</em>, dat wil zeggen dat het software is die in hardware ingeprogrammeerd is en de eerste stap is het plaatsen (of <em>flashen</em>) van deze firmware op de microcontroller.</p>
+<div class="section" id="firmware-downloaden">
+<h3><span class="section-number">1.3.1. </span>Firmware downloaden<a class="headerlink" href="#firmware-downloaden" title="Permalink naar deze titel">¶</a></h3>
+<p>De MicroPython firmware is microcontroller specifiek, op <a class="reference external" href="https://micropython.org/download/esp32/">https://micropython.org/download/esp32/</a> vind je de versie voor de ESP32 microcontroller. Download de laatste firmware release (<em>latest</em>), je zal deze later op het ontwikkelbord gaan plaatsen.</p>
+</div>
+<div class="section" id="seriele-communicatie">
+<h3><span class="section-number">1.3.2. </span>Seriële communicatie<a class="headerlink" href="#seriele-communicatie" title="Permalink naar deze titel">¶</a></h3>
+<p>Sluit het bord aan met de Micro USB kabel, deze aansluiting is zowel voor voeding als <em>seriële</em> communicatie. Een eerste test of de communicatie met het ontwikkelbord slaagt is om het aan te sluiten, waarna een <em>rode led</em> op het bord zal moeten oplichten.</p>
+<p>Voordat je de firmware kan flashen zal je eerst moeten weten op <em>welke</em> <a class="reference external" href="https://en.wikipedia.org/wiki/Serial_port">seriële poort</a> het bord is aangesloten. In het kort volgen nu instructies voor jouw besturingssysteem, meer uitgebreide informatie kan je vinden in de <a class="reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html">ESP32 documentie</a> over seriële communicatie met de microcontroller.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="c99bb433-395b-4183-b3d8-ef7a7dd5650a" name="8878f3dd-8801-4408-9309-1cf7e8975725" type="radio">
+</input><label class="tabbed-label" for="c99bb433-395b-4183-b3d8-ef7a7dd5650a">
+Windows</label><div class="tabbed-content docutils">
+<p>De meest eenvoudige manier om een overzicht van actuele seriële poortnamen op te vragen is om om op de command line het volgende twee keer uit te voeren:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>mode
+</pre></div>
+</div>
+<p>waar de uitvoer vergelijkbaar zal zijn met het volgende</p>
+<!-- TODO uitvoer met aangesloten board -->
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Status for device COM1:</span>
+<span class="go">-----------------------</span>
+<span class="go">    Baud:            1200</span>
+<span class="go">    Parity:          None</span>
+<span class="go">    Data Bits:       7</span>
+<span class="go">    Stop Bits:       1</span>
+<span class="go">    Timeout:         OFF</span>
+<span class="go">    XON/XOFF:        OFF</span>
+<span class="go">    CTS handshaking: OFF</span>
+<span class="go">    DSR handshaking: OFF</span>
+<span class="go">    DSR sensitivity: OFF</span>
+<span class="go">    DTR circuit:     ON</span>
+<span class="go">    RTS circuit:     ON</span>
+
+<span class="go">...</span>
+</pre></div>
+</div>
+<p>Je zal hier vooral geïnteresseerd in de genummerde <code class="docutils literal notranslate"><span class="pre">COM</span></code>-poorten en het is waarschijnlijk dat het laatst aangesloten seriële apparaat (de ESP32) het hoogste getal heeft, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">COM2</span></code>. Onthoud of noteer deze waarde, je zal het later nodig hebben voor het <em>flashen</em> van de MicroPyton firmware en het plaatsen van jouw programmacode op de microcontroller.</p>
+<div class="admonition important">
+<p class="admonition-title">Belangrijk</p>
+<p>Het kan zijn dat een nieuwe <code class="docutils literal notranslate"><span class="pre">COM</span></code>-poort niet zichtbaar is. Dit kan betekenen dat niet de juiste stuurprogramma’s zijn geïnstalleerd, of dat dat Windows deze niet automatisch kan vinden.</p>
+<p>Download en installeer in dit geval de <a class="reference external" href="https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers">CP210x USB to UART Bridge VCP Drivers</a> en probeer het opnieuw.</p>
+</div>
+<p>Twijfel je over de poortnaam? Koppel het bord dan los, voer <code class="docutils literal notranslate"><span class="pre">mode</span></code> uit en noteer de huidige namen. Sluit vervolgens het bord weer aan en controleer weer met <code class="docutils literal notranslate"><span class="pre">mode</span></code> welke poortnaam is toegevoegd (dit zal jouw bord zijn).</p>
+</div>
+<input id="0f088a55-3eec-4429-9a2c-3a6afa965f2e" name="8878f3dd-8801-4408-9309-1cf7e8975725" type="radio">
+</input><label class="tabbed-label" for="0f088a55-3eec-4429-9a2c-3a6afa965f2e">
+macOS / Linux</label><div class="tabbed-content docutils">
+<p>De seriële poortnaam onder Linux of macOS kan je als <em>pseudoterninal</em> device vinden in het virtuele filesystem <code class="docutils literal notranslate"><span class="pre">/dev</span></code>. Voer het volgende twee keer uit, eerst <em>zonder</em> het bord te hebben aangesloten en vervolgens mét om te zien welke poortnaam is toegevoegd:</p>
+<p><strong>Linux</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ls /dev/tty*
+</pre></div>
+</div>
+<p><strong>macOS</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ls /dev/cu.*
+</pre></div>
+</div>
+<p>De poortnaam zal voor Linux zichtbaar zijn als bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">/dev/ttyUSB0</span></code>, of voor macOS bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">/dev/cu.SLAB_USBtoUART7</span></code>. Let op, dit zijn <em>voorbeelden</em>, de namen kunnen voor jouw systeem verschillen!</p>
+<div class="admonition important">
+<p class="admonition-title">Belangrijk</p>
+<p>Onder Linux zal je jezelf moeten toevoegen aan de groep <code class="docutils literal notranslate"><span class="pre">dialout</span></code> om gebruik te kunnen maken van de seriële poort. Als macOS gebruiker zal je misschien ook extra stappen moeten ondernemen als je geen poortnaam ziet, het kan dan zijn dat tóch nog een driver moet worden geïnstalleerd of dat permissies moeten worden gezet om de driver te mogen gebruiken. Lees in dit geval de <a class="reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html">ESP32 documentie</a> voor meer informatie.</p>
+</div>
+</div>
+</div>
+<p>Let op, mocht je de kabel later op een andere USB-poort aansluiten dan is de kans groot dat seriële poortnaam wijzigt, houd hier rekening mee!</p>
+<p>De seriële poortnaam zal je vaak nodig hebben, niet alleen voor het flashen van de MicroPython firmware, maar ook later als je jouw code op het het bord gaat plaatsen!</p>
+</div>
+<div class="section" id="geheugen-wissen">
+<h3><span class="section-number">1.3.3. </span>Geheugen wissen<a class="headerlink" href="#geheugen-wissen" title="Permalink naar deze titel">¶</a></h3>
+<p>De firmware zal naar het permanente geheugen van de microcontroller worden geschreven, maar voordat je dit gaat doet zal je het geheugen eerst moeten wissen. Voer het volgende uit op de command line:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>esptool.py --port &lt;name&gt; erase_flash
+</pre></div>
+</div>
+<p>Vervang hier  <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code> met de seriële poortnaam die je eerder hebt bepaald, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">COM2</span></code> (Windows) of <code class="docutils literal notranslate"><span class="pre">/dev/ttyUSB0</span></code> (Linux).</p>
+</div>
+<div class="section" id="firmware-flashen">
+<h3><span class="section-number">1.3.4. </span>Firmware flashen<a class="headerlink" href="#firmware-flashen" title="Permalink naar deze titel">¶</a></h3>
+<p>Eindelijk het laatste deel! Je zal nu de MicroPython firmware die je eerder hebt gedownload naar het permanente geheugen van de microcontroller gaan schrijven, oftewel <em>flashen</em>. Voer het volgende uit op de command line:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>esptool.py --port &lt;name&gt; write_flash -z 0x1000 &lt;firmware&gt;
+</pre></div>
+</div>
+<p>Vervang ook hier <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code> met de seriële poortnaam en <code class="docutils literal notranslate"><span class="pre">&lt;firmware&gt;</span></code> met de bestandsnaam van de firmware die je eerder hebt gedownload (bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">esp32-20220117-v1.18.bin</span></code>).</p>
+<p>Jouw ESP32 is nu klaar voor gebruik!</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="0_introductie.html" title="vorige pagina">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">vorige</p>
+            <p class="prev-next-title">Internet of Things</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2_micro_python.html" title="volgende pagina">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>MicroPython</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Door Hanzehogeschool Groningen<br/>
+    
+        &copy; auteursrechten CC BY-NC-SA 4.0.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
