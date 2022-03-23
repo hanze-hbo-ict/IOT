@@ -1,0 +1,50 @@
+@startuml c4_iot_component
+!theme cyborg-outline
+!include <C4/C4_Component>
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v2.4.0
+!includeurl ICONURL/common.puml
+!includeurl ICONURL/devicons2/python.puml
+!includeurl ICONURL/font-awesome-5/temperature_high.puml
+!includeurl ICONURL/font-awesome-5/wifi.puml
+!includeurl ICONURL/font-awesome/flash.puml
+!includeurl ICONURL/devicons2/flask_original.puml
+!includeurl ICONURL/font-awesome-5/exclamation_triangle.puml
+
+'title Component diagram for Temperature Reader
+
+Container(Device, "Device", "ESP32", "Device capable of reading and sending temperature and acting on a message")
+Container(Service, "Service", "Host", "Service capable of accepting a temperature reading and sending an actionable message")
+
+Boundary(esp32, "Device", "Container") {
+    Component(sensor, "Sensor", "tmp36", "Temperature sensor", $sprite=temperature_high)
+    Component(warning, "Warning", "red led", "Temperature warning actuator", $sprite=exclamation_triangle)
+    Component(activity, "Activity", "blue led", "Temperature sending actuator", $sprite=flash)
+    Component(client, Client, http, "Reads and sends a temperature and acts on a response", $sprite=python)
+    Component(connectivity, Connectivity, wifi, "Network", $sprite=wifi)
+}
+
+Boundary(host, "Service", "Container") {
+    Component(server, Server, http, "Accepts a temperature and sends a response", $sprite=flask_original)
+    Component(endpoint, Endpoint, request, "API endpoint", $sprite=python)
+}
+
+Rel(Device, connectivity, "Provides", builtin)
+Rel(Device, client, "Embeds", MicroPython)
+Rel(Device, activity, "Provides", builtin)
+
+Rel(client, connectivity, "Uses", socket)
+Rel(client, activity, "Signals", "request")
+
+Rel(client, sensor, "Reads", temperature)
+Rel(client, warning, "Triggers", "on, off")
+
+Rel(Service, server, "Deploys", webserver)
+Rel_R(server, endpoint, "Delegates", route)
+Rel_L(endpoint, server, "Returns", response)
+
+Rel(client, server, Sends, "endpoint, json")
+Rel(server, client, Responds, json)
+
+SHOW_LEGEND()
+@enduml

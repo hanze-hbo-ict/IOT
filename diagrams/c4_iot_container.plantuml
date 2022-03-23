@@ -1,0 +1,24 @@
+@startuml c4_iot_container
+!theme cyborg-outline
+!include <C4/C4_Container>
+
+'title Container diagram for Temperature Reader
+
+Person(Integrator, "Integrator", "IoT Developer")
+
+System_Boundary(c1, "Temperature Reader") {
+    Container(Device, "Device", "ESP32", "Device capable of reading and sending temperature and acting on a message")
+    Container(Service, "Service", "Host", "Service capable of accepting a temperature reading and responding with an actionable message")
+}
+
+'Container(containerAlias, "Label", "Technology", "Optional Description")
+
+Rel(Integrator, Device, "Uses")
+Rel(Integrator, Service, "Uses")
+
+Rel_R(Device, Service, "Sends", "temperature")
+Rel_L(Service, Device, "Responds", "message")
+
+SHOW_LEGEND()
+
+@enduml

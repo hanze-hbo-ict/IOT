@@ -1,0 +1,1484 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1181.25px" preserveAspectRatio="none" style="width:926px;height:1181px;background:#00000000;" version="1.1" viewBox="0 0 926 1181" width="926.0417px" zoomAndPan="magnify"><defs/><g><!--MD5=[8926145d6bcd80fd0d0b25411d969d7f]
+cluster esp32--><g id="cluster_esp32"><rect height="488.5417" rx="4.1667" ry="4.1667" style="stroke:#444444;stroke-width:2.0833333333333335;fill:none;stroke-dasharray:7.0,7.0;" width="896.875" x="17.7083" y="544.7917"/><text fill="#444444" font-family="&quot;Verdana&quot;" font-size="22.9167" font-weight="bold" lengthAdjust="spacing" textLength="86.4583" x="422.9167" y="573.3551">Device</text><text fill="#444444" font-family="&quot;Verdana&quot;" font-size="12.5" font-weight="bold" lengthAdjust="spacing" textLength="86.4583" x="422.9167" y="590.3625">[Container]</text></g><!--MD5=[c8375d0abf05781a4d00ac7db9cff037]
+cluster host--><g id="cluster_host"><rect height="243.75" rx="4.1667" ry="4.1667" style="stroke:#444444;stroke-width:2.0833333333333335;fill:none;stroke-dasharray:7.0,7.0;" width="483.3333" x="412.5" y="227.0833"/><text fill="#444444" font-family="&quot;Verdana&quot;" font-size="22.9167" font-weight="bold" lengthAdjust="spacing" textLength="97.9167" x="605.2083" y="255.6468">Service</text><text fill="#444444" font-family="&quot;Verdana&quot;" font-size="12.5" font-weight="bold" lengthAdjust="spacing" textLength="86.4583" x="610.9375" y="272.6542">[Container]</text></g><!--MD5=[88723051146da09166554e42ec8ff111]
+entity sensor--><g id="elem_sensor"><rect fill="#85BBF0" height="141.8783" rx="4.1667" ry="4.1667" style="stroke:#78A8D8;stroke-width:2.0833333333333335;" width="164.5833" x="471.875" y="875"/><image height="50" width="50" x="529.1667" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAAC3ElEQVR4Xu2Yr04dQRTGxyJISB3BIAiuSYOoBYfAIME1BFfTJlgSzBgUqrpJH6B4DI/AI/AIPEK/u7M5e/b7ZmeXu3NvEffkE9ydf78958zZGUJ8evtQCvro/2oE6Pbv6/nPh8/H53uHX6CDo5Pjix9X94/as6zL299+ktPru5s/L9otloEwLAzYp939iVjohs48vrGvZ9+0fx4IjsGr8ARiINaxXvAuj+kbWLGWH5IHmkKTrMAE33DvnGEtPyoDBE/yoKJ9//Wsk0BDkVKDIweBkGvcvTGkJECznqNXTEIWc78QkM6YZGt7h54DfRBI3YNZfJjhD51RnYQXoD5+E2BOarVNx0C0mGc3aXKgFlAf8iUIfCtewLcGh8tA1M+im6qRvQflB5poHgKiHQ6X+1YYQtwClPt14I3ZvBQRckCUoMDxvlXLgQW9B6QZTUDmCQLSvNaiCkSsmko/NcFs4KqAdKqC+YivCijmNuyQ+e/aCoGi5H7WfFVcLOR/VAdCxmjJ8UY0i4X8j+pASVhVXeWLiNc6gGxyzIZ6o2Xda31AE7UBGtMGaEwboDH1gLSqTgQK7kAzUx1Q9hTcHVMaKwDRiWdpdUBa3f3BND0xIHyktL9+mJZQC6SHXITPOpnzAGEfIE247AH8vWqB9IBnC2t0LLHgQmqia+gSaoEonW3XXMkFI7h0Ub8a69JqgeiSUEjeZJTsZvPTKA9ktwstBMm6W0vfqgHRwpbRmiXJUobptWl+NWqB9ECenmNJvTib//RCUz58TVG7sFZF+z8LnOED6u+gVIqq1MYWaPGXmD/z4u90zbMnGk3bCnPUAWnU8MZD21hpQo14RQ+kGZoMCY6AohWCnxBK/WiESu6JHijmMmmiwZfza3RSDygOxGLUfLbNFAPF3GYuGHxTJXVMGaDYfKSodmcN+6BWpEx5oCSkVPbTAa8ApWKYvEpApht3C14Rh2kS0Dr14YD+Ad3R37VZ/M8qAAAAAElFTkSuQmCC" y="890.625"/><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="14.5833" font-weight="bold" lengthAdjust="spacing" textLength="57.2917" x="525.5208" y="954.1616">Sensor</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="53.125" x="527.6042" y="969.2037">[tmp36]</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="552.0833" y="983.7545"> </text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="129.1667" x="491.6667" y="998.3053">Temperature sensor</text></g><!--MD5=[2484827b7d92bdfad7182dc577fa9cd2]
+entity warning--><g id="elem_warning"><rect fill="#85BBF0" height="141.8783" rx="4.1667" ry="4.1667" style="stroke:#78A8D8;stroke-width:2.0833333333333335;" width="225" x="672.9167" y="875"/><image height="50" width="50" x="760.4167" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACQ0lEQVR4Xu2XoU5EMRBFaxEkBEcwCIIjIQgsOARmJThCcBhIsJtgMCgUmoQPAI/hE/gEPoFP4Gb3bbc7t52Zdl+WFXtzFbSd0/d653XD4+fvUjnwn/7XKyDLPQDdv30P7p4vhq/8rwbPC3R0dhkmWlvfuHn54jFVngsIDybSRCYeVuV2oOH7D8oLIOj4/JYH+90OlL4sIZwqHu90IxBKSopE+8cDnuJ0I9Du4YmkmNXV0wfP8rgFCAmX9UmbWzs80eMWIBST9XNCBnmu6Wqg0+sHWbkgZBBJ5BV01wGhgCyrqqEF1AEpUS+ptgVUAOGzIKs5hDzyUoorgLb3DmS1EPDH1NneXdUCvEDZqGePiBxU2QK8QNmtO4EgZJNHZu0CQmFZYSSccTFSiaGzBdhASg3+ZimDmT5rGwhV5doTcYL0j67n+mYA6VFnIH08YsglhA2gbNSjuAASLgfNyrx6a0B8QxXiPGe7QyrzjqsBZaOeilc39xCsFlAEKkVdSMxy3gWUFiBXHFsPSyox0bkN7hfRcsWxzRtqFB4JkhXtvLuFcgvIAJlJ6UWc0CKQf5dhdK5xkLFdbENpoVllW4AE8sQklbh/Vd3gOKQSqPRjtCT/174kXmEGqGp/ofDMq954oGc8BfJHPSrb4uQgS6IFTIH8UY/iHzrOxiiU3nE7oOao4wWNlwOZsyuy0hbQATU8nn4V+2QHpF8zFqCYjw6otqf1rpi1DqghYj0qvW5PU4a3uPiThJyK3jHTGJfBKyDLKyDLfxElIpzy05mFAAAAAElFTkSuQmCC" y="890.625"/><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="14.5833" font-weight="bold" lengthAdjust="spacing" textLength="69.7917" x="750.5208" y="954.1616">Warning</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="54.1667" x="758.3333" y="969.2037">[red led]</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="783.3333" y="983.7545"> </text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="189.5833" x="692.7083" y="998.3053">Temperature warning actuator</text></g><!--MD5=[291c0a8b75f8cd592d60f1950b1cf784]
+entity activity--><g id="elem_activity"><rect fill="#85BBF0" height="141.8783" rx="4.1667" ry="4.1667" style="stroke:#78A8D8;stroke-width:2.0833333333333335;" width="226.0417" x="208.8542" y="875"/><image height="50" width="50" x="296.875" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACB0lEQVR4Xu2XPUoEQRCFJzUQxExMDMRMEAPTNTMw2VAzETMTBdMFk0mMjIwFD6C5iUfwCB7BI/hwmKao6q2tnxYXsXjRdvf0tz2vu990/evnUqmTP/2u/oEW6a8ATU6utvcPq0KT7G9XBOjm6b2bXyura3KIXRGg6fU9pyB1cHwmh9gVAdqdTDkFqcuHNznErggQXgqnGGt9Y0v2d8kNpBvo6OJWDnHJDaQbaPb8IYe45AZSDIQ9L/t75QZSDHQ6e5T9vfIB4Y1wClKyf0C+p2ANOMVYeJWyP/7A+d0Lzm5sBdlalQ8Ihx4HGQsTD30AAW70xBFQWu2npQ+IzkELxpIQtAruQjmAdAMp5TotHUCKgfRy7T4HkGIgpVzL07uA5vlDL5zs8lGKrEAxAwWykRUI24TPZqjAXWsFwuHGZyM1720G7lor0ObOHpsMELA5dtAwK2tFxcK1FQg3eScgipASGU0XWp7eDqQLXmE09ruCqQ3QsH607LcpUxsgFpKqN79RDYBkys58eDQAYikb+1H2sasBEEvZ9qRRVQMgaiDvVSqVBWIGciWNqrJA1ED55enzQNRA3qRRVRaoGCiQNKpKAVEDBZJGVSkgaqDYVSqVAiopO5Y0qkoBlVzWann6DFBJ2eGkUVUcqHymhZNGVXGgIZRlkkZVcaD++1NE/phUCugntHRAX/c0mJyN1fD4AAAAAElFTkSuQmCC" y="890.625"/><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="14.5833" font-weight="bold" lengthAdjust="spacing" textLength="66.6667" x="288.5417" y="954.1616">Activity</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="60.4167" x="291.6667" y="969.2037">[blue led]</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="319.7917" y="983.7545"> </text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="190.625" x="228.6458" y="998.3053">Temperature sending actuator</text></g><!--MD5=[4a65e84059005d12693a083370a06717]
+entity client--><g id="elem_client"><rect fill="#85BBF0" height="156.429" rx="4.1667" ry="4.1667" style="stroke:#78A8D8;stroke-width:2.0833333333333335;" width="237.5" x="370.8333" y="615.625"/><image height="50" width="50" x="464.5833" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACoElEQVR4XuWZr04EMRDGa0+QkHMEgyA4EoLAHg6BOQmOEBwGEuwlmJpTKDQJDwAewyPwCDwCj8C3O8tcr91Op73uheS+jDh2++e37XRmdjH24+dfmQkvJe16/n5283hyfrV7cDTe2RttbZPhN2z/+BS30OD2+TPsm7QMoNnbN2YyOQJxLlYGEJ7en1Cny9lLOFrMtEDYAhodWLRfzoxpYXXDMXtNCwTP8IZmRI0mF3fhmL2mBYI3mNYn+Aqcw582LrejbFogHCIaumyF0D0cs9eygfCjwIcGBCrTBgDBhRGgBfMRlrUqEDw3SVAA9PD6xe0xfm9w8oGm90/FEVkQAYVHAeEAlFEgjn7VFQMiuUwLoMPJ1G9YTzKQGzY7oKQTrCgZCOKioAMadHlMm5LlWcC6BOTfry3aFMFHOS40QPAp/35tUbaXoytFgQYIBZR/s7YwWXIW+HEHBHz/ZlUBBUDy8kDI2R2Q4Pwrimpq0FA5JYu2tQESnN8TnhL0eOIwdXjGmQGhP7k2JGDkAdHJxAnAo+C3bBhTOFO9WgBptow2WNOyWPTADVCyGMWzDk1jXB9K5g1sU1ZJXyZ6fWuA4H3+TUcU9YdeHuMGRiu+lZKvCQ2qiBN+ByTERvI15dEtFqLDEpCQztYDxOVsB2TjXrIGIIopPpCNRMihgSim9APZNvOjBX16ItNUDqY9jLmGidh1okAxSwKFXcpMO1ASKExnrtX/HJMEksUVatI2AwgOSyURVyD1gcY5qYOq426CVuM2IWpMC6SpQVnuqzEtbf1PeggY/rRx8ZniNw03FsumBbKZi4Q94vb65bFZQDaSW2ShS+93oJjlAdm2vFRW72jmerfSsoHI6E0UvkKJb/T3zxf8iYv0Zhj20lgh0HD2C9mcjJbuR23AAAAAAElFTkSuQmCC" y="631.25"/><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="14.5833" font-weight="bold" lengthAdjust="spacing" textLength="48.9583" x="465.1042" y="694.7866">Client</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="37.5" x="470.8333" y="709.8287">[http]</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="487.5" y="724.3795"> </text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="202.0833" x="390.625" y="738.9303">Reads and sends a temperature</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="148.9583" x="415.1042" y="753.481">and acts on a response</text></g><!--MD5=[0fbdd79600f8c33bbd17b85579f6722d]
+entity connectivity--><g id="elem_connectivity"><rect fill="#85BBF0" height="141.8783" rx="4.1667" ry="4.1667" style="stroke:#78A8D8;stroke-width:2.0833333333333335;" width="137.5" x="34.375" y="875"/><image height="50" width="50" x="78.125" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACSklEQVR4Xu2Wr04EMRCH1yJICI5gEARHQhDYwyEwJ8ERgsNAgr0EU3MKhSbhAcBjeAQegUfgEfiyvVu6nW5ntnsBxE5+uVw20/abf92t3NvXv1IlH/2tRiBNI5CmEUjTIKC754/rx/fL+asX/3kye/mUnnb1A+LIk6v7/cl0c2un6ra19Y3tvYPJ2c357KkvnwkIjqPTC46JT7bZ7uHx9PbBSKYAsRGxxieUGlFRU3lKqE4geiJfl2Kj4plsJYAIYoVZ6TJ6UR6dAMIvXiqMzBElnuFkIT90VJl2toSEj6xgC4juixcFxnog5BYZQUzfxBu1DZ9wyQKI+DIxkQ9Cl+fZRdoyQxqWbwHUlRueD0QJxcFdWE2eFkBUPXapKsKSmw4UpZDBQ9nM3U8PhUyULzOZzdaEBTRxs5ZfxNVsaTJWhTThklZTeyY6Rm7RiAripl5R/naWyxsRDCgRjZNjn0kM0Wcav8uYssyeUjFQUmSlACU0kiq3TUoHslyVFqPKlvZSgOREJK1rmKVF16BUDohKxfstjXCpArtH/UEO6GXGIl6wNCKUB4XKASG5Nc2kRunq4YBYZk69ZhUg12bKT7JUdA2qNM4C5Or7iX0tLZmU/8qz0Dgj0G9qKJDvFcqKuDmlQ18NAqK7m/7wpg6RqnIgciOHqOpzKSdVDhS+sUODUjrbVQ6U/ITyJp3tKl+cecdJZ7vKF9NDMUhtfG9IZ7vKgVyqjXjH9fr6kRoE5OrJZ9RpZP+6lQ59NRRo5RqBNI1AmkYgTSOQpm9Cd9rPxpYZigAAAABJRU5ErkJggg==" y="890.625"/><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="14.5833" font-weight="bold" lengthAdjust="spacing" textLength="106.25" x="50" y="954.1616">Connectivity</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="31.25" x="87.5" y="969.2037">[wifi]</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="101.0417" y="983.7545"> </text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="52.0833" x="79.1667" y="998.3053">Network</text></g><!--MD5=[dd82451e1dd92fe3da01853750f49ff6]
+entity server--><g id="elem_server"><rect fill="#85BBF0" height="156.429" rx="4.1667" ry="4.1667" style="stroke:#78A8D8;stroke-width:2.0833333333333335;" width="211.4583" x="429.6875" y="297.9167"/><image height="50" width="50" x="510.4167" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAADPElEQVR4Xu2YvY7TQBRG3VIgITq0DQWiQ0IU25puC5ot2Q4hOhqQaCPRTENFRY3EA0BPwyPwCDwCj8DRHOVqMmPH2dhetkj0yZo4k8zxd388Tpd+/r1V6tpT/1cnoCntA3r75dfm+5/2/KoaBbp48/Fq87V/+a79aFWNAn349vvO3XvnL161H62qUSB09vhp13VP+ksGNxa7USBpeOETR2KHZ+20xTUKJAdYJBMoAbc21jDQ608/wpv7Dx5evv9MghM7sUis9SI4AASBCzPAoUfPniNaAGNF+KxBuNuvz1QNxKWzpN744i3eAKEroMRA6GWDuAPESoECBwawGMcyQIzxhqhxdLBsa9gBwglkxnDpKdsAE2dY1dgx4O16DXMHiPVYDCbGLOnCesZHWEUmOXON7FE7QBDYfsoc0pJq2nptqU7q4CBkWBUVXqYRQIQy3FpWNVA0mzDJpIagnMaZlaJWA3H14RB5k/LaBKhanniR+O3PzVcN5E1eIOLFW2mqjIGySqylVAOl3KmDCRvshJFDkKmVKn8AyIIXKAoKk2wHjMO59rvzNQCkK2aSQBBAYytywo2GLOXNEMvLZNdu/WgTaxENA2mJQIxN8HZa1QsW0TAQlx4OMSBAtMHqIcR20H53poaBUr762Bh1eQuLZ1RfZBJA2LZ4vx4FwiSjZgvgCKJbJeQc8trmuaBGgVKufzzQIXPIW2/Zo3Fo2XvIPiCCYrXL5NqOTSznlNuS+doHlHLLwSchuuxT7LLLuuu3G9z5mgBKebGy4sh07y2xudakwb5whKaBUq44e7clJiJHn0CcQ9QijnN0EBAVB1AZuy7f6RzEg7adYmY+HQSUtvfUkskWoFURL32KfeYROhQobVuzTLGfjC5VFr/l2Tf7bs6Dy5W0Px66BpCyM5VPAb6FwP7EqnBs8q7XeuzzFm+TH0G73D7anw1dGyjluIDleiVWl7MeOBY2vnBYBPZ379n2jvP8hGlZ9PnZ3B8/BkjZojzanMo42h3O8n8Bkf6e16d4+S13f2kOkMKteKa2HQRKFdbqZSjhqCI4F6hUwF3lP0YQd18fw43URf7PZPkcWlUnoCmdgKZ064D+ATSQJjgLmfu7AAAAAElFTkSuQmCC" y="313.5417"/><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="14.5833" font-weight="bold" lengthAdjust="spacing" textLength="53.125" x="508.8542" y="377.0782">Server</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="37.5" x="516.6667" y="392.1204">[http]</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="533.3333" y="406.6711"> </text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="171.875" x="449.4792" y="421.2219">Accepts a temperature and</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="114.5833" x="478.125" y="435.7727">sends a response</text></g><!--MD5=[453ec97e7ad26416e5cda754d1a4536e]
+entity endpoint--><g id="elem_endpoint"><rect fill="#85BBF0" height="141.8783" rx="4.1667" ry="4.1667" style="stroke:#78A8D8;stroke-width:2.0833333333333335;" width="112.5" x="766.6667" y="305.2083"/><image height="50" width="50" x="797.9167" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACoElEQVR4XuWZr04EMRDGa0+QkHMEgyA4EoLAHg6BOQmOEBwGEuwlmJpTKDQJDwAewyPwCDwCj8C3O8tcr91Op73uheS+jDh2++e37XRmdjH24+dfmQkvJe16/n5283hyfrV7cDTe2RttbZPhN2z/+BS30OD2+TPsm7QMoNnbN2YyOQJxLlYGEJ7en1Cny9lLOFrMtEDYAhodWLRfzoxpYXXDMXtNCwTP8IZmRI0mF3fhmL2mBYI3mNYn+Aqcw582LrejbFogHCIaumyF0D0cs9eygfCjwIcGBCrTBgDBhRGgBfMRlrUqEDw3SVAA9PD6xe0xfm9w8oGm90/FEVkQAYVHAeEAlFEgjn7VFQMiuUwLoMPJ1G9YTzKQGzY7oKQTrCgZCOKioAMadHlMm5LlWcC6BOTfry3aFMFHOS40QPAp/35tUbaXoytFgQYIBZR/s7YwWXIW+HEHBHz/ZlUBBUDy8kDI2R2Q4Pwrimpq0FA5JYu2tQESnN8TnhL0eOIwdXjGmQGhP7k2JGDkAdHJxAnAo+C3bBhTOFO9WgBptow2WNOyWPTADVCyGMWzDk1jXB9K5g1sU1ZJXyZ6fWuA4H3+TUcU9YdeHuMGRiu+lZKvCQ2qiBN+ByTERvI15dEtFqLDEpCQztYDxOVsB2TjXrIGIIopPpCNRMihgSim9APZNvOjBX16ItNUDqY9jLmGidh1okAxSwKFXcpMO1ASKExnrtX/HJMEksUVatI2AwgOSyURVyD1gcY5qYOq426CVuM2IWpMC6SpQVnuqzEtbf1PeggY/rRx8ZniNw03FsumBbKZi4Q94vb65bFZQDaSW2ShS+93oJjlAdm2vFRW72jmerfSsoHI6E0UvkKJb/T3zxf8iYv0Zhj20lgh0HD2C9mcjJbuR23AAAAAAElFTkSuQmCC" y="320.8333"/><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="14.5833" font-weight="bold" lengthAdjust="spacing" textLength="75" x="785.4167" y="384.3699">Endpoint</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="58.3333" x="793.75" y="399.412">[request]</text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="820.8333" y="413.9628"> </text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="77.0833" x="786.4583" y="428.5136">API endpoint</text></g><!--MD5=[1481f43b514325438f831f19ea58e9e2]
+entity Device--><g id="elem_Device"><rect fill="#438DD5" height="120.9798" rx="4.1667" ry="4.1667" style="stroke:#3C7FC0;stroke-width:2.0833333333333335;" width="236.4583" x="138.0208" y="315.625"/><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="14.5833" font-weight="bold" lengthAdjust="spacing" textLength="54.1667" x="229.1667" y="344.7866">Device</text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="51.0417" x="230.7292" y="359.8287">[ESP32]</text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="254.1667" y="374.3795"> </text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="193.75" x="159.375" y="388.9303">Device capable of reading and</text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="201.0417" x="153.6458" y="403.481">sending temperature and acting</text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="89.5833" x="211.4583" y="418.0318">on a message</text></g><!--MD5=[17737e49c286898813382e12d6080e03]
+entity Service--><g id="elem_Service"><rect fill="#438DD5" height="120.9798" rx="4.1667" ry="4.1667" style="stroke:#3C7FC0;stroke-width:2.0833333333333335;" width="235.4167" x="417.7083" y="17.7083"/><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="14.5833" font-weight="bold" lengthAdjust="spacing" textLength="60.4167" x="505.2083" y="46.8699">Service</text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="38.5417" x="516.1458" y="61.912">[Host]</text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="533.3333" y="76.4628"> </text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="195.8333" x="437.5" y="91.0136">Service capable of accepting a</text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="157.2917" x="454.6875" y="105.5644">temperature reading and</text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="12.5" lengthAdjust="spacing" textLength="200" x="435.4167" y="120.1152">sending an actionable message</text></g><!--MD5=[235a5ba81ea8975a83c5a7b6afdf9b72]
+link Device to connectivity--><g id="link_Device_connectivity"><path d="M214.4083,436.501 C196.001,465.4052 175.8156,501.4135 163.5417,536.4583 C124.8396,646.9667 110.9292,782.7469 105.9292,866.525 " fill="none" id="Device-to-connectivity" style="stroke:#666666;stroke-width:3.125;"/><polygon fill="#666666" points="105.4458,874.9698,109.0419,866.8286,102.8021,866.4715,105.4458,874.9698" style="stroke:#666666;stroke-width:3.125;"/><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-weight="bold" lengthAdjust="spacing" textLength="65.625" x="169.7917" y="691.2903">Provides</text><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="50" x="177.6042" y="705.8411">[builtin]</text></g><!--MD5=[b7661e2773224091b041030c9a075e44]
+link Device to client--><g id="link_Device_client"><path d="M297.8,436.6167 C317.4938,464.5646 341.4875,498.2292 363.5417,528.125 C382.9583,554.4448 404.474,582.8198 424.15,608.4719 " fill="none" id="Device-to-client" style="stroke:#666666;stroke-width:3.125;"/><polygon fill="#666666" points="429.3781,615.2813,426.7813,606.7685,421.8242,610.5751,429.3781,615.2813" style="stroke:#666666;stroke-width:3.125;"/><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-weight="bold" lengthAdjust="spacing" textLength="57.2917" x="384.8958" y="505.3528">Embeds</text><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="87.5" x="369.7917" y="519.9036">[MicroPython]</text></g><!--MD5=[c7e5229ec13e17a1ef94b0bbd3d48d89]
+link Device to activity--><g id="link_Device_activity"><path d="M252.174,436.649 C247.5938,526.3448 244.7729,700.8063 279.1667,843.75 C280.9823,851.2969 283.3031,859.0021 285.9208,866.6229 " fill="none" id="Device-to-activity" style="stroke:#666666;stroke-width:3.125;"/><polygon fill="#666666" points="288.8688,874.849,288.9982,865.9499,283.1148,868.0591,288.8688,874.849" style="stroke:#666666;stroke-width:3.125;"/><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-weight="bold" lengthAdjust="spacing" textLength="65.625" x="270.8333" y="691.2903">Provides</text><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="50" x="278.6458" y="705.8411">[builtin]</text></g><!--MD5=[acce7ab87388cea5e046aa2cdb97271e]
+link client to connectivity--><g id="link_client_connectivity"><path d="M370.5594,761.7177 C314.8354,794.2615 248.2063,834.9365 190.625,875 C186.8365,877.6354 182.9979,880.3833 179.1521,883.199 " fill="none" id="client-to-connectivity" style="stroke:#666666;stroke-width:3.125;"/><polygon fill="#666666" points="172.2271,888.3313,180.7826,885.8792,177.0607,880.8582,172.2271,888.3313" style="stroke:#666666;stroke-width:3.125;"/><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-weight="bold" lengthAdjust="spacing" textLength="35.4167" x="309.8958" y="820.9778">Uses</text><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="51.0417" x="302.0833" y="835.5286">[socket]</text></g><!--MD5=[f7ec8d79bfccfe5491c32fe9a04c97a8]
+link client to activity--><g id="link_client_activity"><path d="M439.351,771.9427 C424.1417,795.1042 407.3188,820.524 391.6667,843.75 C386.4667,851.4656 381.0125,859.4865 375.5396,867.4854 " fill="none" id="client-to-activity" style="stroke:#666666;stroke-width:3.125;"/><polygon fill="#666666" points="370.5167,874.8156,377.8057,869.7087,372.6505,866.1752,370.5167,874.8156" style="stroke:#666666;stroke-width:3.125;"/><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-weight="bold" lengthAdjust="spacing" textLength="54.1667" x="425" y="820.9778">Signals</text><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="58.3333" x="422.9167" y="835.5286">[request]</text></g><!--MD5=[468925cb56773b400511eda5b4256713]
+link client to sensor--><g id="link_client_sensor"><path d="M509.576,772.1813 C517.3302,802.1979 526.1969,836.5219 533.9708,866.6135 " fill="none" id="client-to-sensor" style="stroke:#666666;stroke-width:3.125;"/><polygon fill="#666666" points="536.1323,874.9823,537.0747,866.1323,531.0231,867.6949,536.1323,874.9823" style="stroke:#666666;stroke-width:3.125;"/><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-weight="bold" lengthAdjust="spacing" textLength="45.8333" x="555.2083" y="820.9778">Reads</text><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="89.5833" x="533.3333" y="835.5286">[temperature]</text></g><!--MD5=[b1843bb34b1b90611ccebb03fb44ec9f]
+link client to warning--><g id="link_client_warning"><path d="M598.6958,772.1708 C611.9719,782.324 625.1844,792.7948 637.5,803.125 C661.8823,823.5781 687.2958,847.0458 710.0396,868.9208 " fill="none" id="client-to-warning" style="stroke:#666666;stroke-width:3.125;"/><polygon fill="#666666" points="716.0698,874.7427,712.2453,866.7063,707.9041,871.2026,716.0698,874.7427" style="stroke:#666666;stroke-width:3.125;"/><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-weight="bold" lengthAdjust="spacing" textLength="65.625" x="685.4167" y="820.9778">Triggers</text><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="50" x="693.2292" y="835.5286">[on, off]</text></g><!--MD5=[200967af0f6c69728f358847f931c5f0]
+link Service to server--><g id="link_Service_server"><path d="M535.4167,138.6771 C535.4167,181.8917 535.4167,241.0083 535.4167,289.3031 " fill="none" id="Service-to-server" style="stroke:#666666;stroke-width:3.125;"/><polygon fill="#666666" points="535.4167,297.8792,538.5417,289.5458,532.2917,289.5458,535.4167,297.8792" style="stroke:#666666;stroke-width:3.125;"/><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-weight="bold" lengthAdjust="spacing" textLength="59.375" x="549.4792" y="187.6444">Deploys</text><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="75" x="541.6667" y="202.1952">[webserver]</text></g><!--MD5=[0a197ad537c7ab611727281c6764d1ae]
+link server to endpoint--><g id="link_server_endpoint"><path d="M641.2458,376.0417 C680.3604,376.0417 723.5083,376.0417 757.9365,376.0417 " fill="none" id="server-to-endpoint" style="stroke:#666666;stroke-width:3.125;"/><polygon fill="#666666" points="766.4927,376.0417,758.1594,372.9167,758.1594,379.1667,766.4927,376.0417" style="stroke:#666666;stroke-width:3.125;"/><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-weight="bold" lengthAdjust="spacing" textLength="77.0833" x="665.3646" y="350.1444">Delegates</text><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="43.75" x="682.0313" y="364.6952">[route]</text></g><!--MD5=[c83eca3ce7b34431a68c24ddff584bda]
+reverse link server to endpoint--><g id="link_server_endpoint"><path d="M649.326,419.0063 C680.0229,425.4135 713.1333,427.599 743.4896,419.7917 C751.2656,417.7917 759.0958,414.8521 766.649,411.4271 " fill="none" id="server-backto-endpoint" style="stroke:#666666;stroke-width:3.125;"/><polygon fill="#666666" points="641.1573,417.1917,648.614,422.0504,649.9702,415.9493,641.1573,417.1917" style="stroke:#666666;stroke-width:3.125;"/><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-weight="bold" lengthAdjust="spacing" textLength="60.4167" x="673.6979" y="397.0194">Returns</text><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="66.6667" x="670.5729" y="411.5702">[response]</text></g><!--MD5=[6e668341980b2b6f3174a2b130bbe9df]
+link client to server--><g id="link_client_server"><path d="M474.6635,615.2302 C469.8438,576.3906 468.0177,528.925 478.125,487.5 C480.1594,479.1604 482.9438,470.7479 486.1958,462.4875 " fill="none" id="client-to-server" style="stroke:#666666;stroke-width:3.125;"/><polygon fill="#666666" points="489.5927,454.2854,483.5167,460.7887,489.291,463.1803,489.5927,454.2854" style="stroke:#666666;stroke-width:3.125;"/><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-weight="bold" lengthAdjust="spacing" textLength="45.8333" x="511.4583" y="505.3528">Sends</text><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="100" x="484.375" y="519.9036">[endpoint, json]</text></g><!--MD5=[709c8e59bb66e349e481c56c2feb03a9]
+link server to client--><g id="link_server_client"><path d="M586.9104,454.5438 C596.6802,477.8917 601.9063,503.7854 594.7917,528.125 C586.6083,556.1219 572.0479,583.8844 556.3188,608.4094 " fill="none" id="server-to-client" style="stroke:#666666;stroke-width:3.125;"/><polygon fill="#666666" points="551.6323,615.575,558.8091,610.3116,553.5786,606.8904,551.6323,615.575" style="stroke:#666666;stroke-width:3.125;"/><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-weight="bold" lengthAdjust="spacing" textLength="72.9167" x="604.1667" y="505.3528">Responds</text><text fill="#666666" font-family="&quot;Verdana&quot;" font-size="12.5" font-style="italic" lengthAdjust="spacing" textLength="35.4167" x="622.9167" y="519.9036">[json]</text></g><rect height="109.2611" rx="4.1667" ry="4.1667" style="stroke:#00000000;stroke-width:1.0416666666666667;fill:none;" width="150" x="745.8333" y="1048.9583"/><rect height="27.3926" style="stroke:none;stroke-width:1.0416666666666667;fill:none;" width="127.0833" x="757.2917" y="1062.5"/><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="14.5833" font-weight="bold" lengthAdjust="spacing" textLength="59.375" x="762.5" y="1081.2449">Legend</text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="4.1667" x="821.875" y="1081.2449"> </text><rect fill="#438DD5" height="27.3926" style="stroke:none;stroke-width:1.0416666666666667;" width="127.0833" x="757.2917" y="1089.8926"/><text fill="#3C7FC0" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="8.3333" x="766.6667" y="1108.6375">▯</text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="4.1667" x="775" y="1108.6375"> </text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="71.875" x="783.3333" y="1108.6375">container</text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="4.1667" x="859.375" y="1108.6375"> </text><rect fill="#85BBF0" height="27.3926" style="stroke:none;stroke-width:1.0416666666666667;" width="127.0833" x="757.2917" y="1117.2852"/><text fill="#78A8D8" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="8.3333" x="766.6667" y="1136.0301">▯</text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="4.1667" x="775" y="1136.0301"> </text><text fill="#000000" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="87.5" x="783.3333" y="1136.0301">component</text><text fill="#FFFFFF" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="4.1667" x="875" y="1136.0301"> </text><line style="stroke:#00000000;stroke-width:1.0416666666666667;" x1="757.2917" x2="884.375" y1="1062.5" y2="1062.5"/><line style="stroke:#00000000;stroke-width:1.0416666666666667;" x1="757.2917" x2="884.375" y1="1089.8926" y2="1089.8926"/><line style="stroke:#00000000;stroke-width:1.0416666666666667;" x1="757.2917" x2="884.375" y1="1117.2852" y2="1117.2852"/><line style="stroke:#00000000;stroke-width:1.0416666666666667;" x1="757.2917" x2="884.375" y1="1144.6777" y2="1144.6777"/><line style="stroke:#00000000;stroke-width:1.0416666666666667;" x1="757.2917" x2="757.2917" y1="1062.5" y2="1144.6777"/><line style="stroke:#00000000;stroke-width:1.0416666666666667;" x1="884.375" x2="884.375" y1="1062.5" y2="1144.6777"/><!--MD5=[9a39dd355812fa999fd94978454a8c49]
+@startuml
+!theme cyborg-outline
+!include <C4/C4_Component>
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v2.4.0
+!includeurl ICONURL/common.puml
+!includeurl ICONURL/devicons2/python.puml
+!includeurl ICONURL/font-awesome-5/temperature_high.puml
+!includeurl ICONURL/font-awesome-5/wifi.puml
+!includeurl ICONURL/font-awesome/flash.puml
+!includeurl ICONURL/devicons2/flask_original.puml
+!includeurl ICONURL/font-awesome-5/exclamation_triangle.puml
+
+'title Component diagram for Temperature Reader
+
+Container(Device, "Device", "ESP32", "Device capable of reading and sending temperature and acting on a message")
+Container(Service, "Service", "Host", "Service capable of accepting a temperature reading and sending an actionable message")
+
+Boundary(esp32, "Device", "Container") {
+    Component(sensor, "Sensor", "tmp36", "Temperature sensor", $sprite=temperature_high)
+    Component(warning, "Warning", "red led", "Temperature warning actuator", $sprite=exclamation_triangle)
+    Component(activity, "Activity", "blue led", "Temperature sending actuator", $sprite=flash)
+    Component(client, Client, http, "Reads and sends a temperature and acts on a response", $sprite=python)
+    Component(connectivity, Connectivity, wifi, "Network", $sprite=wifi)
+}
+
+Boundary(host, "Service", "Container") {
+    Component(server, Server, http, "Accepts a temperature and sends a response", $sprite=flask_original)
+    Component(endpoint, Endpoint, request, "API endpoint", $sprite=python)
+}
+
+Rel(Device, connectivity, "Provides", builtin)
+Rel(Device, client, "Embeds", MicroPython)
+Rel(Device, activity, "Provides", builtin)
+
+Rel(client, connectivity, "Uses", socket)
+Rel(client, activity, "Signals", "request")
+
+Rel(client, sensor, "Reads", temperature)
+Rel(client, warning, "Triggers", "on, off")
+
+Rel(Service, server, "Deploys", webserver)
+Rel_R(server, endpoint, "Delegates", route)
+Rel_L(endpoint, server, "Returns", response)
+
+Rel(client, server, Sends, "endpoint, json")
+Rel(server, client, Responds, json)
+
+SHOW_LEGEND()
+@enduml
+
+@startuml
+
+
+
+skinparam backgroundColor transparent
+skinparam useBetaStyle false
+
+
+
+
+
+
+<style>
+  root {
+    BackgroundColor transparent
+    FontColor #2A9FD6
+    HyperLinkColor #fd7e14
+    LineColor #55B2DE
+    LineThickness 1
+    Margin 10
+    Padding 6
+    Shadowing 0.0
+  }
+  node {
+   Padding 15
+   roundcorner 20
+   BackgroundColor transparent
+  }
+  caption {
+    LineThickness 0
+  }
+  footer {
+    LineThickness 0
+  }
+  groupHeader {
+    BackgroundColor #555
+    FontColor #9933CC
+    FontStyle bold
+  }
+  header {
+    LineThickness 0
+  }
+  referenceHeader {
+    BackgroundColor transparent
+    FontColor #ADAFAE
+    FontStyle bold
+  }
+  separator {
+    BackgroundColor #FFF
+    FontColor transparent
+    FontStyle bold
+  }
+  title {
+	FontSize 20
+	BorderRoundCorner            8
+	BorderThickness 	         1
+	BackgroundColor  transparent
+	FontColor #2A9FD6
+	BorderColor #555
+  }
+  nwdiagDiagram {
+	network {
+			FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent    
+		LineColor #2A9FD6
+		LineThickness 1.0
+		FontColor #227FAB
+	}
+	server {
+			FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+	}
+	arrow {
+		FontColor #227FAB
+		LineColor #227FAB
+	}
+	group {
+		BackGroundColor #222
+		LineColor #4E4E4E
+		LineThickness 2.0
+		Margin 5
+		Padding 5
+	}
+  }
+  ganttDiagram {
+	task {
+			FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+		LineColor #2A9FD6
+		Margin 10
+		Padding 6
+	}
+	note {
+		FontColor #9933CC
+		LineColor #AD5CD6
+		BackGroundColor transparent
+	}
+	separator {
+		LineColor #777777
+		BackGroundColor transparent
+		FontColor #777777
+	}
+	milestone {
+		FontColor #9933CC
+		FontSize 16
+		FontStyle italic
+		BackGroundColor #555
+		LineColor #777777
+	}
+	timeline {
+		BackgroundColor #555
+		FontColor #777777
+	}
+	closed {
+		BackgroundColor #FFA033
+		FontColor #FF8800
+	}
+  }
+</style>
+skinparam defaultFontName       "Verdana"
+skinparam defaultFontSize       12
+skinparam dpi                   100
+skinparam shadowing             false
+skinparam roundcorner           8
+skinparam ParticipantPadding    40
+skinparam BoxPadding            40
+skinparam Padding               5
+skinparam ArrowColor            #ADAFAE
+skinparam stereotype {
+    CBackgroundColor #777777
+    CBorderColor #444444
+    ABackgroundColor #5F8F00
+    ABorderColor #92C233
+    IBackgroundColor #a30000
+    IBorderColor #D63333
+    EBackgroundColor #cc6d00
+    EBorderColor #FFA033
+    NBackgroundColor #7a29a3
+    NBorderColor #AD5CD6
+}
+skinparam title {
+	FontColor	                 #2A9FD6
+	BorderColor	                 #777777
+	FontSize	    	         20
+	BorderRoundCorner            8
+	BorderThickness 	         1
+	BackgroundColor              transparent
+}
+
+skinparam legend {
+	BackgroundColor transparent
+	BorderColor #777777
+	FontColor #ADAFAE
+}
+
+skinparam swimlane {
+	BorderColor #9933CC
+	BorderThickness 2
+	TitleBackgroundColor  #444444-#555
+	TitleFontColor #2A9FD6
+}
+
+
+skinparam activity {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+	BarColor #77B300
+	StartColor #9933CC
+	EndColor #9933CC
+	DiamondBackgroundColor transparent
+  	DiamondBorderColor #777777
+  	DiamondFontColor #777777
+}
+
+
+skinparam participant {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+	ParticipantBorderThickness 2
+}
+
+
+skinparam actor {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+	FontColor #2A9FD6
+}
+
+
+skinparam arrow {
+	Thickness 3
+	Color #2A9FD6
+	FontColor #FFF
+}
+
+
+skinparam sequence {
+	BorderColor #2A9FD6
+	TitleFontColor #2A9FD6
+	BackgroundColor transparent
+	StartColor #2A9FD6
+	EndColor #2A9FD6
+	BoxBackgroundColor transparent
+	BoxBorderColor #ADAFAE
+	BoxFontColor #ADAFAE
+	DelayFontColor #ADAFAE
+	LifeLineBorderColor #555
+	LifeLineBorderThickness 2
+	LifeLineBackgroundColor transparent
+	GroupBorderColor #ADAFAE
+	GroupFontColor #ADAFAE
+	GroupHeaderFontColor #9933CC
+	GroupBackgroundColor transparent
+	GroupHeaderBackgroundColor transparent
+	DividerBackgroundColor transparent
+    DividerBorderColor #ADAFAE
+    DividerBorderThickness 2
+    DividerFontColor #ADAFAE
+	ReferenceBackgroundColor transparent
+	ReferenceBorderColor #ADAFAE
+	ReferenceFontColor #ADAFAE
+	ReferenceHeaderFontColor #9933CC
+	ReferenceHeaderBackgroundColor transparent
+	StereotypeFontColor #2A9FD6
+}
+
+
+skinparam partition {
+	BorderColor #2A9FD6
+	FontColor #2A9FD6
+	BackgroundColor transparent
+}
+
+
+skinparam collections {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+}
+
+
+skinparam control {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+	FontColor #2A9FD6
+}
+
+
+skinparam entity {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+	FontColor #2A9FD6
+}
+
+
+skinparam boundary {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+	FontColor #2A9FD6
+}
+
+
+skinparam agent {
+	BackgroundColor transparent
+	BorderColor #cc6d00
+	FontColor #ADAFAE
+}
+
+
+skinparam note {
+	BorderThickness 1
+	BackgroundColor transparent
+	BorderColor #AD5CD6
+	FontColor #AD5CD6
+}
+
+
+skinparam artifact {
+	BackgroundColor transparent
+	BorderColor #BDBFBE
+	FontColor #BDBFBE
+}
+
+
+skinparam component {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+}
+
+
+skinparam interface {
+	BackgroundColor  transparent
+	BorderColor  #CC0000
+	FontColor #ADAFAE
+}
+
+
+skinparam storage {
+	BackgroundColor transparent
+  	BorderColor #FFA033
+	FontColor #FF8800
+}
+
+
+skinparam node {
+	BackgroundColor  transparent
+	BorderColor #ADAFAE
+	FontColor #ADAFAE
+}
+
+
+skinparam cloud {
+	BackgroundColor transparent
+	BorderColor #F2FCFE
+	FontColor #ADAFAE
+}
+
+
+skinparam database {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+	FontColor #2A9FD6
+}
+
+
+
+skinparam class {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+        FontColor #222
+	HeaderBackgroundColor #227FAB
+	StereotypeFontColor #ADAFAE
+	BorderThickness 1
+	AttributeFontColor #ADAFAE
+	AttributeFontSize 11
+}
+
+
+skinparam object {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+	StereotypeFontColor #ADAFAE
+	BorderThickness 1
+	AttributeFontColor #777777
+	AttributeFontSize 11
+}
+
+
+skinparam usecase {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+	BorderThickness 2
+	StereotypeFontColor #2A9FD6
+}
+
+
+skinparam rectangle {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+	BorderThickness 2
+	StereotypeFontColor #2A9FD6
+}
+
+
+skinparam package {
+	BackgroundColor transparent
+  	BorderColor #2A9FD6
+	FontColor #2A9FD6
+	BorderThickness 2
+}
+
+
+skinparam folder {
+	BackgroundColor transparent
+  	BorderColor #FF8800
+	FontColor #FF8800
+	BorderThickness 2
+}
+
+
+skinparam frame {
+	BackgroundColor transparent
+  	BorderColor #9933CC
+	FontColor #9933CC
+	BorderThickness 2
+}
+
+
+skinparam state {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+	StartColor #9933CC
+	EndColor #9933CC
+	AttributeFontColor #777777
+	AttributeFontSize 11
+}
+
+
+skinparam queue {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+}
+
+
+skinparam card {
+	BackgroundColor transparent
+	BorderColor #9933CC
+	FontColor #9933CC
+}
+
+
+skinparam file {
+	BackgroundColor transparent
+	BorderColor #555
+	FontColor #555
+}
+
+
+skinparam stack {
+		FontColor #2A9FD6
+	BorderColor #55B2DE
+	BackgroundColor transparent
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam shadowing<<legendArea>> false
+skinparam rectangle<<legendArea>> {
+    backgroundcolor #00000000
+    bordercolor #00000000
+}
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam actor {
+    StereotypeFontSize 12
+    shadowing false
+    style awesome
+}
+
+skinparam person {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam package {
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontStyle plain
+    BackgroundColor transparent
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontColor #444444
+    BorderColor #444444
+    BackgroundColor transparent
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam actor<<person>> {
+    StereotypeFontColor #08427B
+    FontColor #08427B
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam person<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_person>> {
+    StereotypeFontColor #686868
+    FontColor #686868
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam person<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam queue<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam actor<<system>> {
+    StereotypeFontColor #1168BD
+    FontColor #1168BD
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam person<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_system>> {
+    StereotypeFontColor #999999
+    FontColor #999999
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam person<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $person2 [48x48/16] {
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000002578888300000000005888864100000000000
+0000000007DFFFFFFFFD9643347BFFFFFFFFFB4000000000
+00000004EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB10000000
+0000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD2000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+00003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50000
+0003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000
+0009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+0009FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF2000
+0003FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFD0000
+0000BFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF50000
+00003FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFB00000
+000006FFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFE100000
+0000007FFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFD2000000
+00000004EFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFB10000000
+0000000007DF8FFFFFFFFFFFFFFFFFFFFFF8FB4000000000
+000000000002578888888888888888888864100000000000
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam queue<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam actor<<container>> {
+    StereotypeFontColor #438DD5
+    FontColor #438DD5
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam person<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+
+skinparam rectangle<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam database<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam queue<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam actor<<external_container>> {
+    StereotypeFontColor #B3B3B3
+    FontColor #B3B3B3
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam person<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam database<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam queue<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam actor<<component>> {
+    StereotypeFontColor #85BBF0
+    FontColor #85BBF0
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam person<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+
+
+skinparam rectangle<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam database<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam queue<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam actor<<external_component>> {
+    StereotypeFontColor #CCCCCC
+    FontColor #CCCCCC
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam person<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hide stereotype
+sprite $python [48x48/16] {
+000000000000000000000000000000000000000000000000
+00000000000000000479CDEEEDDB97300000000000000000
+0000000000000019FFFFFFFFFFFFFFFC3000000000000000
+00000000000000DFFFFFFFFFFFFFFFFFF500000000000000
+00000000000007FFD79FFFFFFFFFFFFFFF10000000000000
+0000000000000BFF1007FFFFFFFFFFFFFF80000000000000
+0000000000000CFC0003FFFFFFFFFFFFFFC0000000000000
+0000000000000EFF1007FFFFFFFFFFFFFFE0000000000000
+0000000000000EFFE79FFFFFFFFFFFFFFFE0000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFFE0000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFFE0000000000000
+000000000000034444444444FFFFFFFFFFE0000000000000
+000000013444444444444444FFFFFFFFFFE0244431000000
+000006DFFFFFFFFFFFFFFFFFFFFFFFFFFFE09FFFFFC20000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE09FFFFFFF2000
+000AFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE09FFFFFFFC000
+004FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE09FFFFFFFF300
+00AFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0AFFFFFFFF900
+00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC0BFFFFFFFFE00
+02FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF80EFFFFFFFFF10
+05FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF15FFFFFFFFFF40
+08FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF51EFFFFFFFFFF70
+09FFFFFFFFFFFFFFFFFFFFFFFFFFFFFC31CFFFFFFFFFFF80
+0AFFFFFFFFFFFFFE95444444444443106EFFFFFFFFFFFFA0
+0AFFFFFFFFFFFF902899999999999ABFFFFFFFFFFFFFFFA0
+09FFFFFFFFFFF709FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF90
+07FFFFFFFFFFB09FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF80
+04FFFFFFFFFF23FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50
+01FFFFFFFFFD09FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF10
+00DFFFFFFFFA0DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC00
+008FFFFFFFF90EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600
+002FFFFFFFF90EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF100
+0009FFFFFFF90EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7000
+0000AFFFFFF90EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000
+000005BDDDD80EFFFFFFFFFFDDDDDDDDDDDDDDDDDB600000
+0000000000000EFFFFFFFFFF000000000000000000000000
+0000000000000EFFFFFFFFFF999999999980000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFFE0000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFFE0000000000000
+0000000000000EFFFFFFFFFFFFFFD43BFFE0000000000000
+0000000000000DFFFFFFFFFFFFFF4000FFD0000000000000
+0000000000000CFFFFFFFFFFFFFF2000EFC0000000000000
+00000000000006FFFFFFFFFFFFFF8005FF70000000000000
+00000000000000CFFFFFFFFFFFFFFDCFFC00000000000000
+000000000000000AFFFFFFFFFFFFFFFFA100000000000000
+00000000000000004BFFFFFFFFFFFFB40000000000000000
+000000000000000000158BDEEDB851000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<DEV2 PYTHON>> White
+sprite $temperature_high [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000016ACCB8400000000000000005ACCB720000000
+0000000007FFFFFFFFD40000000000004DFFFFFFF9000000
+00000001CFFFFFFFFFFF700000000006FFFFFFFFFFD10000
+0000000CFFFFFFFFFFFFF7000000004FFFFFFFFFFFFC0000
+0000009FFFFFFFFFFFFFFF30000000DFFFFFFFFFFFFF6000
+000002FFFFFFFA9CFFFFFFC0000005FFFFFFB9EFFFFFD000
+000009FFFFFB10003EFFFFF300000AFFFFF4000BFFFFF200
+00000EFFFFD0000004FFFFF800000CFFFFB00003FFFFF400
+00000FFFFF6006A200DFFFFA00000CFFFF900001FFFFF500
+00001FFFFF400FF900AFFFFB00000BFFFFE00006FFFFF300
+00002FFFFF400FFA00AFFFFC000007FFFFFB316FFFFFF000
+00002FFFFF400FFA00AFFFFC000002FFFFFFFFFFFFFFA000
+00002FFFFF400FFA00AFFFFC0000009FFFFFFFFFFFFF2000
+00002FFFFF400FFA00AFFFFC0000000DFFFFFFFFFFF60000
+00002FFFFF400FFA00AFFFFC00000001BFFFFFFFFF600000
+00002FFFFF400FFA00AFFFFC0000000006DFFFFFA2000000
+00002FFFFF400FFA00AFFFFC000000000002453000000000
+00002FFFFF400FFA00AFFFFC000000000000000000000000
+00002FFFFF400FFA00AFFFFC000000000000000000000000
+00002FFFFF400FFA00AFFFFC000000000000000000000000
+00002FFFFF400FFA00AFFFFC000000000000000000000000
+00002FFFFF400FFA00AFFFFC000000000000000000000000
+00002FFFFF400FFA00AFFFFC000000000000000000000000
+00002FFFFF400FFA00AFFFFC000000000000000000000000
+0000BFFFFF400FFA00AFFFFF500000000000000000000000
+0005FFFFFF300FFA00AFFFFFE00000000000000000000000
+000DFFFFF8000FFA001DFFFFF60000000000000000000000
+003FFFFFB0005FFD2002FFFFFD0000000000000000000000
+007FFFFF200AFFFFF4008FFFFF1000000000000000000000
+00BFFFFC004FFFFFFE003FFFFF4000000000000000000000
+00CFFFFA00AFFFFFFF300FFFFF6000000000000000000000
+00CFFFF900BFFFFFFF500FFFFF6000000000000000000000
+00BFFFFB008FFFFFFF201FFFFF5000000000000000000000
+009FFFFF001EFFFFF9006FFFFF3000000000000000000000
+005FFFFF7002CFFF9000DFFFFE0000000000000000000000
+000FFFFFF20002310008FFFFFA0000000000000000000000
+0009FFFFFE400000008FFFFFF30000000000000000000000
+0001FFFFFFFB51127DFFFFFFA00000000000000000000000
+00005FFFFFFFFFFFFFFFFFFE100000000000000000000000
+000008FFFFFFFFFFFFFFFFF2000000000000000000000000
+0000006FFFFFFFFFFFFFFE30000000000000000000000000
+00000003CFFFFFFFFFFF9100000000000000000000000000
+0000000005BFFFFFFE920000000000000000000000000000
+000000000000245320000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<FA5 TEMPERATURE_HIGH>> White
+sprite $wifi [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000002344432100000000000000000000
+00000000000000037ADFFFFFFFFFEC851000000000000000
+00000000000039EFFFFFFFFFFFFFFFFFFB61000000000000
+00000000006CFFFFFFFFFFFFFFFFFFFFFFFF920000000000
+000000004DFFFFFFFFFFFFFFFFFFFFFFFFFFFFA100000000
+0000002CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF70000000
+000007FFFFFFFFFFFDA7432112368CFFFFFFFFFFFC200000
+0000BFFFFFFFFFC720000000000000049FFFFFFFFFF40000
+001CFFFFFFFFA3000000000000000000006EFFFFFFFF7000
+00BFFFFFFFB30000000000000000000000007EFFFFFFF400
+008FFFFFF60000000000000000000000000001BFFFFFE100
+0008FFFC10000000000146787752000000000006FFFE2000
+00008FA00000000038DFFFFFFFFFFB60000000004EE20000
+000001000000005CFFFFFFFFFFFFFFFF9100000000000000
+0000000000003CFFFFFFFFFFFFFFFFFFFF80000000000000
+000000000007FFFFFFFFFFFFFFFFFFFFFFFD200000000000
+0000000000BFFFFFFFFFFFFEFFFFFFFFFFFFF40000000000
+0000000003FFFFFFFFD841000026AFFFFFFFFB0000000000
+0000000000AFFFFFC40000000000018EFFFFF30000000000
+00000000000AFFF60000000000000001BFFF300000000000
+0000000000008B20000000000000000006C3000000000000
+000000000000000000000000000000000000000000000000
+00000000000000000000018AA50000000000000000000000
+000000000000000000004FFFFFB000000000000000000000
+00000000000000000001EFFFFFF800000000000000000000
+00000000000000000006FFFFFFFE00000000000000000000
+00000000000000000008FFFFFFFF00000000000000000000
+00000000000000000007FFFFFFFF00000000000000000000
+00000000000000000001FFFFFFF900000000000000000000
+000000000000000000006FFFFFD100000000000000000000
+0000000000000000000004BED80000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<FA5 WIFI>> White
+sprite $flash [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000008BBBBBBBB800000000000000000000
+000000000000000002FFFFFFFFFE00000000000000000000
+000000000000000006FFFFFFFFF900000000000000000000
+00000000000000000AFFFFFFFFF300000000000000000000
+00000000000000000EFFFFFFFFD000000000000000000000
+00000000000000002FFFFFFFFF7000000000000000000000
+00000000000000006FFFFFFFFF1000000000000000000000
+0000000000000000AFFFFFFFFB0000000000000000000000
+0000000000000000EFFFFFFFF50000000000000000000000
+0000000000000001FFFFFFFFF00000000000000000000000
+0000000000000005FFFFFFFFA00000014820000000000000
+0000000000000009FFFFFFFF400159DFFF90000000000000
+000000000000000DFFFFFFFE59DFFFFFFF40000000000000
+000000000000001FFFFFFFFFFFFFFFFFFD00000000000000
+000000000000005FFFFFFFFFFFFFFFFFF500000000000000
+000000000000009FFFFFFFFFFFFFFFFFD000000000000000
+00000000000000DFFFFFFFFFFFFFFFFF6000000000000000
+00000000000001FFFFFFFFFFFFFFFFFE0000000000000000
+00000000000004FFFFFFFFFFFFFFFFF70000000000000000
+00000000000008FFFFFFFFFDFFFFFFF10000000000000000
+0000000000000CFFFFFD9510FFFFFF800000000000000000
+0000000000000BFD95100003FFFFFF100000000000000000
+000000000000000000000007FFFFF9000000000000000000
+00000000000000000000000BFFFFF2000000000000000000
+00000000000000000000000EFFFFA0000000000000000000
+00000000000000000000002FFFFF30000000000000000000
+00000000000000000000006FFFFC00000000000000000000
+0000000000000000000000AFFFF400000000000000000000
+0000000000000000000000EFFFD000000000000000000000
+0000000000000000000002FFFF5000000000000000000000
+0000000000000000000006FFFD0000000000000000000000
+000000000000000000000AFFF60000000000000000000000
+000000000000000000000EFFE00000000000000000000000
+000000000000000000002FFF700000000000000000000000
+000000000000000000006FFF100000000000000000000000
+000000000000000000009FF8000000000000000000000000
+00000000000000000000DFF1000000000000000000000000
+00000000000000000001FF90000000000000000000000000
+00000000000000000005FF20000000000000000000000000
+00000000000000000007FA00000000000000000000000000
+000000000000000000004000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<FA FLASH>> White
+sprite $flask_original [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000310000000000000000000000000000000000000
+000000007580000000000000000000000000000000000000
+000000002E90000000000000000000000000000000000000
+000000000CFAC10000000000000000000000000000000000
+00000000CFFEF82000000000000000000000000000000000
+00000000EFC72FFE20000000000000000000000000000000
+00000004FEFD65AFF9100000000000000000000000000000
+000000DFFDCBB3CCC8754000000000000000000000000000
+000001CEFFFCA8107107FD20000000000000000000000000
+00001EFFC424100015955990000000000000000000000000
+0000AA65D07269BB96800000000000000000000000000000
+0000B6A0868EFB4300400000000000000000000000000000
+00006CFEFFF9600006820000000000000000000000000000
+00000FFFDA91010006730000000000000000000000000000
+00000AFFEFF4170000140000000000000000000000000000
+000006FFDB01840000250000000000000000000000000000
+000002EFD928420000160000000000000000000000000000
+000000DEFD57110022280000000000000000000000000000
+00000086FD6824A029280000000000000000000000000000
+00000057FF689AB405160000000000000000000000000000
+0000000CBFF5D80000042000000000000000000000000000
+00000009AFF9D90000007000000000000000000000000000
+00000002BFFB133100018000000000000000000000000000
+000000007DFFF8AEB4019300000000000000000000000000
+000000002AFEFE7CEE006B00000000000000000000000000
+00000000089FF90CF5000340000000000000000000000000
+0000000001ABFF34FFB10143000000000000000000000000
+000000000058FFF9CBB90008100000000000000000000000
+000000000008BFFBDDE71014900000000000000000000000
+00000000000077FB48B8C8003B1000000000000000000000
+000000000000278FFFFDFFC107D300000000000000000000
+0000000000000298FFFCEB89003B91000000000000000000
+00000000000000188FEFFEFE40001A8200001BC000000000
+00000000000000009FEFFFFEA501217BB841CF3000000000
+00000000000000000397BFFFFFBEC98448EE9A9C99C88700
+00000000000000000005858CBEFFEDDCCDFFEDCFFFFEFA00
+00000000000000000000035598BDDCEFFFFFFFFFB8A30000
+0000000000000000000000000355544669A9753000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<DEV2 FLASK_ORIGINAL>> White
+sprite $exclamation_triangle [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000026500000000000000000000000
+0000000000000000000009FFFE3000000000000000000000
+000000000000000000006FFFFFE000000000000000000000
+00000000000000000001EFFFFFF800000000000000000000
+00000000000000000009FFFFFFFF20000000000000000000
+0000000000000000002FFFFFFFFFA0000000000000000000
+000000000000000000BFFFFFFFFFF4000000000000000000
+000000000000000005FFFFFFFFFFFD000000000000000000
+00000000000000000DFFFFFFFFFFFF600000000000000000
+00000000000000007FFFFFFFFFFFFFE10000000000000000
+0000000000000001FFFFFFFFFFFFFFF80000000000000000
+0000000000000009FFFFFFFFFFFFFFFF2000000000000000
+000000000000003FFFFFFFFFFFFFFFFFB000000000000000
+00000000000000CFFFFFFCCCCCEFFFFFF400000000000000
+00000000000005FFFFFF8000000FFFFFFD00000000000000
+0000000000000EFFFFFF8000000FFFFFFF70000000000000
+0000000000008FFFFFFF9000001FFFFFFFF1000000000000
+000000000001FFFFFFFFA000001FFFFFFFF9000000000000
+00000000000AFFFFFFFFB000002FFFFFFFFF300000000000
+00000000003FFFFFFFFFB000003FFFFFFFFFC00000000000
+0000000000CFFFFFFFFFC000004FFFFFFFFFF50000000000
+0000000006FFFFFFFFFFD000005FFFFFFFFFFE0000000000
+000000000EFFFFFFFFFFE000006FFFFFFFFFFF7000000000
+000000008FFFFFFFFFFFF000007FFFFFFFFFFFF100000000
+00000002FFFFFFFFFFFFF000008FFFFFFFFFFFFA00000000
+0000000BFFFFFFFFFFFFF73333DFFFFFFFFFFFFF30000000
+0000004FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC0000000
+000000DFFFFFFFFFFFFFFE634AFFFFFFFFFFFFFFF5000000
+000006FFFFFFFFFFFFFFF200009FFFFFFFFFFFFFFE000000
+00001EFFFFFFFFFFFFFF8000000FFFFFFFFFFFFFFF800000
+00009FFFFFFFFFFFFFFF5000000DFFFFFFFFFFFFFFF20000
+0002FFFFFFFFFFFFFFFF7000000FFFFFFFFFFFFFFFFA0000
+000BFFFFFFFFFFFFFFFFE100007FFFFFFFFFFFFFFFFF4000
+004FFFFFFFFFFFFFFFFFFD4018FFFFFFFFFFFFFFFFFFC000
+00BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF300
+00CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF500
+00AFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200
+002FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9000
+0003BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE70000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<FA5 EXCLAMATION_TRIANGLE>> White
+
+
+rectangle "==Device\n//<size:12>[ESP32]</size>//\n\n Device capable of reading and sending temperature and acting on a message" <<container>> as Device 
+rectangle "==Service\n//<size:12>[Host]</size>//\n\n Service capable of accepting a temperature reading and sending an actionable message" <<container>> as Service 
+
+rectangle "==Device\n<size:12>[Container]</size>" <<boundary>> as esp32  {
+    rectangle "<$temperature_high>\n==Sensor\n//<size:12>[tmp36]</size>//\n\n Temperature sensor" <<component>> as sensor 
+    rectangle "<$exclamation_triangle>\n==Warning\n//<size:12>[red led]</size>//\n\n Temperature warning actuator" <<component>> as warning 
+    rectangle "<$flash>\n==Activity\n//<size:12>[blue led]</size>//\n\n Temperature sending actuator" <<component>> as activity 
+    rectangle "<$python>\n==Client\n//<size:12>[http]</size>//\n\n Reads and sends a temperature and acts on a response" <<component>> as client 
+    rectangle "<$wifi>\n==Connectivity\n//<size:12>[wifi]</size>//\n\n Network" <<component>> as connectivity 
+}
+
+rectangle "==Service\n<size:12>[Container]</size>" <<boundary>> as host  {
+    rectangle "<$flask_original>\n==Server\n//<size:12>[http]</size>//\n\n Accepts a temperature and sends a response" <<component>> as server 
+    rectangle "<$python>\n==Endpoint\n//<size:12>[request]</size>//\n\n API endpoint" <<component>> as endpoint 
+}
+
+Device - ->> connectivity : **Provides**\n//<size:12>[builtin]</size>//
+Device - ->> client : **Embeds**\n//<size:12>[MicroPython]</size>//
+Device - ->> activity : **Provides**\n//<size:12>[builtin]</size>//
+
+client - ->> connectivity : **Uses**\n//<size:12>[socket]</size>//
+client - ->> activity : **Signals**\n//<size:12>[request]</size>//
+
+client - ->> sensor : **Reads**\n//<size:12>[temperature]</size>//
+client - ->> warning : **Triggers**\n//<size:12>[on, off]</size>//
+
+Service - ->> server : **Deploys**\n//<size:12>[webserver]</size>//
+server -RIGHT->> endpoint : **Delegates**\n//<size:12>[route]</size>//
+endpoint -LEFT->> server : **Returns**\n//<size:12>[response]</size>//
+
+client - ->> server : **Sends**\n//<size:12>[endpoint, json]</size>//
+server - ->> client : **Responds**\n//<size:12>[json]</size>//
+
+hide stereotype
+legend right
+<#00000000,#00000000>|<color:#000000>**Legend**</color> |
+|<#438DD5><color:#3C7FC0> <U+25AF></color> <color:#FFFFFF> container </color> |
+|<#85BBF0><color:#78A8D8> <U+25AF></color> <color:#000000> component </color> |
+endlegend
+@enduml
+
+PlantUML version 1.2022.3beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

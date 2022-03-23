@@ -1,0 +1,15 @@
+@startuml c4_iot_context
+!theme cerulean-outline
+!include <C4/C4_Context>
+
+'title System Context diagram for Temperature Reader
+
+Person(Integrator, "Integrator", "IoT Developer")
+
+System(Temperature_Reader, "Temperature Reader", "A system for reading temperature and triggering a visual warning if a certain treshold was exceeded.")
+
+Rel(Integrator, Temperature_Reader, "Uses")
+
+SHOW_LEGEND()
+
+@enduml
