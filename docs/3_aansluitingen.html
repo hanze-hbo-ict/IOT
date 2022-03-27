@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Aansluitingen &#8212; Workshop Internet of Things</title>
+    <title>3. Aansluitingen &#8212; Internet of Things</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -86,7 +86,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../_static/logo_iot.svg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Workshop Internet of Things</h1>
+      <h1 class="site-logo" id="site-title">Internet of Things</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -297,30 +297,30 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="aansluitingen">
 <h1><span class="section-number">3. </span>Aansluitingen<a class="headerlink" href="#aansluitingen" title="Permalink naar deze titel">¶</a></h1>
-<p>Tot nu toe heb je alleen nog maar met een interne pin gewerkt (waar een blauwe led op is aangesloten), in het volgende ga je de externe pins gebruiken om apparaten op aan te sluiten.</p>
+<p>Tot nu toe heb je alleen nog maar met een interne pin gewerkt (waar een blauwe LED op is aangesloten), in het volgende ga je de externe pins gebruiken om apparaten op aan te sluiten.</p>
 <div class="section" id="sensoren-en-actuatoren">
 <h2><span class="section-number">3.1. </span>Sensoren en actuatoren<a class="headerlink" href="#sensoren-en-actuatoren" title="Permalink naar deze titel">¶</a></h2>
-<p>Wat je kan aansluiten valt uiteen in twee categoriën, <em>sensoren</em> en <em>actuatoren</em>. Een sensor (van het Engelse woord <em>sense</em>) kan je zien als een zintuig, iets dat waarneemt. Voorbeelden zijn een bewegingssensor of een temperatuursensor, de laatste ga je in deze workshop gebruiken.</p>
-<p>Een sensor neemt waar, maar handelt niet, daar is een actuator (van het Engelse woord <em>act</em>) voor nodig. Een actuator is met andere woorden een apparaat dat dingen doet of in actie zet. Voorbeelden zijn een elektromotor of andere apparaten waar spanning op wordt gezet zoals een lamp. In dit onderdeel ga je een led als actuator aansluiten.</p>
+<p>Wat je op het bord kan aansluiten valt uiteen in twee categoriën, <em>sensoren</em> en <em>actuatoren</em>. Een sensor (van het Engelse woord <em>sense</em>) kan je zien als een zintuig, iets dat waarneemt. Voorbeelden zijn een bewegingssensor of een temperatuursensor, de laatste ga je in deze workshop gebruiken.</p>
+<p>Een sensor neemt waar, maar handelt niet, daar is een actuator (van het Engelse woord <em>act</em>) voor nodig. Een actuator is met andere woorden een apparaat dat dingen doet of in actie zet. Voorbeelden zijn een elektromotor of andere apparaten waar spanning op wordt gezet zoals een lamp. In dit onderdeel ga je een LED als actuator aansluiten.</p>
 </div>
 <div class="section" id="schakelingen-ontwerpen">
 <h2><span class="section-number">3.2. </span>Schakelingen ontwerpen<a class="headerlink" href="#schakelingen-ontwerpen" title="Permalink naar deze titel">¶</a></h2>
 <p>Als een elektronische schakeling wordt opgebouwd dan is daar normaal gesproken een printplaat voor ontworpen. Op zo’n printplaat hebben alle onderdelen een aangewezen plek waar ze moeten worden gemonteerd.</p>
 <p>Het ontwerpen van een printplaat gebeurt alleen als er veel identieke elektronische circuits moeten worden opgebouwd en ook alleen als het zeker is dat het ontwerp correct is.</p>
-<p>In deze workshop ga je geen printplaat ontwerpen, maar ga je gebruik maken van een <em>breadboard</em>, zie figuur <a class="reference internal" href="#breadboard"><span class="std std-numref">Fig. 3.1</span></a> voor het flexibel plaatsen van de ESP32 microcontroller en het aansluiten van een sensor en actuator.</p>
+<p>In deze workshop ga je geen printplaat ontwerpen, maar ga je gebruik maken van een <em>breadboard</em> (zie figuur <a class="reference internal" href="#breadboard"><span class="std std-numref">Fig. 3.1</span></a>) voor het flexibel plaatsen van de ESP32 microcontroller en het aansluiten van een sensor en actuator.</p>
 <div class="figure align-default" id="breadboard">
 <img alt="../_images/breadboard_half.png" src="../_images/breadboard_half.png" />
 <p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Een half-size <em>breadboard</em></span><a class="headerlink" href="#breadboard" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
-<p>Je ziet veel gaatjes waar pinnen en draden in kunnen worden gestoken, maar aan de buitenkant zie je niet zien hoe de contacten lopen. De contacten worden gevormd door metalen strips die de gaatjes onderling verbinden per rij. In figuur <a class="reference internal" href="#breadboard"><span class="std std-numref">Fig. 3.1</span></a> zie je een aantal van deze strips aangegeven met rode lijnen.</p>
-<p>De buitenste gaatjes zijn <em>horizontaal</em> met elkaar vebonden en de binnenste gaatjes zijn <em>verticaal</em> met elkaar verbonden. Je ziet ook dat de binnenste gaatjes verdeeld zijn over twee vlakken en worden gescheiden door een “ravijn”.</p>
+<p>Je ziet op een breadboard veel gaatjes waar pinnen en draden in kunnen worden gestoken, maar aan de buitenkant zie je niet zien hoe de contacten lopen. De contacten worden gevormd door metalen strips die de gaatjes onderling verbinden per rij, in figuur <a class="reference internal" href="#breadboard"><span class="std std-numref">Fig. 3.1</span></a> zie je een aantal van deze strips waar de <em>richting</em> van de verbinding van de rijen zijn aangegeven met rode lijnen.</p>
+<p>De buitenste gaatjes zijn <em>horizontaal</em> met elkaar vebonden en de binnenste gaatjes zijn <em>verticaal</em> met elkaar verbonden. Je ziet ook dat de binnenste gaatjes verdeeld zijn over twee vlakken die worden gescheiden door een “ravijn”.</p>
 <div class="section" id="esp32-plaatsen">
 <h3><span class="section-number">3.2.1. </span>ESP32 plaatsen<a class="headerlink" href="#esp32-plaatsen" title="Permalink naar deze titel">¶</a></h3>
 <div class="figure align-default" id="esp32-placement">
 <img alt="../_images/esp32_step_0_bb.png" src="../_images/esp32_step_0_bb.png" />
 <p class="caption"><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Plaatsing van de ESP32</span><a class="headerlink" href="#esp32-placement" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
-<p>Plaats nu de ESP32 op het breadboard zoals aangegeven in <a class="reference internal" href="#esp32-placement"><span class="std std-numref">Fig. 3.2</span></a>, het zal wat lichte druk nodig hebben om de pins in de gaatjes te laten vallen. Je mag de ESP32 ook anders plaatsen, in ons voorbeeld proberen we zoveel mogelijk ruimte aan de linkerkant van het board over te houden omdat daar een sensor en actuator moet worden bijgeplaatst. Zorg er in ieder geval voor dat de 2 pinnen-rijen aan verschillende zijde van het ravijn zitten.</p>
+<p>Plaats nu de ESP32 op het breadboard zoals aangegeven in <a class="reference internal" href="#esp32-placement"><span class="std std-numref">Fig. 3.2</span></a>, het zal wat lichte druk nodig hebben om de pins in de gaatjes te laten vallen. Je mag de ESP32 ook anders plaatsen, in ons voorbeeld proberen we zoveel mogelijk ruimte aan de rechterkant van het board over te houden omdat daar een sensor en actuator moeten worden bijgeplaatst. Zorg er in ieder geval voor dat de twee pin-rijen aan verschillende zijden van het ravijn zitten.</p>
 </div>
 <div class="section" id="aarding-aansluiten">
 <h3><span class="section-number">3.2.2. </span>Aarding aansluiten<a class="headerlink" href="#aarding-aansluiten" title="Permalink naar deze titel">¶</a></h3>
@@ -329,44 +329,44 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="caption"><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Aansluiten van aarding</span><a class="headerlink" href="#ground-connect" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
 <p>Een eerstvolgende stap in het ontwerp is de aarding aanleggen (de <span class="math notranslate nohighlight">\(-\)</span> aansluiting) en dit doe je door met een (korte) kabel de pin GND (<em>ground</em>) aan te sluiten op het board. In figuur <a class="reference internal" href="#ground-connect"><span class="std std-numref">Fig. 3.3</span></a> zie je dat daar de bovenste rij voor is gekozen, en je ziet dat horizontaal de rij nu verbonden is (de rij gaatjes is met groen aangegeven).</p>
-<p>Dit tot zover de eerste voorbereiding, je gaat nu een led aansluiten op dit circuit.</p>
+<p>Dit tot zover de eerste voorbereiding, je gaat nu een LED aansluiten op dit circuit.</p>
 </div>
 </div>
 <div class="section" id="een-led-ansluiten">
 <h2><span class="section-number">3.3. </span>Een LED ansluiten<a class="headerlink" href="#een-led-ansluiten" title="Permalink naar deze titel">¶</a></h2>
-<p>De basis heb je nu gereed, nu ga je een led aansluiten en het circuit verder compleet maken.</p>
+<p>De basis is gereed, nu ga je een LED aansluiten en het circuit verder compleet maken.</p>
 <div class="figure align-default" id="red-led">
 <img alt="../_images/red_led.png" src="../_images/red_led.png" />
 <p class="caption"><span class="caption-number">Fig. 3.4 </span><span class="caption-text">Een LED diode</span><a class="headerlink" href="#red-led" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
-<p>Een led heeft twee pinnen en als je goed kijkt zie je dat één langer is dan de ander en dit heeft een reden. Op de <strong>lange</strong> kant wordt spanning aangesloten (<span class="math notranslate nohighlight">\(+\)</span>) en op de <strong>korte</strong> kant de aarding (<span class="math notranslate nohighlight">\(-\)</span>).</p>
+<p>Een LED heeft twee pinnen en als je goed kijkt zie je dat één langer is dan de ander en dit heeft een reden. Op de <strong>lange</strong> kant wordt spanning aangesloten (<span class="math notranslate nohighlight">\(+\)</span>) en op de <strong>korte</strong> kant de aarding (<span class="math notranslate nohighlight">\(-\)</span>).</p>
 <div class="figure align-default" id="led-connect">
 <img alt="../_images/esp32_step_2_bb.png" src="../_images/esp32_step_2_bb.png" />
 <p class="caption"><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Een LED aansluiten</span><a class="headerlink" href="#led-connect" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
-<p>Plaats nu een led op het board, bijvoorbeeld zoals in figuur <a class="reference internal" href="#led-connect"><span class="std std-numref">Fig. 3.5</span></a>. Je ziet in deze figuur nu ook dat verticaal twee rijen groen oplichten om aan te geven dat deze gaatjes met elkaar in contact staan.</p>
+<p>Plaats nu een LED op het board, bijvoorbeeld zoals in figuur <a class="reference internal" href="#led-connect"><span class="std std-numref">Fig. 3.5</span></a>. Je ziet in deze figuur nu ook dat verticaal twee rijen groen oplichten om aan te geven dat deze gaatjes met elkaar in verbinding staan.</p>
 <div class="figure align-default" id="ground-led">
 <img alt="../_images/esp32_step_3_bb.png" src="../_images/esp32_step_3_bb.png" />
 <p class="caption"><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Een LED aansluiten op aarding</span><a class="headerlink" href="#ground-led" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
-<p>Een volgende stap is om de led aan te sluiten op de aarding, verbind met een kabel de horizontale aarding die je eerder hebt aangelegd met de korte kant van de led, zie figuur <a class="reference internal" href="#ground-led"><span class="std std-numref">Fig. 3.6</span></a>.</p>
+<p>Een volgende stap is om de LED aan te sluiten op de aarding, verbind met een kabel de horizontale aarding die je eerder hebt aangelegd met de korte kant van de led, zie figuur <a class="reference internal" href="#ground-led"><span class="std std-numref">Fig. 3.6</span></a>.</p>
 <div class="figure align-default" id="led-resistor">
 <img alt="../_images/esp32_step_4_bb.png" src="../_images/esp32_step_4_bb.png" />
 <p class="caption"><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Een weerstand plaatsen</span><a class="headerlink" href="#led-resistor" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
 <p>LED’s hebben weerstanden nodig om de stroom die er doorheen gaat te beperken zodat ze niet beschadigd raken. Elke LED heeft een stroomsterkte die niet mag worden overschreden en weerstanden hebben de mogelijkheid de stroom te beperken tot onder de maximaal toegestane stroom voor de LED.</p>
-<p>Plaats nu een weerstand op het bord zoals aangegeven in figuur <a class="reference internal" href="#led-resistor"><span class="std std-numref">Fig. 3.7</span></a>. Je kunt elke weerstandswaarde tussen 220 Ω en 500 Ω gebruiken, en de LED zal helder zijn.</p>
+<p>Plaats nu een weerstand op het bord zoals aangegeven in figuur <a class="reference internal" href="#led-resistor"><span class="std std-numref">Fig. 3.7</span></a>. Je kunt elke weerstandswaarde tussen 220 Ω en 500 Ω gebruiken, en de LED zal helder oplichten.</p>
 <div class="admonition attention">
 <p class="admonition-title">Let op</p>
 <p>Weerstanden hebben kleurcodes die de weerstandswaarde in Ω (Ohm) aangeven. Gebruik bijvoorbeeld <a class="reference external" href="https://resistorcolorcodecalc.com/">https://resistorcolorcodecalc.com</a> om te bepalen welke weerstand je nodig hebt.</p>
-<p>In figuur <a class="reference internal" href="#led-resistor"><span class="std std-numref">Fig. 3.7</span></a> zie je dat de kleurcode rood-rood-bruin wordt gebruikt en gelijk staat aan 220 Ω.</p>
+<p>In figuur <a class="reference internal" href="#led-resistor"><span class="std std-numref">Fig. 3.7</span></a> zie je dat de kleurcode rood-rood-bruin wordt gebruikt wat gelijk staat aan 220 Ω.</p>
 </div>
 <p>Het circuit is nu bijna compleet, de weerstand zal nog moeten worden aangesloten op een pin van de ESP32 die stroom kan leveren, maar welke pin?</p>
 <div class="figure align-default" id="pinout-diagram">
 <img alt="../_images/esp32_devkit_v1_pins.png" src="../_images/esp32_devkit_v1_pins.png" />
 <p class="caption"><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Pinout diagram ESP32</span><a class="headerlink" href="#pinout-diagram" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
-<p>De ESP32 biedt heel véél aansluitingsmogelijkheden en sommige pins kunnen ook nog eens verschillende rollen spelen. In het geval van een led waar je stroom nodig hebt zal je op zoek moeten gaan naar een van de <em>General Purpose I/O</em> (GPIO) pins. In figuur <a class="reference internal" href="#pinout-diagram"><span class="std std-numref">Fig. 3.8</span></a> vind je per pin welke mogelijkheid het biedt (<a href="../reference/ESP32-Devkit-Pinout-Rev-12.pdf">klik hier</a> voor een grotere versie).</p>
+<p>De ESP32 biedt heel véél aansluitingsmogelijkheden en sommige pins kunnen ook nog eens verschillende rollen spelen. In het geval van een LED waar je stroom nodig hebt zal je op zoek moeten gaan naar een van de <em>General Purpose I/O</em> (GPIO) pins. In figuur <a class="reference internal" href="#pinout-diagram"><span class="std std-numref">Fig. 3.8</span></a> vind je per pin welke mogelijkheid het biedt (<a href="../reference/ESP32-Devkit-Pinout-Rev-12.pdf">klik hier</a> voor een grotere versie).</p>
 <div class="figure align-default" id="power-led">
 <img alt="../_images/esp32_step_5_bb.png" src="../_images/esp32_step_5_bb.png" />
 <p class="caption"><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Aansluiten op een GPIO pin</span><a class="headerlink" href="#power-led" title="Permallink naar deze afbeelding">¶</a></p>
@@ -378,7 +378,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="micropython">
 <h3><span class="section-number">3.3.1. </span>MicroPython<a class="headerlink" href="#micropython" title="Permalink naar deze titel">¶</a></h3>
-<p>Hoe kan je nu controleren of jouw circuit met led werkt? Wat je in de bovenstande stappen hebt gedaan is precies hetzelfde hoe de interne pin met de blauwe led is opgebouwd, en dat betekent dat je in de code die je eerder hebt geschreven maar één waarde hoeft aan te passen, namelijk het pinnummer:</p>
+<p>Hoe kan je nu controleren of jouw circuit met LED werkt? Wat je in de bovenstande stappen hebt gedaan is precies dezelfde manier hoe de interne pin met de blauwe LED is opgebouwd. Dit betekent dat je in de code die je eerder hebt geschreven maar één waarde hoeft aan te passen, namelijk het pinnummer:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
 <span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
 
@@ -391,7 +391,7 @@ const thebe_selector_output = ".output, .cell_output"
     <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Pas <code class="docutils literal notranslate"><span class="pre">main.py</span></code> met deze wijziging aan en plaats het met <code class="docutils literal notranslate"><span class="pre">ampy</span> <span class="pre">put</span></code> op het bord. In plaats van de ingebouwde blauwe led zal nu jouw zojuist aangesloten led 5 keer gaan knipperen.</p>
+<p>Pas <code class="docutils literal notranslate"><span class="pre">main.py</span></code> met deze wijziging aan en plaats het met <code class="docutils literal notranslate"><span class="pre">ampy</span> <span class="pre">put</span></code> op het bord. In plaats van de ingebouwde blauwe LED zal nu jouw zojuist aangesloten LED 5 keer gaan knipperen.</p>
 <p>In de volgende stap ga je dit ontwerp uitbreiden met een temperatuursensor.</p>
 </div>
 </div>

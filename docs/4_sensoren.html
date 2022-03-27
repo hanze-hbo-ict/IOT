@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Sensoren &#8212; Workshop Internet of Things</title>
+    <title>4. Sensoren &#8212; Internet of Things</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -86,7 +86,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../_static/logo_iot.svg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Workshop Internet of Things</h1>
+      <h1 class="site-logo" id="site-title">Internet of Things</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -204,13 +204,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#temperatuursensor-plaatsen">
-   4.2. Temperatuursensor plaatsen
+  <a class="reference internal nav-link" href="#temperatuursensor">
+   4.2. Temperatuursensor
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#temperatuur">
-   4.3. Temperatuur
+  <a class="reference internal nav-link" href="#temperatuur-meten">
+   4.3. Temperatuur meten
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -246,13 +246,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#temperatuursensor-plaatsen">
-   4.2. Temperatuursensor plaatsen
+  <a class="reference internal nav-link" href="#temperatuursensor">
+   4.2. Temperatuursensor
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#temperatuur">
-   4.3. Temperatuur
+  <a class="reference internal nav-link" href="#temperatuur-meten">
+   4.3. Temperatuur meten
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -276,20 +276,20 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Sensoren komen in allerlei soorten en maten, bekend zijn beweging-, licht- en temperatuursensoren. In dit onderdeel ga je het ontwerp uitbreiden met een temperatuursensor.</p>
 <div class="section" id="voorbereiding">
 <h2><span class="section-number">4.1. </span>Voorbereiding<a class="headerlink" href="#voorbereiding" title="Permalink naar deze titel">¶</a></h2>
-<p>In tegenstelling tot een led die aangesloten werd op een GPIO-pin (die aan- en uit kon worden gezet) is een continue stroomtoevoer voor een sensor een betere keus. Rechtsonder op het bord zie je een <strong>3V3</strong> pin die deze stroomtoevoer biedt (zie ook figuur <a class="reference internal" href="2_micro_python.html#esp32-devkit"><span class="std std-numref">Fig. 2.2</span></a> voor meer detail).</p>
+<p>In tegenstelling tot een LED die aangesloten werd op een GPIO-pin (die aan- en uit kon worden gezet) is een continue stroomtoevoer voor een sensor een betere keus. Rechtsonder op het bord zie je een <strong>3V3</strong> pin die deze stroomtoevoer biedt (zie ook figuur <a class="reference internal" href="2_micro_python.html#esp32-devkit"><span class="std std-numref">Fig. 2.2</span></a> voor meer detail).</p>
 <div class="figure align-default" id="v3-connect">
 <img alt="../_images/esp32_step_6_bb.png" src="../_images/esp32_step_6_bb.png" />
 <p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">3V3 pin aansluiten</span><a class="headerlink" href="#v3-connect" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
 <p>Het begint op het breadboard al aardig druk te worden met een led, kabels en een weerstand. De 3V3 pin bevindt zich aan de onderkant van het ravijn, we kiezen er voor om deze pin aan te sluiten op de onderste verticale strip, zie figuur <a class="reference internal" href="#v3-connect"><span class="std std-numref">Fig. 4.1</span></a>. Je zal hier de ESP32 even van het board moeten halen om de kabel te plaatsen, zorg er voor dat je een gaatje recht boven de 3V3 pin gebruikt zodat pin en kabel verticaal op de strip zijn aangesloten.</p>
 </div>
-<div class="section" id="temperatuursensor-plaatsen">
-<h2><span class="section-number">4.2. </span>Temperatuursensor plaatsen<a class="headerlink" href="#temperatuursensor-plaatsen" title="Permalink naar deze titel">¶</a></h2>
-<div class="figure align-default" id="red-led">
+<div class="section" id="temperatuursensor">
+<h2><span class="section-number">4.2. </span>Temperatuursensor<a class="headerlink" href="#temperatuursensor" title="Permalink naar deze titel">¶</a></h2>
+<div class="figure align-default" id="tmp36-sensor">
 <img alt="../_images/tmp36.png" src="../_images/tmp36.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">tmp36 temperatuursensor</span><a class="headerlink" href="#red-led" title="Permallink naar deze afbeelding">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">tmp36 temperatuursensor</span><a class="headerlink" href="#tmp36-sensor" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
-<p>De tmp36 sensor heeft 3 aansluitingen, als je de kant met het label voor je houdt is <strong>links</strong> is de input (stroom in <span class="math notranslate nohighlight">\(+\)</span>), <strong>midden</strong> is <em>analoge output</em> en <strong>rechts</strong> is aarding (stroom uit <span class="math notranslate nohighlight">\(-\)</span>).</p>
+<p>De tmp36 temperatuursensor heeft 3 aansluitingen, als je de kant met het label voor je houdt is <strong>links</strong> is de input (stroom in <span class="math notranslate nohighlight">\(+\)</span>), <strong>midden</strong> is <em>analoge output</em> en <strong>rechts</strong> is aarding (stroom uit <span class="math notranslate nohighlight">\(-\)</span>).</p>
 <div class="figure align-default" id="tmp36-in-out">
 <img alt="../_images/esp32_step_7_bb.png" src="../_images/esp32_step_7_bb.png" />
 <p class="caption"><span class="caption-number">Fig. 4.3 </span><span class="caption-text">temp36 in- en output</span><a class="headerlink" href="#tmp36-in-out" title="Permallink naar deze afbeelding">¶</a></p>
@@ -299,10 +299,10 @@ const thebe_selector_output = ".output, .cell_output"
 <img alt="../_images/esp32_step_8_bb.png" src="../_images/esp32_step_8_bb.png" />
 <p class="caption"><span class="caption-number">Fig. 4.4 </span><span class="caption-text">temp36 analoge output</span><a class="headerlink" href="#tmp36-analog-out" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
-<p>Voor de middelste aansluiting, de analoge output, zal ook net als bij de led weer een keus moeten worden gemaakt welke pin te gebruiken. Wij hebben hier gekozen voor GPIO-pin nummer 34, zie figuur <a class="reference internal" href="#tmp36-analog-out"><span class="std std-numref">Fig. 4.4</span></a>.</p>
+<p>Voor de middelste aansluiting, de analoge output, zal ook net als bij de LED weer een keus moeten worden gemaakt welke pin te gebruiken. Wij hebben hier gekozen voor GPIO-pin nummer 34, zie figuur <a class="reference internal" href="#tmp36-analog-out"><span class="std std-numref">Fig. 4.4</span></a>.</p>
 </div>
-<div class="section" id="temperatuur">
-<h2><span class="section-number">4.3. </span>Temperatuur<a class="headerlink" href="#temperatuur" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="temperatuur-meten">
+<h2><span class="section-number">4.3. </span>Temperatuur meten<a class="headerlink" href="#temperatuur-meten" title="Permalink naar deze titel">¶</a></h2>
 <p>De ESP32 zal op de pin analoge <em>input</em> ontvangen van de temperatuursensor, en je zal deze <em>analoge</em> waarde moeten converteren naar een <em>digitale</em> representatie die je uiteindelijk kan gebruiken voor het bepalen van de temperatuur in graden celsius.</p>
 <p>Laten we dit stap voor stap doen, het is aan te raden om dit met MicroPython REPL uit te voeren. Later kan je deze stappen in jouw code overnemen.</p>
 <div class="section" id="analoog-naar-digitaal">
@@ -322,7 +322,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>De klasse <code class="docutils literal notranslate"><span class="pre">ADC</span></code> heeft een methode <a class="reference external" href="https://docs.micropython.org/en/latest/library/machine.ADC.html#machine.ADC.read_u16"><code class="docutils literal notranslate"><span class="pre">read_u16</span></code></a> en deze zal een 16-bit waarde teruggeven op basis van de analoge input die het van de pin (sensor) ontvangt.</p>
 <div class="admonition attention">
 <p class="admonition-title">Let op</p>
-<p>De nieuwere methode <code class="docutils literal notranslate"><span class="pre">ADC.read_u16</span></code> biedt een meer uniforme aanpak voor het uitvoeren van analoge lezingen waarbij een waarde tussen 0 en 65535 wordt teruggegeven. MicroPython beveelt deze nieuwe methode aan in plaats van de methode <code class="docutils literal notranslate"><span class="pre">ADC.read</span></code> die je in veel tutorials nog gebruikt ziet worden.</p>
+<p>De nieuwere methode <code class="docutils literal notranslate"><span class="pre">ADC.read_u16</span></code> biedt een meer uniforme benadering voor het uitvoeren van analoge lezingen waarbij een waarde tussen 0 en 65535 wordt teruggegeven. MicroPython beveelt deze nieuwe methode aan in plaats van de methode <code class="docutils literal notranslate"><span class="pre">ADC.read</span></code> die je in veel tutorials nog gebruikt ziet worden.</p>
 </div>
 <p>De vraag is nu waar deze waarde voor staat, het kan tussen de 0 en 65535 liggen. Het geeft een verhouding aan tot iets, maar tot wat? Dit blijkt het <a class="reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html#adc-calibration"><em>ADC reference voltage</em></a> (Vref) te zijn, een gekalibreerd voltage, in het geval van de ESP32 is dit 1100 mV (millivolt).</p>
 <p>Definiëer nu dit verhoudingsgetal en vermenigvuldig het met de 16-bit waarde en bewaar het resultaat.</p>
@@ -331,7 +331,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">v_out</span> <span class="o">=</span> <span class="n">adc</span><span class="o">.</span><span class="n">read_u16</span><span class="p">()</span> <span class="o">*</span> <span class="n">prop</span>
 </pre></div>
 </div>
-<p>Het resultaat <code class="docutils literal notranslate"><span class="pre">v_out</span></code> is een waarde in millivolt en de vraag is nu hoe dit voltage kan worden omgezet naar een temperatuur. Dit kan worden beantwoord met behulp van de tmp36 technische <a class="reference external" href="https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf">documentatie</a>.</p>
+<p>Het resultaat <code class="docutils literal notranslate"><span class="pre">v_out</span></code> is een waarde in millivolt en de vraag is nu hoe dit voltage kan worden omgezet naar een temperatuur. Dit kan worden beantwoord met behulp van de tmp36 <a class="reference external" href="https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf">documentatie</a>.</p>
 <div class="figure align-default" id="tmp36-voltage-temp">
 <img alt="../_images/tmp36_output_temperature.png" src="../_images/tmp36_output_temperature.png" />
 <p class="caption"><span class="caption-number">Fig. 4.5 </span><span class="caption-text">Relatie output voltage en temperatuur</span><a class="headerlink" href="#tmp36-voltage-temp" title="Permallink naar deze afbeelding">¶</a></p>

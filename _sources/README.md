@@ -1,3 +1,0 @@
-# IOT
-
-IOT Workshop.

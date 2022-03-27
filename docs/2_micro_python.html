@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. MicroPython &#8212; Workshop Internet of Things</title>
+    <title>2. MicroPython &#8212; Internet of Things</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -84,7 +84,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../_static/logo_iot.svg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Workshop Internet of Things</h1>
+      <h1 class="site-logo" id="site-title">Internet of Things</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -337,13 +337,13 @@ const thebe_selector_output = ".output, .cell_output"
 <h1><span class="section-number">2. </span>MicroPython<a class="headerlink" href="#micropython" title="Permalink naar deze titel">¶</a></h1>
 <div class="section" id="connectiviteit">
 <h2><span class="section-number">2.1. </span>Connectiviteit<a class="headerlink" href="#connectiviteit" title="Permalink naar deze titel">¶</a></h2>
-<p>Sluit de ESP32 aan op de micro USB poort, je zal een rode led zien branden. In de vorige stap heb je gezien hoe je de seriële poortnaam op jouw systeem kan bepalen, deze zal je nu ook nodig hebben om te kunnen communiceren met het bord.</p>
+<p>Sluit de ESP32 aan op de micro USB poort, je zal een rode LED zien branden. In de vorige stap heb je gezien hoe je de seriële poortnaam op jouw systeem kan bepalen, deze zal je nu ook nodig hebben om te kunnen communiceren met het bord.</p>
 <p>Net als met Python op jouw systeem kan je MicroPython op twee manieren gebruiken:</p>
 <ul class="simple">
 <li><p>code in een bestand uitvoeren</p></li>
 <li><p>interactief code uitvoeren</p></li>
 </ul>
-<p>Bij de eerste manier schrijf je de code voor jouw programma in een bestand en laat je het vervolgens uitvoeren. Dit is wat je straks gaat doen om bijvoorbeeld een led te bedienen of een sensor op het bord uit te lezen.</p>
+<p>Bij de eerste manier schrijf je de code voor jouw programma in een bestand en laat je het vervolgens uitvoeren. Dit is wat je straks gaat doen om bijvoorbeeld een LED te bedienen of een sensor op het bord uit te lezen.</p>
 <p>De tweede manier is wat je kent van bijvoorbeeld IPython, een interactieve Python prompt (REPL) en daar ga je nu eerst kennis mee maken.</p>
 <div class="section" id="seriele-connectie">
 <h3><span class="section-number">2.1.1. </span>Seriële connectie<a class="headerlink" href="#seriele-connectie" title="Permalink naar deze titel">¶</a></h3>
@@ -368,12 +368,12 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="id1">
 <h2><span class="section-number">2.2. </span>MicroPython<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h2>
 <p>Zoals eerder is gezegd, MicroPython heeft een aantal modulen die heel specifiek zijn voor een microcontroller als de ESP32, onder andere voor het kunnen gebruiken van de pins. Twee van deze pins zijn <em>intern</em> aangesloten, dat wil zeggen dat je ze niet een fysieke pin hebben op het bord.</p>
-<p>Met de eerste interne pin heb je al kennisgemaakt, dit is waar de <em>rode</em> led op aangesloten is (en gaat branden zodra je het bord aansluit). Op de tweede interne pin is een <em>blauwe</em> led aangesloten (tegenover de rode led, zie figuur <a class="reference internal" href="#esp32-devkit"><span class="std std-numref">Fig. 2.2</span></a>).</p>
+<p>Met de eerste interne pin heb je al kennisgemaakt, dit is waar de <em>rode</em> LED op aangesloten is (en gaat branden zodra je het bord aansluit). Op de tweede interne pin is een <em>blauwe</em> LED aangesloten (tegenover de rode led, zie figuur <a class="reference internal" href="#esp32-devkit"><span class="std std-numref">Fig. 2.2</span></a>).</p>
 <div class="figure align-default" id="esp32-devkit">
 <img alt="../_images/esp32.png" src="../_images/esp32.png" />
 <p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">ESP32 Devkit V1</span><a class="headerlink" href="#esp32-devkit" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
-<p>Standaard staat deze blauwe led uit, in de volgende stap ga je deze led aan- en uitzetten.</p>
+<p>Standaard staat deze blauwe LED uit, in de volgende stap ga je deze LED aan- en uitzetten.</p>
 <div class="section" id="de-module-machine">
 <h3><span class="section-number">2.2.1. </span>De module <code class="docutils literal notranslate"><span class="pre">machine</span></code><a class="headerlink" href="#de-module-machine" title="Permalink naar deze titel">¶</a></h3>
 <p>De MicroPython module <a class="reference external" href="https://docs.micropython.org/en/v1.9.3/wipy/library/machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code></a> bevat functies en klassen voor toegang tot de hardware, onder andere de klasse <a class="reference external" href="https://docs.micropython.org/en/v1.9.3/wipy/library/machine.Pin.html"><code class="docutils literal notranslate"><span class="pre">Pin</span></code></a> die alles te maken heeft met het kunnen gebruiken van de pins op het bord.</p>
@@ -383,11 +383,11 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 <p>en maak als volgt een nieuwe instantie aan van deze klasse die je <code class="docutils literal notranslate"><span class="pre">led</span></code> noemt:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; led = Pin(2, Pin.OUT)
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; LED = Pin(2, Pin.OUT)
 </pre></div>
 </div>
-<p>De interne pin waar de blauwe led op is aangesloten heeft nummer 2, en dit is het eerste argument dat je hier ziet. Het tweede argument betreft de <em>modus</em> van de pin, in dit geval <code class="docutils literal notranslate"><span class="pre">Pin.OUT</span></code> waarmee de pin wordt geconfigureerd voor output (stroom uit). Later zal je ook <code class="docutils literal notranslate"><span class="pre">Pin.IN</span></code> gebruiken voor invoer (stroom in), bijvoorbeeld als op een pin een sensor wordt aangesloten.</p>
-<p>Zet nu als volgt de blauwe led aan</p>
+<p>De interne pin waar de blauwe LED op is aangesloten heeft nummer 2, en dit is het eerste argument dat je hier ziet. Het tweede argument betreft de <em>modus</em> van de pin, in dit geval <code class="docutils literal notranslate"><span class="pre">Pin.OUT</span></code> waarmee de pin wordt geconfigureerd voor output (stroom uit). Later zal je ook <code class="docutils literal notranslate"><span class="pre">Pin.IN</span></code> gebruiken voor invoer (stroom in), bijvoorbeeld als op een pin een sensor wordt aangesloten.</p>
+<p>Zet nu als volgt de blauwe LED aan</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; led.on()
 </pre></div>
 </div>
@@ -481,11 +481,11 @@ const thebe_selector_output = ".output, .cell_output"
     <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Dit eenvoudige programma zal de blauwe led op het bord 5 keer laten knipperen. Plaats dit bestand nu op het bord met het volgende commando:</p>
+<p>Dit eenvoudige programma zal de blauwe LED op het bord 5 keer laten knipperen. Plaats dit bestand nu op het bord met het volgende commando:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ampy</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span><span class="n">portname</span><span class="o">&gt;</span> <span class="n">put</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<p>Als het bestand is overgezet zal de blauwe led gaan knipperen, <code class="docutils literal notranslate"><span class="pre">main.py</span></code> is uitgevoerd! Het bord heeft ook twee knoppen, EN en BOOT, zie figuur  <a class="reference internal" href="#esp32-devkit"><span class="std std-numref">Fig. 2.2</span></a>. BOOT zal het bord opnieuw opstarten, en daarmee opnieuw <code class="docutils literal notranslate"><span class="pre">main.py</span></code> uitvoeren.</p>
+<p>Als het bestand is overgezet zal de blauwe LED gaan knipperen, <code class="docutils literal notranslate"><span class="pre">main.py</span></code> is uitgevoerd! Het bord heeft ook twee knoppen, EN en BOOT, zie figuur  <a class="reference internal" href="#esp32-devkit"><span class="std std-numref">Fig. 2.2</span></a>. BOOT zal het bord opnieuw opstarten, en daarmee opnieuw <code class="docutils literal notranslate"><span class="pre">main.py</span></code> uitvoeren.</p>
 </div>
 </div>
 <div class="section" id="debuggen">

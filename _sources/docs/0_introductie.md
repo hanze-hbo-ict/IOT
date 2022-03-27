@@ -14,7 +14,7 @@ In het bijzonder zal je gaan kennismaken met de [ESP32](https://www.espressif.co
 
 In deze workshop ga je het volgende doen:
 
--   De ESP32 leren kennen
+-   De ESP32 microcontroller leren kennen
 -   Een LED aansluiten
 -   Een temperatuursensor aansluiten
 -   Een programma schrijven voor
