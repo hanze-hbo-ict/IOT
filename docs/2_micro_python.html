@@ -383,7 +383,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 <p>en maak als volgt een nieuwe instantie aan van deze klasse die je <code class="docutils literal notranslate"><span class="pre">led</span></code> noemt:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; LED = Pin(2, Pin.OUT)
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; led = Pin(2, Pin.OUT)
 </pre></div>
 </div>
 <p>De interne pin waar de blauwe LED op is aangesloten heeft nummer 2, en dit is het eerste argument dat je hier ziet. Het tweede argument betreft de <em>modus</em> van de pin, in dit geval <code class="docutils literal notranslate"><span class="pre">Pin.OUT</span></code> waarmee de pin wordt geconfigureerd voor output (stroom uit). Later zal je ook <code class="docutils literal notranslate"><span class="pre">Pin.IN</span></code> gebruiken voor invoer (stroom in), bijvoorbeeld als op een pin een sensor wordt aangesloten.</p>
@@ -472,7 +472,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
 <span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
 
-<span class="n">led</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+ <span class="n">led</span> <span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="n">led</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>

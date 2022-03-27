@@ -67,7 +67,7 @@ Importeer nu de klasse `Pin` uit de module `machine`:
 en maak als volgt een nieuwe instantie aan van deze klasse die je `led` noemt:
 
 ```text
->>> LED = Pin(2, Pin.OUT)
+>>> led = Pin(2, Pin.OUT)
 ```
 
 De interne pin waar de blauwe LED op is aangesloten heeft nummer 2, en dit is het eerste argument dat je hier ziet. Het tweede argument betreft de *modus* van de pin, in dit geval `Pin.OUT` waarmee de pin wordt geconfigureerd voor output (stroom uit). Later zal je ook `Pin.IN` gebruiken voor invoer (stroom in), bijvoorbeeld als op een pin een sensor wordt aangesloten.
@@ -176,7 +176,7 @@ Het is nu tijd om een projectomgeving op te zetten, een directory waar je Python
 from time import sleep
 from machine import Pin
 
-led = Pin(2, Pin.OUT)
+ led =Pin(2, Pin.OUT)
 
 for _ in range(5):
     led.on()
