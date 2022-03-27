@@ -202,7 +202,7 @@ while True:
 
     # read server response
 
-    # set or unset red LED if server tells us to so
+    # set or unset red LED if server tells us to do so
 
     # sleep a little until next temperature reading
 ```
