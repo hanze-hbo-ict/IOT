@@ -52,8 +52,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
     <link rel="next" title="2. MicroPython" href="2_micro_python.html" />
@@ -400,8 +400,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Sluit het bord aan met de Micro USB kabel, deze aansluiting is zowel voor voeding als <em>seriële</em> communicatie. Een eerste test of de communicatie met het ontwikkelbord slaagt is om het aan te sluiten, waarna een <em>rode led</em> op het bord zal moeten oplichten.</p>
 <p>Voordat je de firmware kan flashen zal je eerst moeten weten op <em>welke</em> <a class="reference external" href="https://en.wikipedia.org/wiki/Serial_port">seriële poort</a> het bord is aangesloten. In het kort volgen nu instructies voor jouw besturingssysteem, meer uitgebreide informatie kan je vinden in de <a class="reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html">ESP32 documentie</a> over seriële communicatie met de microcontroller.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c99bb433-395b-4183-b3d8-ef7a7dd5650a" name="8878f3dd-8801-4408-9309-1cf7e8975725" type="radio">
-</input><label class="tabbed-label" for="c99bb433-395b-4183-b3d8-ef7a7dd5650a">
+<input checked="checked" id="c7c84cdc-4b1f-4e7e-83d7-5771ff9524a2" name="c03bffe8-bb75-493e-b1a2-3ff7b35aa9a4" type="radio">
+</input><label class="tabbed-label" for="c7c84cdc-4b1f-4e7e-83d7-5771ff9524a2">
 Windows</label><div class="tabbed-content docutils">
 <p>De meest eenvoudige manier om een overzicht van actuele seriële poortnamen op te vragen is om om op de command line het volgende twee keer uit te voeren:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>mode
@@ -434,8 +434,8 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 <p>Twijfel je over de poortnaam? Koppel het bord dan los, voer <code class="docutils literal notranslate"><span class="pre">mode</span></code> uit en noteer de huidige namen. Sluit vervolgens het bord weer aan en controleer weer met <code class="docutils literal notranslate"><span class="pre">mode</span></code> welke poortnaam is toegevoegd (dit zal jouw bord zijn).</p>
 </div>
-<input id="0f088a55-3eec-4429-9a2c-3a6afa965f2e" name="8878f3dd-8801-4408-9309-1cf7e8975725" type="radio">
-</input><label class="tabbed-label" for="0f088a55-3eec-4429-9a2c-3a6afa965f2e">
+<input id="3aa3193a-9759-43af-a28f-b41f9ade74e5" name="c03bffe8-bb75-493e-b1a2-3ff7b35aa9a4" type="radio">
+</input><label class="tabbed-label" for="3aa3193a-9759-43af-a28f-b41f9ade74e5">
 macOS / Linux</label><div class="tabbed-content docutils">
 <p>De seriële poortnaam onder Linux of macOS kan je als <em>pseudoterninal</em> device vinden in het virtuele filesystem <code class="docutils literal notranslate"><span class="pre">/dev</span></code>. Voer het volgende twee keer uit, eerst <em>zonder</em> het bord te hebben aangesloten en vervolgens mét om te zien welke poortnaam is toegevoegd:</p>
 <p><strong>Linux</strong></p>

@@ -38,7 +38,7 @@ Plaats de tmp36 op het bord en sluit de in- en output aan, zie figuur {numref}`t
 temp36 analoge output
 ```
 
-Voor de middelste aansluiting, de analoge output, zal ook net als bij de led weer een keus moeten worden gemaakt welke pin te gebruiken. We hebben hier gekozen voor GPIO-pin nummer 34, zie figuur {numref}`tmp36-analog-out`.
+Voor de middelste aansluiting, de analoge output, zal ook net als bij de led weer een keus moeten worden gemaakt welke pin te gebruiken. Wij hebben hier gekozen voor GPIO-pin nummer 34, zie figuur {numref}`tmp36-analog-out`.
 
 ## Temperatuur
 
@@ -48,7 +48,7 @@ Laten we dit stap voor stap doen, het is aan te raden om dit met MicroPython REP
 
 ### Analoog naar digitaal
 
-Om te beginnen zal ook hier weer de klasse `Pin` gebrukt moeten worden én de klasse [`ADC`](https://docs.micropython.org/en/latest/library/machine.ADC.html) uit de module `machine` voor de analoog naar digitale conversie.
+Om te beginnen zal je ook hier weer de klasse `Pin` moeten gebruiken én de klasse [`ADC`](https://docs.micropython.org/en/latest/library/machine.ADC.html) uit de module `machine` voor de analoog naar digitale conversie.
 
 ```python
 from machine import Pin, ADC
@@ -63,18 +63,18 @@ tmp36 = Pin(34, Pin.IN)
 Maak een instantie van de klasse `ADC` aan en noem deze bijvoorbeeld `adc`. De klasse accepteert als argument een `Pin` instantie.
 
 ```python
-adc = machine.ADC(tmp36)
+adc = ADC(tmp36)
 ```
 
-De klasse `ADC` heeft een methode [`read_u16`](https://docs.micropython.org/en/latest/library/machine.ADC.html#machine.ADC.read_u16) en deze zal een 16-bit waarde teruggeven op basis van de analoge input die het van de pin (sensor) heeft ontvangen.
+De klasse `ADC` heeft een methode [`read_u16`](https://docs.micropython.org/en/latest/library/machine.ADC.html#machine.ADC.read_u16) en deze zal een 16-bit waarde teruggeven op basis van de analoge input die het van de pin (sensor) ontvangt.
 
 ```{attention}
 De nieuwere methode `ADC.read_u16` biedt een meer uniforme aanpak voor het uitvoeren van analoge lezingen waarbij een waarde tussen 0 en 65535 wordt teruggegeven. MicroPython beveelt deze nieuwe methode aan in plaats van de methode `ADC.read` die je in veel tutorials nog gebruikt ziet worden.
 ```
 
-De vraag is nu waar deze digitale waarde voor staat, het kan tussen de 0 en 65535 liggen. Het geeft een verhouding aan tot iets, maar tot wat? Dit blijkt een [*ADC reference voltage*](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html#adc-calibration) (Vref) te zijn, een gekalibreerd voltage, in het geval van de ESP32 is dit 1100 mV (millivolt).
+De vraag is nu waar deze waarde voor staat, het kan tussen de 0 en 65535 liggen. Het geeft een verhouding aan tot iets, maar tot wat? Dit blijkt het [*ADC reference voltage*](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html#adc-calibration) (Vref) te zijn, een gekalibreerd voltage, in het geval van de ESP32 is dit 1100 mV (millivolt).
 
-Definiëer nu dit verhoudingsgetal en vermenigvuldig het met de digitale 16-bit waarde en bewaar het resultaat.
+Definiëer nu dit verhoudingsgetal en vermenigvuldig het met de 16-bit waarde en bewaar het resultaat.
 
 ```python
 prop = 1100 / 65535
@@ -82,7 +82,7 @@ prop = 1100 / 65535
 v_out = adc.read_u16() * prop
 ```
 
-Het resultaat `v_out` is een waarde in millivolt en de is nu vraag hoe dit voltage kan worden omgezet naar een temperatuur. Dit kan worden beantwoord met behulp van de tmp36 technische [documentatie](https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf).
+Het resultaat `v_out` is een waarde in millivolt en de vraag is nu hoe dit voltage kan worden omgezet naar een temperatuur. Dit kan worden beantwoord met behulp van de tmp36 technische [documentatie](https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf).
 
 ```{figure} ../images/tmp36_output_temperature.png
 :name: tmp36-voltage-temp
@@ -90,13 +90,13 @@ Het resultaat `v_out` is een waarde in millivolt en de is nu vraag hoe dit volta
 Relatie output voltage en temperatuur
 ```
 
-In de documentatie is een grafiek opgenomen die de relatie voltage (in millivolt) ten opzichte van temperatuur in graden celsius aangeeft, zie figuur {numref}`tmp36-voltage-temp`. Let hier in het bijzonder op lijn *b* die het gedrag van de tmp36 weergeeft. Op basis van deze informatie blijkt dat je de onderstaande formule kan toepassen om voltage om te zetten naar temperatuur:
+In deze documentatie is een grafiek opgenomen die de relatie voltage (in millivolt) ten opzichte van temperatuur in graden celsius aangeeft, zie figuur {numref}`tmp36-voltage-temp`. Let hier in het bijzonder op lijn *b* die het gedrag van de tmp36 weergeeft. Op basis van deze informatie blijkt dat je de onderstaande formule kan toepassen om het voltage om te zetten naar temperatuur:
 
 $$
 ^oC = (V_{out} - 500) / 10
 $$
 
-De bepaling van de temperatuur is nu heel eenvoudig, wat volgt is de allerlaatste stap waar `temp` de waarde in graden celsius zal zijn.
+De bepaling van de temperatuur is nu eenvoudig, wat volgt is de allerlaatste stap waar `temp` de waarde in graden celsius zal zijn.
 
 ```python
 temp = (v_out - 500) / 10
