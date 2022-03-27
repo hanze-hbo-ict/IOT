@@ -40,7 +40,7 @@ Houd er rekening mee dat je deze stappen en alles wat verder gaat volgen met een
 
 Je gaat in deze workshop Python code schrijven voor het aansturen van de microcontroller. Later zal je een Python versie op de microcontroller installeren die speciaal voor dit type processoren geschikt is, [MicroPyhon](https://micropython.org/).
 
-MicroPython is een voor microcontrollers geoptimaliseerde versie van Python en bevat een aantal modules die heel specifiek zijn voor microcontrollers, bijvoorbeeld het kunnen gebruiken van de pinnen of WiFi. Deze zijn *niet* om jouw systeem geïnstalleerd, editors als VSCode zullen je daarom voor deze specifieke MicroPython modules geen *contextuele* hulp kunnen bieden (bijvoorbeeld functies aanvullen) want ze kennen alleen maar modules uit jouw geïnstalleerde (standaard) Python versie.
+MicroPython is een voor microcontrollers geoptimaliseerde versie van Python en bevat een aantal modules die heel specifiek zijn voor microcontrollers, bijvoorbeeld het kunnen gebruiken van de pinnen of WiFi. Deze zijn *niet* op jouw systeem geïnstalleerd, editors als VSCode zullen je daarom voor deze specifieke MicroPython modules geen *contextuele* hulp kunnen bieden (bijvoorbeeld functies aanvullen) want ze kennen alleen maar modules in jouw geïnstalleerde (standaard) Python versie.
 
 Installeer met het volgende een aparte Python package om jouw editor wél kennis te laten hebben van MicroPython specfieke modules:
 
@@ -50,12 +50,14 @@ pip install huas-micropython[all]
 
 Dit zal tegelijkertijd voor jou *twee* andere packages installeren, [`adafruit-ampy`](https://pypi.org/project/adafruit-ampy/) en [`esptool`](https://pypi.org/project/esptool/). De *eerste* heb je nodig voor het kunnen overzetten van de code die je gaat schrijven naar de microcontroller, de *tweede* is nodig voor het plaatsen van MicroPython (de *firmware*) op de microntroller en dit is de eerstvolgende stap die je gaat uitvoeren.
 
-````{note}
+````{attention}
 Het kan zijn dat je [PyCharm](https://www.jetbrains.com/pycharm/) gebruikt in combinatie met de Micropython [plugin](https://plugins.jetbrains.com/plugin/9777-micropython). Deze plugin installeert dezelfde MicroPyton type informatie als [`huas-micropython`](https://pypi.org/project/huas-micropython/) en verder `adafruit-ampy`, maar niet `esptool`. De laatste zal je zelf moeten installeren met:
 
 ```text
 pip install esptool
 ```
+
+Windows gebruikers kunnen mogelijk de waarschuwing krijgen dat *Microsoft Visual c++* aanwezig moet zijn om `esptool` te kunnen installeren. Zie in dit geval [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) voor aanvullende software.
 ````
 
 Controleer voordat je naar de volgende stap gaat eerst of alles correct is geïnstalleerd. Voor het plaatsen van de *firmware* op de microcontroller zal je straks `esptool.py` op de command line het moeten kunnen uitvoeren, probeer dit nu met
@@ -96,7 +98,7 @@ Sluit het bord aan met de Micro USB kabel, deze aansluiting is zowel voor voedin
 Voordat je de firmware kan flashen zal je eerst moeten weten op *welke* [seriële poort](https://en.wikipedia.org/wiki/Serial_port) het bord is aangesloten. In het kort volgen nu instructies voor jouw besturingssysteem, meer uitgebreide informatie kan je vinden in de [ESP32 documentie](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html) over seriële communicatie met de microcontroller.
 
 ````{tabbed} Windows
-De meest eenvoudige manier om een overzicht van actuele seriële poortnamen op te vragen is om om op de command line het volgende twee keer uit te voeren:
+De meest eenvoudige manier om een overzicht van actuele seriële poortnamen op te vragen is om op de command line het volgende uit te voeren:
 
 ```text
 mode
@@ -137,7 +139,7 @@ Twijfel je over de poortnaam? Koppel het bord dan los, voer `mode` uit en noteer
 ````
 
 ````{tabbed} macOS / Linux
-De seriële poortnaam onder Linux of macOS kan je als *pseudoterninal* device vinden in het virtuele filesystem `/dev`. Voer het volgende twee keer uit, eerst *zonder* het bord te hebben aangesloten en vervolgens mét om te zien welke poortnaam is toegevoegd:
+De seriële poortnaam onder Linux of macOS kan je als *pseudo terminal* device vinden in het virtuele filesystem `/dev`. Voer het volgende twee keer uit, eerst *zonder* het bord te hebben aangesloten en vervolgens mét om te zien welke poortnaam is toegevoegd:
 
 **Linux**
 

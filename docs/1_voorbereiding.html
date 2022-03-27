@@ -354,18 +354,19 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="ontwikkelomgeving">
 <h3><span class="section-number">1.2.1. </span>Ontwikkelomgeving<a class="headerlink" href="#ontwikkelomgeving" title="Permalink naar deze titel">¶</a></h3>
 <p>Je gaat in deze workshop Python code schrijven voor het aansturen van de microcontroller. Later zal je een Python versie op de microcontroller installeren die speciaal voor dit type processoren geschikt is, <a class="reference external" href="https://micropython.org/">MicroPyhon</a>.</p>
-<p>MicroPython is een voor microcontrollers geoptimaliseerde versie van Python en bevat een aantal modules die heel specifiek zijn voor microcontrollers, bijvoorbeeld het kunnen gebruiken van de pinnen of WiFi. Deze zijn <em>niet</em> om jouw systeem geïnstalleerd, editors als VSCode zullen je daarom voor deze specifieke MicroPython modules geen <em>contextuele</em> hulp kunnen bieden (bijvoorbeeld functies aanvullen) want ze kennen alleen maar modules uit jouw geïnstalleerde (standaard) Python versie.</p>
+<p>MicroPython is een voor microcontrollers geoptimaliseerde versie van Python en bevat een aantal modules die heel specifiek zijn voor microcontrollers, bijvoorbeeld het kunnen gebruiken van de pinnen of WiFi. Deze zijn <em>niet</em> op jouw systeem geïnstalleerd, editors als VSCode zullen je daarom voor deze specifieke MicroPython modules geen <em>contextuele</em> hulp kunnen bieden (bijvoorbeeld functies aanvullen) want ze kennen alleen maar modules in jouw geïnstalleerde (standaard) Python versie.</p>
 <p>Installeer met het volgende een aparte Python package om jouw editor wél kennis te laten hebben van MicroPython specfieke modules:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pip install huas-micropython[all]
 </pre></div>
 </div>
 <p>Dit zal tegelijkertijd voor jou <em>twee</em> andere packages installeren, <a class="reference external" href="https://pypi.org/project/adafruit-ampy/"><code class="docutils literal notranslate"><span class="pre">adafruit-ampy</span></code></a> en <a class="reference external" href="https://pypi.org/project/esptool/"><code class="docutils literal notranslate"><span class="pre">esptool</span></code></a>. De <em>eerste</em> heb je nodig voor het kunnen overzetten van de code die je gaat schrijven naar de microcontroller, de <em>tweede</em> is nodig voor het plaatsen van MicroPython (de <em>firmware</em>) op de microntroller en dit is de eerstvolgende stap die je gaat uitvoeren.</p>
-<div class="admonition note">
-<p class="admonition-title">Notitie</p>
+<div class="admonition attention">
+<p class="admonition-title">Let op</p>
 <p>Het kan zijn dat je <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> gebruikt in combinatie met de Micropython <a class="reference external" href="https://plugins.jetbrains.com/plugin/9777-micropython">plugin</a>. Deze plugin installeert dezelfde MicroPyton type informatie als <a class="reference external" href="https://pypi.org/project/huas-micropython/"><code class="docutils literal notranslate"><span class="pre">huas-micropython</span></code></a> en verder <code class="docutils literal notranslate"><span class="pre">adafruit-ampy</span></code>, maar niet <code class="docutils literal notranslate"><span class="pre">esptool</span></code>. De laatste zal je zelf moeten installeren met:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pip install esptool
 </pre></div>
 </div>
+<p>Windows gebruikers kunnen mogelijk de waarschuwing krijgen dat <em>Microsoft Visual c++</em> aanwezig moet zijn om <code class="docutils literal notranslate"><span class="pre">esptool</span></code> te kunnen installeren. Zie in dit geval <a class="reference external" href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">Microsoft C++ Build Tools</a> voor aanvullende software.</p>
 </div>
 <p>Controleer voordat je naar de volgende stap gaat eerst of alles correct is geïnstalleerd. Voor het plaatsen van de <em>firmware</em> op de microcontroller zal je straks <code class="docutils literal notranslate"><span class="pre">esptool.py</span></code> op de command line het moeten kunnen uitvoeren, probeer dit nu met</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>esptool.py -h
@@ -400,10 +401,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Sluit het bord aan met de Micro USB kabel, deze aansluiting is zowel voor voeding als <em>seriële</em> communicatie. Een eerste test of de communicatie met het ontwikkelbord slaagt is om het aan te sluiten, waarna een <em>rode led</em> op het bord zal moeten oplichten.</p>
 <p>Voordat je de firmware kan flashen zal je eerst moeten weten op <em>welke</em> <a class="reference external" href="https://en.wikipedia.org/wiki/Serial_port">seriële poort</a> het bord is aangesloten. In het kort volgen nu instructies voor jouw besturingssysteem, meer uitgebreide informatie kan je vinden in de <a class="reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html">ESP32 documentie</a> over seriële communicatie met de microcontroller.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c7c84cdc-4b1f-4e7e-83d7-5771ff9524a2" name="c03bffe8-bb75-493e-b1a2-3ff7b35aa9a4" type="radio">
-</input><label class="tabbed-label" for="c7c84cdc-4b1f-4e7e-83d7-5771ff9524a2">
+<input checked="checked" id="af2136e9-1779-4e07-86d5-d756f93d02a7" name="f6c0b714-eea8-4138-ad55-2d5466e1a6c1" type="radio">
+</input><label class="tabbed-label" for="af2136e9-1779-4e07-86d5-d756f93d02a7">
 Windows</label><div class="tabbed-content docutils">
-<p>De meest eenvoudige manier om een overzicht van actuele seriële poortnamen op te vragen is om om op de command line het volgende twee keer uit te voeren:</p>
+<p>De meest eenvoudige manier om een overzicht van actuele seriële poortnamen op te vragen is om op de command line het volgende uit te voeren:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>mode
 </pre></div>
 </div>
@@ -434,10 +435,10 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 <p>Twijfel je over de poortnaam? Koppel het bord dan los, voer <code class="docutils literal notranslate"><span class="pre">mode</span></code> uit en noteer de huidige namen. Sluit vervolgens het bord weer aan en controleer weer met <code class="docutils literal notranslate"><span class="pre">mode</span></code> welke poortnaam is toegevoegd (dit zal jouw bord zijn).</p>
 </div>
-<input id="3aa3193a-9759-43af-a28f-b41f9ade74e5" name="c03bffe8-bb75-493e-b1a2-3ff7b35aa9a4" type="radio">
-</input><label class="tabbed-label" for="3aa3193a-9759-43af-a28f-b41f9ade74e5">
+<input id="0eb43059-02d9-40e5-8baa-4792433d396b" name="f6c0b714-eea8-4138-ad55-2d5466e1a6c1" type="radio">
+</input><label class="tabbed-label" for="0eb43059-02d9-40e5-8baa-4792433d396b">
 macOS / Linux</label><div class="tabbed-content docutils">
-<p>De seriële poortnaam onder Linux of macOS kan je als <em>pseudoterninal</em> device vinden in het virtuele filesystem <code class="docutils literal notranslate"><span class="pre">/dev</span></code>. Voer het volgende twee keer uit, eerst <em>zonder</em> het bord te hebben aangesloten en vervolgens mét om te zien welke poortnaam is toegevoegd:</p>
+<p>De seriële poortnaam onder Linux of macOS kan je als <em>pseudo terminal</em> device vinden in het virtuele filesystem <code class="docutils literal notranslate"><span class="pre">/dev</span></code>. Voer het volgende twee keer uit, eerst <em>zonder</em> het bord te hebben aangesloten en vervolgens mét om te zien welke poortnaam is toegevoegd:</p>
 <p><strong>Linux</strong></p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ls /dev/tty*
 </pre></div>
