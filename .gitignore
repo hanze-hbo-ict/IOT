@@ -128,6 +128,3 @@ dmypy.json
 _build/
 
 .vscode/
-graphics/
-
-docs/workshop.md
