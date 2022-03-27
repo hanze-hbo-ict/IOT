@@ -2,14 +2,14 @@
 
 ## Connectiviteit
 
-Sluit de ESP32 aan op de micro USB poort, je zal een rode led zien branden. In de vorige stap heb je gezien hoe je de seriële poortnaam op jouw systeem kan bepalen, deze zal je nu ook nodig hebben om te kunnen communiceren met het bord.
+Sluit de ESP32 aan op de micro USB poort, je zal een rode LED zien branden. In de vorige stap heb je gezien hoe je de seriële poortnaam op jouw systeem kan bepalen, deze zal je nu ook nodig hebben om te kunnen communiceren met het bord.
 
 Net als met Python op jouw systeem kan je MicroPython op twee manieren gebruiken:
 
 -   code in een bestand uitvoeren
 -   interactief code uitvoeren
 
-Bij de eerste manier schrijf je de code voor jouw programma in een bestand en laat je het vervolgens uitvoeren. Dit is wat je straks gaat doen om bijvoorbeeld een led te bedienen of een sensor op het bord uit te lezen.
+Bij de eerste manier schrijf je de code voor jouw programma in een bestand en laat je het vervolgens uitvoeren. Dit is wat je straks gaat doen om bijvoorbeeld een LED te bedienen of een sensor op het bord uit te lezen.
 
 De tweede manier is wat je kent van bijvoorbeeld IPython, een interactieve Python prompt (REPL) en daar ga je nu eerst kennis mee maken.
 
@@ -42,7 +42,7 @@ Sluit de sessie nog niet af want je hebt deze nodig voor de volgende stap!
 
 Zoals eerder is gezegd, MicroPython heeft een aantal modulen die heel specifiek zijn voor een microcontroller als de ESP32, onder andere voor het kunnen gebruiken van de pins. Twee van deze pins zijn *intern* aangesloten, dat wil zeggen dat je ze niet een fysieke pin hebben op het bord.
 
-Met de eerste interne pin heb je al kennisgemaakt, dit is waar de *rode* led op aangesloten is (en gaat branden zodra je het bord aansluit). Op de tweede interne pin is een *blauwe* led aangesloten (tegenover de rode led, zie figuur {numref}`esp32-devkit`).
+Met de eerste interne pin heb je al kennisgemaakt, dit is waar de *rode* LED op aangesloten is (en gaat branden zodra je het bord aansluit). Op de tweede interne pin is een *blauwe* LED aangesloten (tegenover de rode led, zie figuur {numref}`esp32-devkit`).
 
 ```{figure} ../circuits/esp32.png
 :name: esp32-devkit
@@ -50,7 +50,7 @@ Met de eerste interne pin heb je al kennisgemaakt, dit is waar de *rode* led op 
 ESP32 Devkit V1
 ```
 
-Standaard staat deze blauwe led uit, in de volgende stap ga je deze led aan- en uitzetten.
+Standaard staat deze blauwe LED uit, in de volgende stap ga je deze LED aan- en uitzetten.
 
 ### De module `machine`
 
@@ -67,12 +67,12 @@ Importeer nu de klasse `Pin` uit de module `machine`:
 en maak als volgt een nieuwe instantie aan van deze klasse die je `led` noemt:
 
 ```text
->>> led = Pin(2, Pin.OUT)
+>>> LED = Pin(2, Pin.OUT)
 ```
 
-De interne pin waar de blauwe led op is aangesloten heeft nummer 2, en dit is het eerste argument dat je hier ziet. Het tweede argument betreft de *modus* van de pin, in dit geval `Pin.OUT` waarmee de pin wordt geconfigureerd voor output (stroom uit). Later zal je ook `Pin.IN` gebruiken voor invoer (stroom in), bijvoorbeeld als op een pin een sensor wordt aangesloten.
+De interne pin waar de blauwe LED op is aangesloten heeft nummer 2, en dit is het eerste argument dat je hier ziet. Het tweede argument betreft de *modus* van de pin, in dit geval `Pin.OUT` waarmee de pin wordt geconfigureerd voor output (stroom uit). Later zal je ook `Pin.IN` gebruiken voor invoer (stroom in), bijvoorbeeld als op een pin een sensor wordt aangesloten.
 
-Zet nu als volgt de blauwe led aan
+Zet nu als volgt de blauwe LED aan
 
 ```text
 >>> led.on()
@@ -185,13 +185,13 @@ for _ in range(5):
     sleep(1)
 ```
 
-Dit eenvoudige programma zal de blauwe led op het bord 5 keer laten knipperen. Plaats dit bestand nu op het bord met het volgende commando:
+Dit eenvoudige programma zal de blauwe LED op het bord 5 keer laten knipperen. Plaats dit bestand nu op het bord met het volgende commando:
 
 ```python
 ampy -p <portname> put main.py
 ```
 
-Als het bestand is overgezet zal de blauwe led gaan knipperen, `main.py` is uitgevoerd! Het bord heeft ook twee knoppen, EN en BOOT, zie figuur  {numref}`esp32-devkit`. BOOT zal het bord opnieuw opstarten, en daarmee opnieuw `main.py` uitvoeren.
+Als het bestand is overgezet zal de blauwe LED gaan knipperen, `main.py` is uitgevoerd! Het bord heeft ook twee knoppen, EN en BOOT, zie figuur  {numref}`esp32-devkit`. BOOT zal het bord opnieuw opstarten, en daarmee opnieuw `main.py` uitvoeren.
 
 ## Debuggen
 

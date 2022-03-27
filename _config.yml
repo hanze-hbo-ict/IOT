@@ -1,4 +1,4 @@
-title: Workshop Internet of Things
+title: Internet of Things
 author: Hanzehogeschool Groningen
 logo: assets/logo_iot.svg
 copyright: "CC BY-NC-SA 4.0"
@@ -7,6 +7,7 @@ subtitle: Workshop ESP32 microcontroller en embedded systems
 subject: Een kennismaking met microcontrollers en embedded systems
 description: Workshop IoT waar een client/server architectuur wordt uitgewerkt voor het meten en versturen van data.
 keywords: [microcontroller, SoC, esp32, MicroPython, IoT]
+exclude_patterns: ["README.md"]
 
 latex:
   latex_engine: xelatex
