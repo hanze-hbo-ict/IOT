@@ -6,7 +6,7 @@ De ESP32 heeft ingebouwde Wifi connectiviteit en deze zal je later configureren,
 
 ## Architectuur
 
-Het beschrijven van een software oplossing kan op vele manieren, wij gebruiken hier het [C4 model](https://c4model.com/) als hulpmiddel om het te visualiseren en waar we in een drietal stappen met steeds meer detail inzoomen op het probleem (en we zo komen tot een beschrijving van een *software architectuur*).
+Het beschrijven van een softwareoplossing kan op vele manieren, wij gebruiken hier het [C4 model](https://c4model.com/) als hulpmiddel om het te visualiseren en waar we in een drietal stappen met steeds meer detail inzoomen op het probleem (en we zo komen tot een beschrijving van een *software architectuur*).
 
 ```{tip}
 Het [C4 model](https://c4model.com/) model is een eenvoudige en gemakkelijk te leren benadering van software architectuur diagrammen die je ook kan gebruiken in andere projecten. Diagrammen helpen bij communicatie binnen teams, maar ook daar buiten, bijvoorbeeld met een opdrachtgever of andere belanghebbenden. De C4 [Wikipedia pagina](https://en.wikipedia.org/wiki/C4_model) geeft een bekopt overzicht van dit model.

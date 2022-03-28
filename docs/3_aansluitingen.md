@@ -24,7 +24,7 @@ Een half-size *breadboard*
 
 Je ziet op een breadboard veel gaatjes waar pinnen en draden in kunnen worden gestoken, maar aan de buitenkant zie je niet zien hoe de contacten lopen. De contacten worden gevormd door metalen strips die de gaatjes onderling verbinden per rij, in figuur {numref}`breadboard` zie je een aantal van deze strips waar de *richting* van de verbinding van de rijen zijn aangegeven met rode lijnen.
 
-De buitenste gaatjes zijn *horizontaal* met elkaar vebonden en de binnenste gaatjes zijn *verticaal* met elkaar verbonden. Je ziet ook dat de binnenste gaatjes verdeeld zijn over twee vlakken die worden gescheiden door een "ravijn".
+De buitenste gaatjes zijn *horizontaal* met elkaar verbonden en de binnenste gaatjes zijn *verticaal* met elkaar verbonden. Je ziet ook dat de binnenste gaatjes verdeeld zijn over twee vlakken die worden gescheiden door een "ravijn".
 
 ### ESP32 plaatsen
 

@@ -6,13 +6,13 @@ Sensoren komen in allerlei soorten en maten, bekend zijn beweging-, licht- en te
 
 In tegenstelling tot een LED die aangesloten werd op een GPIO-pin (die aan- en uit kon worden gezet) is een continue stroomtoevoer voor een sensor een betere keus. Rechtsonder op het bord zie je een **3V3** pin die deze stroomtoevoer biedt (zie ook figuur {numref}`esp32-devkit` voor meer detail).
 
-```{figure} ../circuits/esp32_step_6_bb.png
-:name: 3v3-connect
+```{figure} ../circuits/esp32_step_6a_bb.png
+:name: 3v3-connect-wire
 
-3V3 pin aansluiten
+3V3 kabel aansluiten
 ```
 
-Het begint op het breadboard al aardig druk te worden met een led, kabels en een weerstand. De 3V3 pin bevindt zich aan de onderkant van het ravijn, we kiezen er voor om deze pin aan te sluiten op de onderste verticale strip, zie figuur {numref}`3v3-connect`. Je zal hier de ESP32 even van het board moeten halen om de kabel te plaatsen, zorg er voor dat je een gaatje recht boven de 3V3 pin gebruikt zodat pin en kabel verticaal op de strip zijn aangesloten.
+Het begint op het breadboard al aardig druk te worden met een led, kabels en een weerstand. De 3V3 pin bevindt zich aan de onderkant van het ravijn, we kiezen er voor om deze pin aan te sluiten op de onderste verticale strip, zie figuur {numref}`3v3-connect-wire`. Je zal hier de ESP32 even van het board moeten halen om de kabel te plaatsen, zorg er voor dat je een gaatje recht boven de 3V3 pin gebruikt zodat pin en kabel verticaal op de strip zijn aangesloten.
 
 ## Temperatuursensor
 
