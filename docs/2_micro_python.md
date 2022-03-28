@@ -176,7 +176,7 @@ Het is nu tijd om een projectomgeving op te zetten, een directory waar je Python
 from time import sleep
 from machine import Pin
 
- led =Pin(2, Pin.OUT)
+led = Pin(2, Pin.OUT)
 
 for _ in range(5):
     led.on()
