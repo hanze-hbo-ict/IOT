@@ -133,7 +133,7 @@ Plaats dit bestand nu op de microcontroller met `ampy`.
 
 Je eerder gezien dat het bestand `boot.py` altijd eerst door MicroPython wordt uitgevoerd en dit is een geschikte plek om een Wifi verbinding te maken met jouw hotspot.
 
-Open een bestand `main.py` (als je deze nog niet in jouw project hebt) en neem het volgende over. Plaats het vervolgens met `ampy` op het bord.
+Open een bestand `boot.py` (als je deze nog niet in jouw project hebt) en neem het volgende over. Plaats het vervolgens met `ampy` op het bord.
 
 ```python
 import config
