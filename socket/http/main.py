@@ -1,5 +1,6 @@
 import config
 from time import sleep
+from boot import connection
 from machine import Pin, ADC
 import urequests as requests
 
@@ -35,7 +36,7 @@ def temperature():
     return temp
 
 
-while True:
+while connection.isconnected():
     # read temperature
     value = temperature()
 
