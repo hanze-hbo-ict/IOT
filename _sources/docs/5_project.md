@@ -141,19 +141,20 @@ import config
 import network
 from time import sleep
 
+connection = network.WLAN(network.STA_IF)
+
 
 def connect():
-    conn = network.WLAN(network.STA_IF)
 
-    if conn.isconnected():
+    if connection.isconnected():
         print("Already connected")
         return
 
-    conn.active(True)
-    conn.connect(config.WIFI_SSID, config.WIFI_PASSWORD)
+    connection.active(True)
+    connection.connect(config.WIFI_SSID, config.WIFI_PASSWORD)
 
     retry = 0
-    while not conn.isconnected():  # wait until connection is complete
+    while not connection.isconnected():  # wait until connection is complete
         if retry == 10:  # try 10 times
             sys.exit("Could not establish connection")
         retry += 1
@@ -161,11 +162,12 @@ def connect():
         sleep(1)  # check again in a sec
 
     print("Connection established")
-    print(conn.ifconfig())  # connection details
+    print(connection.ifconfig())  # connection details
 
 
 if __name__ == "__main__":
     connect()
+
 ```
 
 Net als jouw machine kan de Wifi interface van de microcontroller op twee manieren worden gebruikt, als Access Point Interface (als een *hotspot*) of als Station Interface (als *gebruiker* van een hotspot). Het laatste is natuurlijk wat je nodig hebt en dit herken je in de `network.STA_IF` parameter die wordt doorgegeven als configuratie-optie voor de Wifi interface van de controller.
@@ -176,12 +178,12 @@ Je hebt een werkende Wifi verbinding nodig voor wat gaat volgen. Mocht je proble
 ```python
 import network
 
-conn = network.WLAN(network.STA_IF)
-conn.active(True)
-conn.scan()  # list visible networks, should include your hotspot
+connection = network.WLAN(network.STA_IF)
+connection.active(True)
+connection.scan()  # list visible networks, should include your hotspot
 
-conn.connect(<wifi ssid>, <wifi password>)
-conn.config()  # should list your connection details
+connection.connect(<wifi ssid>, <wifi password>)
+connection.config()  # should list your connection details
 ```
 ````
 
@@ -200,7 +202,9 @@ Je hebt in `main.py` al eerder code geschreven, onder andere voor het aansturen 
 De basis van de client is als volgt, jouw taak wordt om de verschillende onderdelen in te vullen:
 
 ```python
-while True:
+from boot import connection
+
+while connection.isconnected():
     # read temperature
 
     # send temperature to server

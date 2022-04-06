@@ -438,21 +438,21 @@ const thebe_selector_output = ".output, .cell_output"
 <p>In deze stap ga je de Wifi van jouw machine als een mobile hotspot configureren en waar de ESP32 vervolgens gebruik van kan gaan maken. Je zal een netwerknaam en wachtwoord gaan opgeven, en noteer deze, je zal het later nodig hebben voor de ESP32 WiFi-configuratie.</p>
 <p>Een mobiele hotspot creëert een intern netwerk waar ook jouw machine een <a class="reference external" href="https://en.wikipedia.org/wiki/IP_address"><em>IP adres</em></a> op krijgt. Volg de instructies voor jouw besturingssysteem voor het aanmaken van een WiFi hotspot en hoe je het adres van jouw machine op dit netwerk kan bepalen, ook deze zal je later nodig hebben.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="25d2966c-ca3f-4034-ab27-552974a28ef4" name="38871a8b-7c87-4b31-85f6-549c9c4ee994" type="radio">
-</input><label class="tabbed-label" for="25d2966c-ca3f-4034-ab27-552974a28ef4">
+<input checked="checked" id="30118b11-75b3-4863-9bc7-189e42daabc7" name="94f2f72c-1a97-4d37-9a80-03bfada5b332" type="radio">
+</input><label class="tabbed-label" for="30118b11-75b3-4863-9bc7-189e42daabc7">
 Windows</label><div class="tabbed-content docutils">
 <p>Volg de instructies zoals beschreven op
 <a class="reference external" href="https://support.microsoft.com/nl-nl/windows/uw-pc-windows-gebruiken-als-mobiele-hotspot-c89b0fad-72d5-41e8-f7ea-406ad9036b85">“Uw pc Windows gebruiken als mobiele hotspot”</a>.</p>
 <p>Bepaal het WiFi IP adres van jouw machine, bijvoorbeeld op de command line met <code class="docutils literal notranslate"><span class="pre">ipconfig</span></code> en noteer het.</p>
 </div>
-<input id="0e7f05e4-9a73-4ad2-8e33-53793c1eb87e" name="38871a8b-7c87-4b31-85f6-549c9c4ee994" type="radio">
-</input><label class="tabbed-label" for="0e7f05e4-9a73-4ad2-8e33-53793c1eb87e">
+<input id="fad7eebe-7cc4-4978-87d1-a088d5b99a23" name="94f2f72c-1a97-4d37-9a80-03bfada5b332" type="radio">
+</input><label class="tabbed-label" for="fad7eebe-7cc4-4978-87d1-a088d5b99a23">
 macOS</label><div class="tabbed-content docutils">
 <p>Volg de instructies zoals beschreven op <a class="reference external" href="https://support.apple.com/nl-nl/guide/mac-help/mchlp1540/mac">“De internetverbinding op de Mac delen met andere netwerkgebruikers”</a>.</p>
 <p>Bepaal het WiFi IP adres van jouw machine, bijvoorbeeld op de command line met <code class="docutils literal notranslate"><span class="pre">ifconfig</span></code> en noteer het.</p>
 </div>
-<input id="7b12cbc7-cbcf-4349-9377-43365641f6be" name="38871a8b-7c87-4b31-85f6-549c9c4ee994" type="radio">
-</input><label class="tabbed-label" for="7b12cbc7-cbcf-4349-9377-43365641f6be">
+<input id="63a8f22b-e003-4b1a-b67b-0ad4770c43f9" name="94f2f72c-1a97-4d37-9a80-03bfada5b332" type="radio">
+</input><label class="tabbed-label" for="63a8f22b-e003-4b1a-b67b-0ad4770c43f9">
 Linux</label><div class="tabbed-content docutils">
 <p>Volg bijvoorbeeld de Ubuntu instructies zoals beschreven op <a class="reference external" href="https://help.ubuntu.com/stable/ubuntu-help/net-wireless-adhoc.html.en">“Create a wireless hotspot”</a>.</p>
 <p>Op de meeste Linux distributies zal  NetworkManager geïnstalleerd zijn, met de bijbehorende <code class="docutils literal notranslate"><span class="pre">nmcli</span></code> commmand line applicatie is ook eenvoudig een hotspot aan te maken, zie bijvoorbeeld <a class="reference external" href="https://computingforgeeks.com/create-wi-fi-hotspot-on-ubuntu-debian-fedora-centos-arch/">“Create Wi-Fi Hotspot on Ubuntu / Debian / Fedora / CentOS / Arch”</a>.</p>
@@ -482,19 +482,20 @@ Linux</label><div class="tabbed-content docutils">
 <span class="kn">import</span> <span class="nn">network</span>
 <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
 
+<span class="n">connection</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">WLAN</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">STA_IF</span><span class="p">)</span>
+
 
 <span class="k">def</span> <span class="nf">connect</span><span class="p">():</span>
-    <span class="n">conn</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">WLAN</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">STA_IF</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">conn</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">connection</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Already connected&quot;</span><span class="p">)</span>
         <span class="k">return</span>
 
-    <span class="n">conn</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">conn</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">WIFI_SSID</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">WIFI_PASSWORD</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">WIFI_SSID</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">WIFI_PASSWORD</span><span class="p">)</span>
 
     <span class="n">retry</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="ow">not</span> <span class="n">conn</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>  <span class="c1"># wait until connection is complete</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">connection</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>  <span class="c1"># wait until connection is complete</span>
         <span class="k">if</span> <span class="n">retry</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>  <span class="c1"># try 10 times</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="s2">&quot;Could not establish connection&quot;</span><span class="p">)</span>
         <span class="n">retry</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -502,11 +503,12 @@ Linux</label><div class="tabbed-content docutils">
         <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># check again in a sec</span>
 
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection established&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">conn</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">())</span>  <span class="c1"># connection details</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">connection</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">())</span>  <span class="c1"># connection details</span>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">connect</span><span class="p">()</span>
+
 </pre></div>
 </div>
 <p>Net als jouw machine kan de Wifi interface van de microcontroller op twee manieren worden gebruikt, als Access Point Interface (als een <em>hotspot</em>) of als Station Interface (als <em>gebruiker</em> van een hotspot). Het laatste is natuurlijk wat je nodig hebt en dit herken je in de <code class="docutils literal notranslate"><span class="pre">network.STA_IF</span></code> parameter die wordt doorgegeven als configuratie-optie voor de Wifi interface van de controller.</p>
@@ -515,12 +517,12 @@ Linux</label><div class="tabbed-content docutils">
 <p>Je hebt een werkende Wifi verbinding nodig voor wat gaat volgen. Mocht je problemen hebben met het maken van een verbinding bedenk dat je de bovenstaande handelingen ook op de MicroPython REPL kan uitvoeren, bijvoorbeeld</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">network</span>
 
-<span class="n">conn</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">WLAN</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">STA_IF</span><span class="p">)</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">scan</span><span class="p">()</span>  <span class="c1"># list visible networks, should include your hotspot</span>
+<span class="n">connection</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">WLAN</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">STA_IF</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">scan</span><span class="p">()</span>  <span class="c1"># list visible networks, should include your hotspot</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="o">&lt;</span><span class="n">wifi</span> <span class="n">ssid</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">wifi</span> <span class="n">password</span><span class="o">&gt;</span><span class="p">)</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">config</span><span class="p">()</span>  <span class="c1"># should list your connection details</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="o">&lt;</span><span class="n">wifi</span> <span class="n">ssid</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">wifi</span> <span class="n">password</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">config</span><span class="p">()</span>  <span class="c1"># should list your connection details</span>
 </pre></div>
 </div>
 </div>
@@ -536,7 +538,9 @@ Linux</label><div class="tabbed-content docutils">
 <p>De client ga je schrijven in <code class="docutils literal notranslate"><span class="pre">main.py</span></code>, dit wordt het programma dat een temperatuur gaat versturen en zal reageren op een antwoord van een server.</p>
 <p>Je hebt in <code class="docutils literal notranslate"><span class="pre">main.py</span></code> al eerder code geschreven, onder andere voor het aansturen van een LED. Kopiëer dit eventeel naar een kladbestand want het bevat misschien fragmenten die je kan hergebruiken.</p>
 <p>De basis van de client is als volgt, jouw taak wordt om de verschillende onderdelen in te vullen:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">boot</span> <span class="kn">import</span> <span class="n">connection</span>
+
+<span class="k">while</span> <span class="n">connection</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
     <span class="c1"># read temperature</span>
 
     <span class="c1"># send temperature to server</span>
