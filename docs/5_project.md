@@ -352,7 +352,7 @@ assert answer == expected
 en vul hier bij `...` in welke data je als client verstuurt en het antwoord dat je van de server verwacht.
 
 ````{note}
-Het enige verschil is dat hier gebruik wordt gemaakt van `requests` in plaats van `urequests`. MicorPython's `urequests` is een implementatie van `requests` met beperkte functionaliteit.
+Het enige verschil is dat hier gebruik wordt gemaakt van `requests` in plaats van `urequests`. MicroPython's `urequests` is een implementatie van `requests` met beperkte functionaliteit.
 
 [`requests`](https://docs.python-requests.org/en/latest/) is een veelgebruikte Python HTTP client package die misschien nog niet op jouw systeem aanwezig is, installeer het indien nodig als volgt
 
