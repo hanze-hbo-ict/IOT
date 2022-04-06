@@ -438,21 +438,21 @@ const thebe_selector_output = ".output, .cell_output"
 <p>In deze stap ga je de Wifi van jouw machine als een mobile hotspot configureren en waar de ESP32 vervolgens gebruik van kan gaan maken. Je zal een netwerknaam en wachtwoord gaan opgeven, en noteer deze, je zal het later nodig hebben voor de ESP32 WiFi-configuratie.</p>
 <p>Een mobiele hotspot creëert een intern netwerk waar ook jouw machine een <a class="reference external" href="https://en.wikipedia.org/wiki/IP_address"><em>IP adres</em></a> op krijgt. Volg de instructies voor jouw besturingssysteem voor het aanmaken van een WiFi hotspot en hoe je het adres van jouw machine op dit netwerk kan bepalen, ook deze zal je later nodig hebben.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="cad5335b-dc41-452b-a973-f29d38aeff9b" name="ed3971b8-7e9b-4de2-a9b2-73e215790fb1" type="radio">
-</input><label class="tabbed-label" for="cad5335b-dc41-452b-a973-f29d38aeff9b">
+<input checked="checked" id="6ab0c9d7-b806-498b-ada1-12fc18060f90" name="ac6c44f2-ffc0-4772-af77-9f07f9f33535" type="radio">
+</input><label class="tabbed-label" for="6ab0c9d7-b806-498b-ada1-12fc18060f90">
 Windows</label><div class="tabbed-content docutils">
 <p>Volg de instructies zoals beschreven op
 <a class="reference external" href="https://support.microsoft.com/nl-nl/windows/uw-pc-windows-gebruiken-als-mobiele-hotspot-c89b0fad-72d5-41e8-f7ea-406ad9036b85">“Uw pc Windows gebruiken als mobiele hotspot”</a>.</p>
 <p>Bepaal het WiFi IP adres van jouw machine, bijvoorbeeld op de command line met <code class="docutils literal notranslate"><span class="pre">ipconfig</span></code> en noteer het.</p>
 </div>
-<input id="5f843c07-fe91-431b-b82c-d293bbd7492d" name="ed3971b8-7e9b-4de2-a9b2-73e215790fb1" type="radio">
-</input><label class="tabbed-label" for="5f843c07-fe91-431b-b82c-d293bbd7492d">
+<input id="ba7d598e-e435-445d-86f6-4f0a762f8416" name="ac6c44f2-ffc0-4772-af77-9f07f9f33535" type="radio">
+</input><label class="tabbed-label" for="ba7d598e-e435-445d-86f6-4f0a762f8416">
 macOS</label><div class="tabbed-content docutils">
 <p>Volg de instructies zoals beschreven op <a class="reference external" href="https://support.apple.com/nl-nl/guide/mac-help/mchlp1540/mac">“De internetverbinding op de Mac delen met andere netwerkgebruikers”</a>.</p>
 <p>Bepaal het WiFi IP adres van jouw machine, bijvoorbeeld op de command line met <code class="docutils literal notranslate"><span class="pre">ifconfig</span></code> en noteer het.</p>
 </div>
-<input id="6735bacb-afe1-47e5-9cdd-45b4e66d2224" name="ed3971b8-7e9b-4de2-a9b2-73e215790fb1" type="radio">
-</input><label class="tabbed-label" for="6735bacb-afe1-47e5-9cdd-45b4e66d2224">
+<input id="b9f0b54a-7d50-4e29-9052-46675a4964ae" name="ac6c44f2-ffc0-4772-af77-9f07f9f33535" type="radio">
+</input><label class="tabbed-label" for="b9f0b54a-7d50-4e29-9052-46675a4964ae">
 Linux</label><div class="tabbed-content docutils">
 <p>Volg bijvoorbeeld de Ubuntu instructies zoals beschreven op <a class="reference external" href="https://help.ubuntu.com/stable/ubuntu-help/net-wireless-adhoc.html.en">“Create a wireless hotspot”</a>.</p>
 <p>Op de meeste Linux distributies zal  NetworkManager geïnstalleerd zijn, met de bijbehorende <code class="docutils literal notranslate"><span class="pre">nmcli</span></code> commmand line applicatie is ook eenvoudig een hotspot aan te maken, zie bijvoorbeeld <a class="reference external" href="https://computingforgeeks.com/create-wi-fi-hotspot-on-ubuntu-debian-fedora-centos-arch/">“Create Wi-Fi Hotspot on Ubuntu / Debian / Fedora / CentOS / Arch”</a>.</p>
@@ -669,7 +669,7 @@ Linux</label><div class="tabbed-content docutils">
 <p>en vul hier bij <code class="docutils literal notranslate"><span class="pre">...</span></code> in welke data je als client verstuurt en het antwoord dat je van de server verwacht.</p>
 <div class="admonition note">
 <p class="admonition-title">Notitie</p>
-<p>Het enige verschil is dat hier gebruik wordt gemaakt van <code class="docutils literal notranslate"><span class="pre">requests</span></code> in plaats van <code class="docutils literal notranslate"><span class="pre">urequests</span></code>. MicorPython’s <code class="docutils literal notranslate"><span class="pre">urequests</span></code> is een implementatie van <code class="docutils literal notranslate"><span class="pre">requests</span></code> met beperkte functionaliteit.</p>
+<p>Het enige verschil is dat hier gebruik wordt gemaakt van <code class="docutils literal notranslate"><span class="pre">requests</span></code> in plaats van <code class="docutils literal notranslate"><span class="pre">urequests</span></code>. MicroPython’s <code class="docutils literal notranslate"><span class="pre">urequests</span></code> is een implementatie van <code class="docutils literal notranslate"><span class="pre">requests</span></code> met beperkte functionaliteit.</p>
 <p><a class="reference external" href="https://docs.python-requests.org/en/latest/"><code class="docutils literal notranslate"><span class="pre">requests</span></code></a> is een veelgebruikte Python HTTP client package die misschien nog niet op jouw systeem aanwezig is, installeer het indien nodig als volgt</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pip install requests
 </pre></div>

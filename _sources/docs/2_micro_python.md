@@ -15,7 +15,7 @@ De tweede manier is wat je kent van bijvoorbeeld IPython, een interactieve Pytho
 
 ### Seriële connectie
 
-De micro USB aansluiting met het bord is een seriële connectie en deze is *bidirectioneel*, er kunnen zowel gegevens mee worden verstuurd als mee worden ontvangen. In het verleden werden seriële connecties gebruikt om bijvoorbeeld een muis of modem aan te sluiten, maar ook een beeldscherm (of *terminal*). Een beeldscherm kan natuurlijk niet op het bord worden aangesloten, maar kan wél met software worden geëmuleerd.
+De micro USB aansluiting met het bord is een seriële connectie en deze is *bidirectioneel*, er kunnen zowel gegevens mee worden verstuurd als mee worden ontvangen. In het verleden werden seriële connecties gebruikt om bijvoorbeeld een muis of modem aan te sluiten, maar ook een beeldscherm (of *terminal*). Een beeldscherm kan natuurlijk niet op het bord worden aangesloten, maar kan wél met software worden nagebootst (*geëmuleerd*).
 
 ### Terminal
 
