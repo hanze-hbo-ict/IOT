@@ -136,9 +136,11 @@ Je eerder gezien dat het bestand `boot.py` altijd eerst door MicroPython wordt u
 Open een bestand `boot.py` (als je deze nog niet in jouw project hebt) en neem het volgende over. Plaats het vervolgens met `ampy` op het bord.
 
 ```python
+import sys
 import config
 import network
 from time import sleep
+
 
 def connect():
     conn = network.WLAN(network.STA_IF)
@@ -150,8 +152,13 @@ def connect():
     conn.active(True)
     conn.connect(config.WIFI_SSID, config.WIFI_PASSWORD)
 
+    retry = 0
     while not conn.isconnected():  # wait until connection is complete
-        sleep(0.1)  # check again in 100 milliseconds
+        if retry == 10:  # try 10 times
+            sys.exit("Could not establish connection")
+        retry += 1
+
+        sleep(1)  # check again in a sec
 
     print("Connection established")
     print(conn.ifconfig())  # connection details
