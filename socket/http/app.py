@@ -13,7 +13,7 @@ def temperature():
 
     message = {"warn": False}
 
-    # if temperature exceeds a certain treshold (e.g. 20 °C),
+    # if temperature exceeds a certain treshold (e.g. 22 °C),
     # reply with a warning so the client can set the red LED
 
     if data["value"] > 22:
