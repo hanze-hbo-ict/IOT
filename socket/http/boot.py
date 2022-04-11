@@ -18,17 +18,13 @@ def connect():
     retry = 0
     while not connection.isconnected():  # wait until connection is complete
         if retry == 10:  # try 10 times
-            sys.exit("Could not establish connection")
+            sys.exit("Could not establish connection, check your settings")
         retry += 1
 
         sleep(1)  # check again in a sec
 
-    # what's our current connection status?
-    if connection.isconnectec():
-        print("Connection established")
-        print(connection.ifconfig())  # connection details
-    else:
-        print("Could not establish connection, check your settings")
+    # no exit, we have a connection!
+    print("Connection established")
 
 
 if __name__ == "__main__":
