@@ -23,8 +23,12 @@ def connect():
 
         sleep(1)  # check again in a sec
 
-    print("Connection established")
-    print(connection.ifconfig())  # connection details
+    # what's our current connection status?
+    if connection.isconnectec():
+        print("Connection established")
+        print(connection.ifconfig())  # connection details
+    else:
+        print("Could not establish connection, check your settings")
 
 
 if __name__ == "__main__":

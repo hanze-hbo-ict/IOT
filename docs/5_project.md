@@ -161,13 +161,16 @@ def connect():
 
         sleep(1)  # check again in a sec
 
-    print("Connection established")
-    print(connection.ifconfig())  # connection details
+    # what's our current connection status?
+    if connection.isconnectec():
+        print("Connection established")
+        print(connection.ifconfig())  # connection details
+    else:
+        print("Could not establish connection, check your settings")
 
 
 if __name__ == "__main__":
     connect()
-
 ```
 
 Net als jouw machine kan de Wifi interface van de microcontroller op twee manieren worden gebruikt, als Access Point Interface (als een *hotspot*) of als Station Interface (als *gebruiker* van een hotspot). Het laatste is natuurlijk wat je nodig hebt en dit herken je in de `network.STA_IF` parameter die wordt doorgegeven als configuratie-optie voor de Wifi interface van de controller.
