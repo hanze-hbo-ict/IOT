@@ -104,4 +104,4 @@ temp = (v_out - 500) / 10
 print(temp)
 ```
 
-Je hebt nu succesvol led's kunnen aansturen en een temperatuursensor kunnen uitlezen! Deze handelingen gaan in het volgende deel samenkomen in een klein project waar de microcontroller temperatuurmetingen over een netwerk gaat versturen en zal moeten reageren op berichten.
+Je hebt nu succesvol LED's kunnen aansturen en een temperatuursensor kunnen uitlezen! Deze handelingen gaan in het volgende deel samenkomen in een klein project waar de microcontroller temperatuurmetingen over een netwerk gaat versturen en zal moeten reageren op berichten.
