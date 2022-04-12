@@ -1,6 +1,6 @@
 # Project
 
-In dit deel ga je de microcontroller met aangesloten *actuatoren* (led's) en *sensor* (temperatuurmeter) gebruiken waar de microcntroller een temperatuur gaat versturen over een netwerk.
+In dit deel ga je de microcontroller met aangesloten *actuatoren* (LED's) en *sensor* (temperatuurmeter) gebruiken waar de microcntroller een temperatuur gaat versturen over een netwerk.
 
 De ESP32 heeft ingebouwde Wifi connectiviteit en deze zal je later configureren, eerst ga je in meer detail kijken naar het probleem en de verschillende onderdelen van het systeem dat je zal moeten gaan uitwerken.
 
@@ -82,7 +82,7 @@ De bestanden `config.py`, `boot.py` en `main.py` zullen op de microcontroller ga
 
 ## Netwerk
 
-Als je kijkt naar de componenten van *device* (de ESP32 microcontroller) dan zal het je misschien zijn opgevallen dat naast de *client* die nog moet worden geschreven alleen de *connectiviteit* nog ontbreekt (Wifi), want de andere componenten (sensor en led's) heb je in de vorige delen al uitgewerkt.
+Als je kijkt naar de componenten van *device* (de ESP32 microcontroller) dan zal het je misschien zijn opgevallen dat naast de *client* die nog moet worden geschreven alleen de *connectiviteit* nog ontbreekt (Wifi), want de andere componenten (sensor en LED's) heb je in de vorige delen al uitgewerkt.
 
 In deze stap ga je de Wifi van jouw machine als een mobile hotspot configureren en waar de ESP32 vervolgens gebruik van kan gaan maken. Je zal een netwerknaam en wachtwoord gaan opgeven, en noteer deze, je zal het later nodig hebben voor de ESP32 WiFi-configuratie.
 
