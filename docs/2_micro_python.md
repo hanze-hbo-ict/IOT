@@ -191,7 +191,7 @@ Dit eenvoudige programma zal de blauwe LED op het bord 5 keer laten knipperen. P
 ampy -p <portname> put main.py
 ```
 
-Als het bestand is overgezet zal de blauwe LED gaan knipperen, `main.py` is uitgevoerd! Het bord heeft ook twee knoppen, EN en BOOT, zie figuur  {numref}`esp32-devkit`. BOOT zal het bord opnieuw opstarten, en daarmee opnieuw `main.py` uitvoeren.
+Als het bestand is overgezet zal de blauwe LED gaan knipperen, `main.py` is uitgevoerd! Het bord heeft ook twee knoppen, EN en BOOT, zie figuur  {numref}`esp32-devkit`. EN zal het bord opnieuw opstarten, en daarmee opnieuw `main.py` uitvoeren.
 
 ## Debuggen
 
