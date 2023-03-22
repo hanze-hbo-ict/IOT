@@ -88,26 +88,29 @@ In deze stap ga je de Wifi van jouw machine als een mobile hotspot configureren 
 
 Een mobiele hotspot creëert een intern netwerk waar ook jouw machine een [*IP adres*](https://en.wikipedia.org/wiki/IP_address) op krijgt. Volg de instructies voor jouw besturingssysteem voor het aanmaken van een WiFi hotspot en hoe je het adres van jouw machine op dit netwerk kan bepalen, ook deze zal je later nodig hebben.
 
-```{tabbed} Windows
+````{tab-set}
+
+```{tab-item} Windows
 Volg de instructies zoals beschreven op
 ["Uw pc Windows gebruiken als mobiele hotspot"](https://support.microsoft.com/nl-nl/windows/uw-pc-windows-gebruiken-als-mobiele-hotspot-c89b0fad-72d5-41e8-f7ea-406ad9036b85).
 
  Bepaal het WiFi IP adres van jouw machine, bijvoorbeeld op de command line met `ipconfig` en noteer het.
 ```
 
-```{tabbed} macOS
+```{tab-item} macOS
 Volg de instructies zoals beschreven op ["De internetverbinding op de Mac delen met andere netwerkgebruikers"](https://support.apple.com/nl-nl/guide/mac-help/mchlp1540/mac).
 
 Bepaal het WiFi IP adres van jouw machine, bijvoorbeeld op de command line met `ifconfig` en noteer het.
 ```
 
-```{tabbed} Linux
+```{tab-item} Linux
 Volg bijvoorbeeld de Ubuntu instructies zoals beschreven op ["Create a wireless hotspot"](https://help.ubuntu.com/stable/ubuntu-help/net-wireless-adhoc.html.en).
 
 Op de meeste Linux distributies zal  NetworkManager geïnstalleerd zijn, met de bijbehorende `nmcli` commmand line applicatie is ook eenvoudig een hotspot aan te maken, zie bijvoorbeeld ["Create Wi-Fi Hotspot on Ubuntu / Debian / Fedora / CentOS / Arch"](https://computingforgeeks.com/create-wi-fi-hotspot-on-ubuntu-debian-fedora-centos-arch/).
 
 Bepaal het WiFi IP adres van jouw machine, bijvoorbeeld op de command line met  `ip a` en noteer het.
 ```
+````
 
 ```{note}
 De bovenstaande instructies voor jouw systeem zijn algemeen en verwijzen naar comand line tools die altijd beschikbaar zijn.
