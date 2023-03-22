@@ -413,6 +413,28 @@ document.write(`
 <p>Als je kijkt naar de componenten van <em>device</em> (de ESP32 microcontroller) dan zal het je misschien zijn opgevallen dat naast de <em>client</em> die nog moet worden geschreven alleen de <em>connectiviteit</em> nog ontbreekt (Wifi), want de andere componenten (sensor en LED’s) heb je in de vorige delen al uitgewerkt.</p>
 <p>In deze stap ga je de Wifi van jouw machine als een mobile hotspot configureren en waar de ESP32 vervolgens gebruik van kan gaan maken. Je zal een netwerknaam en wachtwoord gaan opgeven, en noteer deze, je zal het later nodig hebben voor de ESP32 WiFi-configuratie.</p>
 <p>Een mobiele hotspot creëert een intern netwerk waar ook jouw machine een <a class="reference external" href="https://en.wikipedia.org/wiki/IP_address"><em>IP adres</em></a> op krijgt. Volg de instructies voor jouw besturingssysteem voor het aanmaken van een WiFi hotspot en hoe je het adres van jouw machine op dit netwerk kan bepalen, ook deze zal je later nodig hebben.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Windows</label><div class="sd-tab-content docutils">
+<p>Volg de instructies zoals beschreven op
+<a class="reference external" href="https://support.microsoft.com/nl-nl/windows/uw-pc-windows-gebruiken-als-mobiele-hotspot-c89b0fad-72d5-41e8-f7ea-406ad9036b85">“Uw pc Windows gebruiken als mobiele hotspot”</a>.</p>
+<p>Bepaal het WiFi IP adres van jouw machine, bijvoorbeeld op de command line met <code class="docutils literal notranslate"><span class="pre">ipconfig</span></code> en noteer het.</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+macOS</label><div class="sd-tab-content docutils">
+<p>Volg de instructies zoals beschreven op <a class="reference external" href="https://support.apple.com/nl-nl/guide/mac-help/mchlp1540/mac">“De internetverbinding op de Mac delen met andere netwerkgebruikers”</a>.</p>
+<p>Bepaal het WiFi IP adres van jouw machine, bijvoorbeeld op de command line met <code class="docutils literal notranslate"><span class="pre">ifconfig</span></code> en noteer het.</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Linux</label><div class="sd-tab-content docutils">
+<p>Volg bijvoorbeeld de Ubuntu instructies zoals beschreven op <a class="reference external" href="https://help.ubuntu.com/stable/ubuntu-help/net-wireless-adhoc.html.en">“Create a wireless hotspot”</a>.</p>
+<p>Op de meeste Linux distributies zal  NetworkManager geïnstalleerd zijn, met de bijbehorende <code class="docutils literal notranslate"><span class="pre">nmcli</span></code> commmand line applicatie is ook eenvoudig een hotspot aan te maken, zie bijvoorbeeld <a class="reference external" href="https://computingforgeeks.com/create-wi-fi-hotspot-on-ubuntu-debian-fedora-centos-arch/">“Create Wi-Fi Hotspot on Ubuntu / Debian / Fedora / CentOS / Arch”</a>.</p>
+<p>Bepaal het WiFi IP adres van jouw machine, bijvoorbeeld op de command line met  <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">a</span></code> en noteer het.</p>
+</div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Notitie</p>
 <p>De bovenstaande instructies voor jouw systeem zijn algemeen en verwijzen naar comand line tools die altijd beschikbaar zijn.</p>

@@ -419,6 +419,60 @@ document.write(`
 <h3><span class="section-number">1.3.2. </span>Seriële communicatie<a class="headerlink" href="#seriele-communicatie" title="Permalink to this heading">#</a></h3>
 <p>Sluit het bord aan met de Micro USB kabel, deze aansluiting is zowel voor voeding als <em>seriële</em> communicatie. Een eerste test of de communicatie met het ontwikkelbord slaagt is om het aan te sluiten, waarna een <em>rode led</em> op het bord zal moeten oplichten.</p>
 <p>Voordat je de firmware kan flashen zal je eerst moeten weten op <em>welke</em> <a class="reference external" href="https://en.wikipedia.org/wiki/Serial_port">seriële poort</a> het bord is aangesloten. In het kort volgen nu instructies voor jouw besturingssysteem, meer uitgebreide informatie kan je vinden in de <a class="reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html">ESP32 documentie</a> over seriële communicatie met de microcontroller.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Windows</label><div class="sd-tab-content docutils">
+<p>De meest eenvoudige manier om een overzicht van actuele seriële poortnamen op te vragen is om op de command line het volgende uit te voeren:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>mode
+</pre></div>
+</div>
+<p>waar de uitvoer vergelijkbaar zal zijn met het volgende</p>
+<!-- TODO uitvoer met aangesloten board -->
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Status for device COM1:</span>
+<span class="go">-----------------------</span>
+<span class="go">    Baud:            1200</span>
+<span class="go">    Parity:          None</span>
+<span class="go">    Data Bits:       7</span>
+<span class="go">    Stop Bits:       1</span>
+<span class="go">    Timeout:         OFF</span>
+<span class="go">    XON/XOFF:        OFF</span>
+<span class="go">    CTS handshaking: OFF</span>
+<span class="go">    DSR handshaking: OFF</span>
+<span class="go">    DSR sensitivity: OFF</span>
+<span class="go">    DTR circuit:     ON</span>
+<span class="go">    RTS circuit:     ON</span>
+
+<span class="go">...</span>
+</pre></div>
+</div>
+<p>Je zal hier vooral geïnteresseerd in de genummerde <code class="docutils literal notranslate"><span class="pre">COM</span></code>-poorten en het is waarschijnlijk dat het laatst aangesloten seriële apparaat (de ESP32) het hoogste getal heeft, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">COM2</span></code>. Onthoud of noteer deze waarde, je zal het later nodig hebben voor het <em>flashen</em> van de MicroPyton firmware en het plaatsen van jouw programmacode op de microcontroller.</p>
+<div class="admonition important">
+<p class="admonition-title">Belangrijk</p>
+<p>Het kan zijn dat een nieuwe <code class="docutils literal notranslate"><span class="pre">COM</span></code>-poort niet zichtbaar is. Dit kan betekenen dat niet de juiste stuurprogramma’s zijn geïnstalleerd, of dat dat Windows deze niet automatisch kan vinden.</p>
+<p>Download en installeer in dit geval de <a class="reference external" href="https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers">CP210x USB to UART Bridge VCP Drivers</a> en probeer het opnieuw.</p>
+</div>
+<p>Twijfel je over de poortnaam? Koppel het bord dan los, voer <code class="docutils literal notranslate"><span class="pre">mode</span></code> uit en noteer de huidige namen. Sluit vervolgens het bord weer aan en controleer weer met <code class="docutils literal notranslate"><span class="pre">mode</span></code> welke poortnaam is toegevoegd (dit zal jouw bord zijn).</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+macOS / Linux</label><div class="sd-tab-content docutils">
+<p>De seriële poortnaam onder Linux of macOS kan je als <em>pseudo terminal</em> device vinden in het virtuele filesystem <code class="docutils literal notranslate"><span class="pre">/dev</span></code>. Voer het volgende twee keer uit, eerst <em>zonder</em> het bord te hebben aangesloten en vervolgens mét om te zien welke poortnaam is toegevoegd:</p>
+<p><strong>Linux</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ls /dev/tty*
+</pre></div>
+</div>
+<p><strong>macOS</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ls /dev/cu.*
+</pre></div>
+</div>
+<p>De poortnaam zal voor Linux zichtbaar zijn als bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">/dev/ttyUSB0</span></code>, of voor macOS bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">/dev/cu.SLAB_USBtoUART7</span></code>. Let op, dit zijn <em>voorbeelden</em>, de namen kunnen voor jouw systeem verschillen!</p>
+<div class="admonition important">
+<p class="admonition-title">Belangrijk</p>
+<p>Onder Linux zal je jezelf moeten toevoegen aan de groep <code class="docutils literal notranslate"><span class="pre">dialout</span></code> om gebruik te kunnen maken van de seriële poort. Als macOS gebruiker zal je misschien ook extra stappen moeten ondernemen als je geen poortnaam ziet, het kan dan zijn dat tóch nog een driver moet worden geïnstalleerd of dat permissies moeten worden gezet om de driver te mogen gebruiken. Lees in dit geval de <a class="reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html">ESP32 documentie</a> voor meer informatie.</p>
+</div>
+</div>
+</div>
 <p>Let op, mocht je de kabel later op een andere USB-poort aansluiten dan is de kans groot dat seriële poortnaam wijzigt, houd hier rekening mee!</p>
 <p>De seriële poortnaam zal je vaak nodig hebben, niet alleen voor het flashen van de MicroPython firmware, maar ook later als je jouw code op het het bord gaat plaatsen!</p>
 </section>

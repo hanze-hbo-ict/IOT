@@ -97,7 +97,9 @@ Sluit het bord aan met de Micro USB kabel, deze aansluiting is zowel voor voedin
 
 Voordat je de firmware kan flashen zal je eerst moeten weten op *welke* [seriële poort](https://en.wikipedia.org/wiki/Serial_port) het bord is aangesloten. In het kort volgen nu instructies voor jouw besturingssysteem, meer uitgebreide informatie kan je vinden in de [ESP32 documentie](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html) over seriële communicatie met de microcontroller.
 
-````{tabbed} Windows
+`````{tab-set}
+
+````{tab-item} Windows
 De meest eenvoudige manier om een overzicht van actuele seriële poortnamen op te vragen is om op de command line het volgende uit te voeren:
 
 ```text
@@ -138,7 +140,7 @@ Twijfel je over de poortnaam? Koppel het bord dan los, voer `mode` uit en noteer
 
 ````
 
-````{tabbed} macOS / Linux
+````{tab-item} macOS / Linux
 De seriële poortnaam onder Linux of macOS kan je als *pseudo terminal* device vinden in het virtuele filesystem `/dev`. Voer het volgende twee keer uit, eerst *zonder* het bord te hebben aangesloten en vervolgens mét om te zien welke poortnaam is toegevoegd:
 
 **Linux**
@@ -159,6 +161,7 @@ De poortnaam zal voor Linux zichtbaar zijn als bijvoorbeeld `/dev/ttyUSB0`, of v
 Onder Linux zal je jezelf moeten toevoegen aan de groep `dialout` om gebruik te kunnen maken van de seriële poort. Als macOS gebruiker zal je misschien ook extra stappen moeten ondernemen als je geen poortnaam ziet, het kan dan zijn dat tóch nog een driver moet worden geïnstalleerd of dat permissies moeten worden gezet om de driver te mogen gebruiken. Lees in dit geval de [ESP32 documentie](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html) voor meer informatie.
 ```
 ````
+`````
 
 Let op, mocht je de kabel later op een andere USB-poort aansluiten dan is de kans groot dat seriële poortnaam wijzigt, houd hier rekening mee!
 
