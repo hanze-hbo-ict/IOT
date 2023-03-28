@@ -136,7 +136,7 @@ Met `ampy` kan je een aantal commando's uitvoeren, onder andere voor het tonen (
 ampy -p <portname> ls
 ```
 
-Vervang ook hier `<portname>` met de naam van jouw seriële poort. De uitvoer zal *twee* bestandsnamen tonen,
+Vervang ook hier `<portname>` met de naam van jouw seriële poort. De uitvoer zal *een* of *twee* van de volgende bestandsnamen tonen:
 
 -   `boot.py`
 
@@ -146,10 +146,10 @@ Vervang ook hier `<portname>` met de naam van jouw seriële poort. De uitvoer za
 
     Als dit bestand aanwezig is dan zal het worden uitgevoerd *nadat* `boot.py` is uitgevoerd. Dit is de plek waar jij jouw programma zal gaan schrijven.
 
-Deze twee bestanden zijn dus al aanwezig, maar zullen door jou moeten worden aangepast! Als je nieuwsgierig bent naar de inhoud van deze bestanden kan je ze met het `get` commando naar jouw machine "downloaden", bijvoorbeeld:
+Deze bestanden zijn al dan niet aanwezig, en zullen door jou moeten worden toegevoegd of aangepast! Als je nieuwsgierig bent naar de inhoud van deze bestanden kan je ze met het `get` commando naar jouw machine "downloaden", bijvoorbeeld:
 
 ```text
-ampy -p <portname> get main.py
+ampy -p <portname> get boot.py
 ```
 
 ````{tip}
