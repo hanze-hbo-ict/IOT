@@ -459,7 +459,7 @@ document.write(`
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ampy -p &lt;portname&gt; ls
 </pre></div>
 </div>
-<p>Vervang ook hier <code class="docutils literal notranslate"><span class="pre">&lt;portname&gt;</span></code> met de naam van jouw seriële poort. De uitvoer zal <em>twee</em> bestandsnamen tonen,</p>
+<p>Vervang ook hier <code class="docutils literal notranslate"><span class="pre">&lt;portname&gt;</span></code> met de naam van jouw seriële poort. De uitvoer zal <em>een</em> of <em>twee</em> van de volgende bestandsnamen tonen:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">boot.py</span></code></p>
 <p>Als dit bestand aanwezig is dan zal het altijd als eerste worden uitgevoerd bij het opstarten van de microcontroller. Dit is een goede plek om code uit te laten voeren die <em>altijd</em> nodig is, bijvoorbeeld voor het configureren van een draadloze netwerkverbinding.</p>
@@ -468,8 +468,8 @@ document.write(`
 <p>Als dit bestand aanwezig is dan zal het worden uitgevoerd <em>nadat</em> <code class="docutils literal notranslate"><span class="pre">boot.py</span></code> is uitgevoerd. Dit is de plek waar jij jouw programma zal gaan schrijven.</p>
 </li>
 </ul>
-<p>Deze twee bestanden zijn dus al aanwezig, maar zullen door jou moeten worden aangepast! Als je nieuwsgierig bent naar de inhoud van deze bestanden kan je ze met het <code class="docutils literal notranslate"><span class="pre">get</span></code> commando naar jouw machine “downloaden”, bijvoorbeeld:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ampy -p &lt;portname&gt; get main.py
+<p>Deze bestanden zijn al dan niet aanwezig, en zullen door jou moeten worden toegevoegd of aangepast! Als je nieuwsgierig bent naar de inhoud van deze bestanden kan je ze met het <code class="docutils literal notranslate"><span class="pre">get</span></code> commando naar jouw machine “downloaden”, bijvoorbeeld:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ampy -p &lt;portname&gt; get boot.py
 </pre></div>
 </div>
 <div class="admonition tip">
