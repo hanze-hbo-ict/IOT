@@ -66,7 +66,7 @@ Een LED heeft twee pinnen en als je goed kijkt zie je dat één langer is dan de
 Een LED aansluiten
 ```
 
-Plaats nu een LED op het board, bijvoorbeeld zoals in figuur {numref}`led-connect`. Je ziet in deze figuur nu ook dat verticaal twee rijen groen oplichten om aan te geven dat deze gaatjes met elkaar in verbinding staan.
+Plaats nu een LED op het board, bijvoorbeeld zoals in figuur {numref}`led-connect`. Je ziet in deze figuur nu ook dat verticaal twee rijen groen gemarkeerd zijn om aan te geven dat deze gaatjes met elkaar in verbinding staan.
 
 ```{figure} ../circuits/esp32_step_3_bb.png
 :name: ground-led
