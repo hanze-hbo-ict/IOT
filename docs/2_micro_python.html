@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="nl" data-content_root="" >
+<html lang="nl" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>2. MicroPython &#8212; Internet of Things</title>
   
@@ -29,40 +28,36 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=b028fc25"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=83e0b41b"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/2_micro_python';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
@@ -161,7 +156,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -349,9 +355,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="micropython">
-<h1><span class="section-number">2. </span>MicroPython<a class="headerlink" href="#micropython" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2. </span>MicroPython<a class="headerlink" href="#micropython" title="Link to this heading">#</a></h1>
 <section id="connectiviteit">
-<h2><span class="section-number">2.1. </span>Connectiviteit<a class="headerlink" href="#connectiviteit" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.1. </span>Connectiviteit<a class="headerlink" href="#connectiviteit" title="Link to this heading">#</a></h2>
 <p>Sluit de ESP32 aan op de micro USB poort, je zal een rode LED zien branden. In de vorige stap heb je gezien hoe je de seriële poortnaam op jouw systeem kan bepalen, deze zal je nu ook nodig hebben om te kunnen communiceren met het bord.</p>
 <p>Net als met Python op jouw systeem kan je MicroPython op twee manieren gebruiken:</p>
 <ul class="simple">
@@ -361,16 +367,16 @@ document.write(`
 <p>Bij de eerste manier schrijf je de code voor jouw programma in een bestand en laat je het vervolgens uitvoeren. Dit is wat je straks gaat doen om bijvoorbeeld een LED te bedienen of een sensor op het bord uit te lezen.</p>
 <p>De tweede manier is wat je kent van bijvoorbeeld IPython, een interactieve Python prompt (REPL) en daar ga je nu eerst kennis mee maken.</p>
 <section id="seriele-connectie">
-<h3><span class="section-number">2.1.1. </span>Seriële connectie<a class="headerlink" href="#seriele-connectie" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.1.1. </span>Seriële connectie<a class="headerlink" href="#seriele-connectie" title="Link to this heading">#</a></h3>
 <p>De micro USB aansluiting met het bord is een seriële connectie en deze is <em>bidirectioneel</em>, er kunnen zowel gegevens mee worden verstuurd als mee worden ontvangen. In het verleden werden seriële connecties gebruikt om bijvoorbeeld een muis of modem aan te sluiten, maar ook een beeldscherm (of <em>terminal</em>). Een beeldscherm kan natuurlijk niet op het bord worden aangesloten, maar kan wél met software worden nagebootst (<em>geëmuleerd</em>).</p>
 </section>
 <section id="terminal">
-<h3><span class="section-number">2.1.2. </span>Terminal<a class="headerlink" href="#terminal" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.1.2. </span>Terminal<a class="headerlink" href="#terminal" title="Link to this heading">#</a></h3>
 <p>Een bekende terminal-emulator is <a class="reference external" href="https://www.putty.org/">PuTTY</a> die voor zowel Windows, Linux en macOS beschikbaar is. Download en installeer PuTTY, en als je het opstart zal het je vragen om een configuratie voor de verbinding die je wilt maken, zie figuur <a class="reference internal" href="#putty-config"><span class="std std-numref">Fig. 2.1</span></a>.</p>
 <figure class="align-default" id="putty-config">
 <img alt="../_images/putty_config.png" src="../_images/putty_config.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">PuTTY configuratie</span><a class="headerlink" href="#putty-config" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">PuTTY configuratie</span><a class="headerlink" href="#putty-config" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Kies voor <em>Serial</em> als type connectie en vul bij <em>Serial line</em> de poortnaam in (bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">COM2</span></code> onder Windows of <code class="docutils literal notranslate"><span class="pre">/dev/ttyUSB0</span></code> onder Linux). De snelheid (<em>Speed</em>) van de verbinding op zet je op 115200. Tip, geef deze configuratie een naam en bewaar het zodat je dit niet elke keer weer moet instellen.</p>
@@ -383,18 +389,18 @@ document.write(`
 </section>
 </section>
 <section id="id1">
-<h2><span class="section-number">2.2. </span>MicroPython<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.2. </span>MicroPython<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>Zoals eerder is gezegd, MicroPython heeft een aantal modulen die heel specifiek zijn voor een microcontroller als de ESP32, onder andere voor het kunnen gebruiken van de pins. Twee van deze pins zijn <em>intern</em> aangesloten, dat wil zeggen dat je ze niet een fysieke pin hebben op het bord.</p>
 <p>Met de eerste interne pin heb je al kennisgemaakt, dit is waar de <em>rode</em> LED op aangesloten is (en gaat branden zodra je het bord aansluit). Op de tweede interne pin is een <em>blauwe</em> LED aangesloten (tegenover de rode led, zie figuur <a class="reference internal" href="#esp32-devkit"><span class="std std-numref">Fig. 2.2</span></a>).</p>
 <figure class="align-default" id="esp32-devkit">
 <img alt="../_images/esp32.png" src="../_images/esp32.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">ESP32 Devkit V1</span><a class="headerlink" href="#esp32-devkit" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">ESP32 Devkit V1</span><a class="headerlink" href="#esp32-devkit" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Standaard staat deze blauwe LED uit, in de volgende stap ga je deze LED aan- en uitzetten.</p>
 <section id="de-module-machine">
-<h3><span class="section-number">2.2.1. </span>De module <code class="docutils literal notranslate"><span class="pre">machine</span></code><a class="headerlink" href="#de-module-machine" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.2.1. </span>De module <code class="docutils literal notranslate"><span class="pre">machine</span></code><a class="headerlink" href="#de-module-machine" title="Link to this heading">#</a></h3>
 <p>De MicroPython module <a class="reference external" href="https://docs.micropython.org/en/v1.9.3/wipy/library/machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code></a> bevat functies en klassen voor toegang tot de hardware, onder andere de klasse <a class="reference external" href="https://docs.micropython.org/en/v1.9.3/wipy/library/machine.Pin.html"><code class="docutils literal notranslate"><span class="pre">Pin</span></code></a> die alles te maken heeft met het kunnen gebruiken van de pins op het bord.</p>
 <p>Alle pins zijn genummerd, zoals je ook op de zijkant van het bord kan zien (bijvoorbeeld D32, D33 etc.). Over wát de verschillende pins (kunnen) doen volgt later meer.</p>
 <p>Importeer nu de klasse <code class="docutils literal notranslate"><span class="pre">Pin</span></code> uit de module <code class="docutils literal notranslate"><span class="pre">machine</span></code>:</p>
@@ -418,7 +424,7 @@ document.write(`
 <p>De terminal sessie kan je nu beëindigen (maar laat de ESP32 wel aangesloten), je gaat in de volgende stappen op jouw laptop of computer verder werken.</p>
 </section>
 <section id="ampy">
-<h3><span class="section-number">2.2.2. </span><code class="docutils literal notranslate"><span class="pre">ampy</span></code><a class="headerlink" href="#ampy" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.2.2. </span><code class="docutils literal notranslate"><span class="pre">ampy</span></code><a class="headerlink" href="#ampy" title="Link to this heading">#</a></h3>
 <p>MicroPython heeft een klein bestandssysteem waar je jouw bestanden op kan plaatsen. Tijdens de voorbereiding heb je ook de Python package <a class="reference external" href="https://pypi.org/project/adafruit-ampy/"><code class="docutils literal notranslate"><span class="pre">adafruit-ampy</span></code></a> geïnstalleerd en deze bevat het programma <code class="docutils literal notranslate"><span class="pre">ampy</span></code> die je zal gaan gebruiken voor bestandsbeheer en een aantal andere eenvoudige taken. Controleer als volgt of <code class="docutils literal notranslate"><span class="pre">ampy</span></code> correct is geïnstalleerd</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ampy --help
 </pre></div>
@@ -486,7 +492,7 @@ document.write(`
 </div>
 </section>
 <section id="een-project">
-<h3><span class="section-number">2.2.3. </span>Een project<a class="headerlink" href="#een-project" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.2.3. </span>Een project<a class="headerlink" href="#een-project" title="Link to this heading">#</a></h3>
 <p>Het is nu tijd om een projectomgeving op te zetten, een directory waar je Python code gaat schrijven voor deze workshop. Maak in deze directory een nieuw bestand <code class="docutils literal notranslate"><span class="pre">main.py</span></code> aan en kopieer daar het volgende in:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
 <span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
@@ -508,7 +514,7 @@ document.write(`
 </section>
 </section>
 <section id="debuggen">
-<h2><span class="section-number">2.3. </span>Debuggen<a class="headerlink" href="#debuggen" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.3. </span>Debuggen<a class="headerlink" href="#debuggen" title="Link to this heading">#</a></h2>
 <p>Het proces van code schrijven op jouw machine, het overzetten naar het bord en vervolgens laten uitvoeren zal je vaak gaan herhalen. Het is een lastig proces omdat je niet op jouw machine kan testen of het werkt. Probeer daarom vertrouwd te raken met de MicroPyton REPL, de interactieve prompt, om fragmenten uit te proberen die je later in jouw code kan opnemen.</p>
 <p>Gebruik de seriële connectie ook om foutmeldingen te laten tonen, bij het opnieuw opstarten of resetten van het bord (de EN knop) zullen deze berichten zichtbaar worden. Het is om deze reden ook een goed idee om eventueel print statements in jouw code op te nemen, deze zullen ook zichtbaar zijn.</p>
 </section>

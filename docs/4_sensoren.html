@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="nl" data-content_root="" >
+<html lang="nl" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>4. Sensoren &#8212; Internet of Things</title>
   
@@ -29,40 +28,36 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=b028fc25"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=83e0b41b"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/4_sensoren';</script>
@@ -163,7 +158,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -345,49 +351,49 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="sensoren">
-<h1><span class="section-number">4. </span>Sensoren<a class="headerlink" href="#sensoren" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">4. </span>Sensoren<a class="headerlink" href="#sensoren" title="Link to this heading">#</a></h1>
 <p>Sensoren komen in allerlei soorten en maten, bekend zijn beweging-, licht- en temperatuursensoren. In dit onderdeel ga je het ontwerp uitbreiden met een temperatuursensor.</p>
 <section id="voorbereiding">
-<h2><span class="section-number">4.1. </span>Voorbereiding<a class="headerlink" href="#voorbereiding" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.1. </span>Voorbereiding<a class="headerlink" href="#voorbereiding" title="Link to this heading">#</a></h2>
 <p>In tegenstelling tot een LED die aangesloten werd op een GPIO-pin (die aan- en uit kon worden gezet) is een continue stroomtoevoer voor een sensor een betere keus. Rechtsonder op het bord zie je een <strong>3V3</strong> pin die deze stroomtoevoer biedt (zie ook figuur <a class="reference internal" href="2_micro_python.html#esp32-devkit"><span class="std std-numref">Fig. 2.2</span></a> voor meer detail).</p>
 <figure class="align-default" id="v3-connect-wire">
 <img alt="../_images/esp32_step_6a_bb.png" src="../_images/esp32_step_6a_bb.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">3V3 kabel aansluiten</span><a class="headerlink" href="#v3-connect-wire" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">3V3 kabel aansluiten</span><a class="headerlink" href="#v3-connect-wire" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Het begint op het breadboard al aardig druk te worden met een led, kabels en een weerstand. De 3V3 pin bevindt zich aan de onderkant van het ravijn, we kiezen er voor om deze pin aan te sluiten op de onderste verticale strip, zie figuur <a class="reference internal" href="#v3-connect-wire"><span class="std std-numref">Fig. 4.1</span></a>. Je zal hier de ESP32 even van het board moeten halen om de kabel te plaatsen, zorg er voor dat je een gaatje recht boven de 3V3 pin gebruikt zodat pin en kabel verticaal op de strip zijn aangesloten.</p>
 </section>
 <section id="temperatuursensor">
-<h2><span class="section-number">4.2. </span>Temperatuursensor<a class="headerlink" href="#temperatuursensor" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.2. </span>Temperatuursensor<a class="headerlink" href="#temperatuursensor" title="Link to this heading">#</a></h2>
 <figure class="align-default" id="tmp36-sensor">
 <img alt="../_images/tmp36.png" src="../_images/tmp36.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">tmp36 temperatuursensor</span><a class="headerlink" href="#tmp36-sensor" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">tmp36 temperatuursensor</span><a class="headerlink" href="#tmp36-sensor" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>De tmp36 temperatuursensor heeft 3 aansluitingen, als je de kant met het label voor je houdt is <strong>links</strong> is de input (stroom in <span class="math notranslate nohighlight">\(+\)</span>), <strong>midden</strong> is <em>analoge output</em> en <strong>rechts</strong> is aarding (stroom uit <span class="math notranslate nohighlight">\(-\)</span>).</p>
 <figure class="align-default" id="tmp36-in-out">
 <img alt="../_images/esp32_step_7_bb.png" src="../_images/esp32_step_7_bb.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">temp36 in- en output</span><a class="headerlink" href="#tmp36-in-out" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">temp36 in- en output</span><a class="headerlink" href="#tmp36-in-out" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Plaats de tmp36 op het bord en sluit de in- en output aan, zie figuur <a class="reference internal" href="#tmp36-in-out"><span class="std std-numref">Fig. 4.3</span></a>.</p>
 <figure class="align-default" id="tmp36-analog-out">
 <img alt="../_images/esp32_step_8_bb.png" src="../_images/esp32_step_8_bb.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 4.4 </span><span class="caption-text">temp36 analoge output</span><a class="headerlink" href="#tmp36-analog-out" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 4.4 </span><span class="caption-text">temp36 analoge output</span><a class="headerlink" href="#tmp36-analog-out" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Voor de middelste aansluiting, de analoge output, zal ook net als bij de LED weer een keus moeten worden gemaakt welke pin te gebruiken. Wij hebben hier gekozen voor GPIO-pin nummer 34, zie figuur <a class="reference internal" href="#tmp36-analog-out"><span class="std std-numref">Fig. 4.4</span></a>.</p>
 </section>
 <section id="temperatuur-meten">
-<h2><span class="section-number">4.3. </span>Temperatuur meten<a class="headerlink" href="#temperatuur-meten" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.3. </span>Temperatuur meten<a class="headerlink" href="#temperatuur-meten" title="Link to this heading">#</a></h2>
 <p>De ESP32 zal op de pin analoge <em>input</em> ontvangen van de temperatuursensor, en je zal deze <em>analoge</em> waarde moeten converteren naar een <em>digitale</em> representatie die je uiteindelijk kan gebruiken voor het bepalen van de temperatuur in graden celsius.</p>
 <p>Laten we dit stap voor stap doen, het is aan te raden om dit met MicroPython REPL uit te voeren. Later kan je deze stappen in jouw code overnemen.</p>
 <section id="analoog-naar-digitaal">
-<h3><span class="section-number">4.3.1. </span>Analoog naar digitaal<a class="headerlink" href="#analoog-naar-digitaal" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.3.1. </span>Analoog naar digitaal<a class="headerlink" href="#analoog-naar-digitaal" title="Link to this heading">#</a></h3>
 <p>Om te beginnen zal je ook hier weer de klasse <code class="docutils literal notranslate"><span class="pre">Pin</span></code> moeten gebruiken én de klasse <a class="reference external" href="https://docs.micropython.org/en/latest/library/machine.ADC.html"><code class="docutils literal notranslate"><span class="pre">ADC</span></code></a> uit de module <code class="docutils literal notranslate"><span class="pre">machine</span></code> voor de analoog naar digitale conversie.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">ADC</span>
 </pre></div>
@@ -416,7 +422,7 @@ document.write(`
 <figure class="align-default" id="tmp36-voltage-temp">
 <img alt="../_images/tmp36_output_temperature.png" src="../_images/tmp36_output_temperature.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 4.5 </span><span class="caption-text">Relatie output voltage en temperatuur</span><a class="headerlink" href="#tmp36-voltage-temp" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 4.5 </span><span class="caption-text">Relatie output voltage en temperatuur</span><a class="headerlink" href="#tmp36-voltage-temp" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In deze documentatie is een grafiek opgenomen die de relatie voltage (in millivolt) ten opzichte van temperatuur in graden celsius aangeeft, zie figuur <a class="reference internal" href="#tmp36-voltage-temp"><span class="std std-numref">Fig. 4.5</span></a>. Let hier in het bijzonder op lijn <em>b</em> die het gedrag van de tmp36 weergeeft. Op basis van deze informatie blijkt dat je de onderstaande formule kan toepassen om het voltage om te zetten naar temperatuur:</p>

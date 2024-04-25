@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="nl" data-content_root="" >
+<html lang="nl" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>3. Aansluitingen &#8212; Internet of Things</title>
   
@@ -29,40 +28,36 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=b028fc25"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=83e0b41b"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/3_aansluitingen';</script>
@@ -163,7 +158,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Zoeken</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -349,42 +355,42 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="aansluitingen">
-<h1><span class="section-number">3. </span>Aansluitingen<a class="headerlink" href="#aansluitingen" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">3. </span>Aansluitingen<a class="headerlink" href="#aansluitingen" title="Link to this heading">#</a></h1>
 <p>Tot nu toe heb je alleen nog maar met een interne pin gewerkt (waar een blauwe LED op is aangesloten), in het volgende ga je de externe pins gebruiken om apparaten op aan te sluiten.</p>
 <section id="sensoren-en-actuatoren">
-<h2><span class="section-number">3.1. </span>Sensoren en actuatoren<a class="headerlink" href="#sensoren-en-actuatoren" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.1. </span>Sensoren en actuatoren<a class="headerlink" href="#sensoren-en-actuatoren" title="Link to this heading">#</a></h2>
 <p>Wat je op het bord kan aansluiten valt uiteen in twee categoriën, <em>sensoren</em> en <em>actuatoren</em>. Een sensor (van het Engelse woord <em>sense</em>) kan je zien als een zintuig, iets dat waarneemt. Voorbeelden zijn een bewegingssensor of een temperatuursensor, de laatste ga je in deze workshop gebruiken.</p>
 <p>Een sensor neemt waar, maar handelt niet, daar is een actuator (van het Engelse woord <em>act</em>) voor nodig. Een actuator is met andere woorden een apparaat dat dingen doet of in actie zet. Voorbeelden zijn een elektromotor of andere apparaten waar spanning op wordt gezet zoals een lamp. In dit onderdeel ga je een LED als actuator aansluiten.</p>
 </section>
 <section id="schakelingen-ontwerpen">
-<h2><span class="section-number">3.2. </span>Schakelingen ontwerpen<a class="headerlink" href="#schakelingen-ontwerpen" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2. </span>Schakelingen ontwerpen<a class="headerlink" href="#schakelingen-ontwerpen" title="Link to this heading">#</a></h2>
 <p>Als een elektronische schakeling wordt opgebouwd dan is daar normaal gesproken een printplaat voor ontworpen. Op zo’n printplaat hebben alle onderdelen een aangewezen plek waar ze moeten worden gemonteerd.</p>
 <p>Het ontwerpen van een printplaat gebeurt alleen als er veel identieke elektronische circuits moeten worden opgebouwd en ook alleen als het zeker is dat het ontwerp correct is.</p>
 <p>In deze workshop ga je geen printplaat ontwerpen, maar ga je gebruik maken van een <em>breadboard</em> (zie figuur <a class="reference internal" href="#breadboard"><span class="std std-numref">Fig. 3.1</span></a>) voor het flexibel plaatsen van de ESP32 microcontroller en het aansluiten van een sensor en actuator.</p>
 <figure class="align-default" id="breadboard">
 <img alt="../_images/breadboard_half.png" src="../_images/breadboard_half.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Een half-size <em>breadboard</em></span><a class="headerlink" href="#breadboard" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Een half-size <em>breadboard</em></span><a class="headerlink" href="#breadboard" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Je ziet op een breadboard veel gaatjes waar pinnen en draden in kunnen worden gestoken, maar aan de buitenkant zie je niet zien hoe de contacten lopen. De contacten worden gevormd door metalen strips die de gaatjes onderling verbinden per rij, in figuur <a class="reference internal" href="#breadboard"><span class="std std-numref">Fig. 3.1</span></a> zie je een aantal van deze strips waar de <em>richting</em> van de verbinding van de rijen zijn aangegeven met rode lijnen.</p>
 <p>De buitenste gaatjes zijn <em>horizontaal</em> met elkaar verbonden en de binnenste gaatjes zijn <em>verticaal</em> met elkaar verbonden. Je ziet ook dat de binnenste gaatjes verdeeld zijn over twee vlakken die worden gescheiden door een “ravijn”.</p>
 <section id="esp32-plaatsen">
-<h3><span class="section-number">3.2.1. </span>ESP32 plaatsen<a class="headerlink" href="#esp32-plaatsen" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.2.1. </span>ESP32 plaatsen<a class="headerlink" href="#esp32-plaatsen" title="Link to this heading">#</a></h3>
 <figure class="align-default" id="esp32-placement">
 <img alt="../_images/esp32_step_0_bb.png" src="../_images/esp32_step_0_bb.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Plaatsing van de ESP32</span><a class="headerlink" href="#esp32-placement" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Plaatsing van de ESP32</span><a class="headerlink" href="#esp32-placement" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Plaats nu de ESP32 op het breadboard zoals aangegeven in <a class="reference internal" href="#esp32-placement"><span class="std std-numref">Fig. 3.2</span></a>, het zal wat lichte druk nodig hebben om de pins in de gaatjes te laten vallen. Je mag de ESP32 ook anders plaatsen, in ons voorbeeld proberen we zoveel mogelijk ruimte aan de rechterkant van het board over te houden omdat daar een sensor en actuator moeten worden bijgeplaatst. Zorg er in ieder geval voor dat de twee pin-rijen aan verschillende zijden van het ravijn zitten.</p>
 </section>
 <section id="aarding-aansluiten">
-<h3><span class="section-number">3.2.2. </span>Aarding aansluiten<a class="headerlink" href="#aarding-aansluiten" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.2.2. </span>Aarding aansluiten<a class="headerlink" href="#aarding-aansluiten" title="Link to this heading">#</a></h3>
 <figure class="align-default" id="ground-connect">
 <img alt="../_images/esp32_step_1_bb.png" src="../_images/esp32_step_1_bb.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Aansluiten van aarding</span><a class="headerlink" href="#ground-connect" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Aansluiten van aarding</span><a class="headerlink" href="#ground-connect" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Een eerstvolgende stap in het ontwerp is de aarding aanleggen (de <span class="math notranslate nohighlight">\(-\)</span> aansluiting) en dit doe je door met een (korte) kabel de pin GND (<em>ground</em>) aan te sluiten op het board. In figuur <a class="reference internal" href="#ground-connect"><span class="std std-numref">Fig. 3.3</span></a> zie je dat daar de bovenste rij voor is gekozen, en je ziet dat horizontaal de rij nu verbonden is (de rij gaatjes is met groen aangegeven).</p>
@@ -392,33 +398,33 @@ document.write(`
 </section>
 </section>
 <section id="een-led-ansluiten">
-<h2><span class="section-number">3.3. </span>Een LED ansluiten<a class="headerlink" href="#een-led-ansluiten" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.3. </span>Een LED ansluiten<a class="headerlink" href="#een-led-ansluiten" title="Link to this heading">#</a></h2>
 <p>De basis is gereed, nu ga je een LED aansluiten en het circuit verder compleet maken.</p>
 <figure class="align-default" id="red-led">
 <img alt="../_images/red_led.png" src="../_images/red_led.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">Een LED diode</span><a class="headerlink" href="#red-led" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">Een LED diode</span><a class="headerlink" href="#red-led" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Een LED heeft twee pinnen en als je goed kijkt zie je dat één langer is dan de ander en dit heeft een reden. Op de <strong>lange</strong> kant wordt spanning aangesloten (<span class="math notranslate nohighlight">\(+\)</span>) en op de <strong>korte</strong> kant de aarding (<span class="math notranslate nohighlight">\(-\)</span>).</p>
 <figure class="align-default" id="led-connect">
 <img alt="../_images/esp32_step_2_bb.png" src="../_images/esp32_step_2_bb.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Een LED aansluiten</span><a class="headerlink" href="#led-connect" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Een LED aansluiten</span><a class="headerlink" href="#led-connect" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Plaats nu een LED op het board, bijvoorbeeld zoals in figuur <a class="reference internal" href="#led-connect"><span class="std std-numref">Fig. 3.5</span></a>. Je ziet in deze figuur nu ook dat verticaal twee rijen groen gemarkeerd zijn om aan te geven dat deze gaatjes met elkaar in verbinding staan.</p>
 <figure class="align-default" id="ground-led">
 <img alt="../_images/esp32_step_3_bb.png" src="../_images/esp32_step_3_bb.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Een LED aansluiten op aarding</span><a class="headerlink" href="#ground-led" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Een LED aansluiten op aarding</span><a class="headerlink" href="#ground-led" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Een volgende stap is om de LED aan te sluiten op de aarding, verbind met een kabel de horizontale aarding die je eerder hebt aangelegd met de korte kant van de led, zie figuur <a class="reference internal" href="#ground-led"><span class="std std-numref">Fig. 3.6</span></a>.</p>
 <figure class="align-default" id="led-resistor">
 <img alt="../_images/esp32_step_4_bb.png" src="../_images/esp32_step_4_bb.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Een weerstand plaatsen</span><a class="headerlink" href="#led-resistor" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Een weerstand plaatsen</span><a class="headerlink" href="#led-resistor" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>LED’s hebben weerstanden nodig om de stroom die er doorheen gaat te beperken zodat ze niet beschadigd raken. Elke LED heeft een stroomsterkte die niet mag worden overschreden en weerstanden hebben de mogelijkheid de stroom te beperken tot onder de maximaal toegestane stroom voor de LED.</p>
@@ -432,14 +438,14 @@ document.write(`
 <figure class="align-default" id="pinout-diagram">
 <img alt="../_images/esp32_devkit_v1_pins.png" src="../_images/esp32_devkit_v1_pins.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Pinout diagram ESP32</span><a class="headerlink" href="#pinout-diagram" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Pinout diagram ESP32</span><a class="headerlink" href="#pinout-diagram" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>De ESP32 biedt heel véél aansluitingsmogelijkheden en sommige pins kunnen ook nog eens verschillende rollen spelen. In het geval van een LED waar je stroom nodig hebt zal je op zoek moeten gaan naar een van de <em>General Purpose I/O</em> (GPIO) pins. In figuur <a class="reference internal" href="#pinout-diagram"><span class="std std-numref">Fig. 3.8</span></a> vind je per pin welke mogelijkheid het biedt (<a href="../reference/ESP32-Devkit-Pinout-Rev-12.pdf">klik hier</a> voor een grotere versie).</p>
 <figure class="align-default" id="power-led">
 <img alt="../_images/esp32_step_5_bb.png" src="../_images/esp32_step_5_bb.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Aansluiten op een GPIO pin</span><a class="headerlink" href="#power-led" title="Permallink naar deze afbeelding">#</a></p>
+<p><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Aansluiten op een GPIO pin</span><a class="headerlink" href="#power-led" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Als laatste stap sluit je nu de weerstand aan op een GPIO pin, in figuur <a class="reference internal" href="#power-led"><span class="std std-numref">Fig. 3.9</span></a> kan je zien dat wij hebben gekozen voor pin nummer 32.</p>
@@ -448,7 +454,7 @@ document.write(`
 <p>Het kiezen van de juiste pin blijft lastig, naast het pinout diagram dat we hier aanbieden kan het behulpzaam zijn om online gidsen door te nemen waar in verder detail wordt beschreven wat elke pin doet (of kan doen), bijvoorbeeld <a class="reference external" href="https://www.electrorules.com/esp32-pinout-reference/">Complete guide on ESP32 Pinout reference: what GPIO pins do you use?</a>.</p>
 </div>
 <section id="micropython">
-<h3><span class="section-number">3.3.1. </span>MicroPython<a class="headerlink" href="#micropython" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.3.1. </span>MicroPython<a class="headerlink" href="#micropython" title="Link to this heading">#</a></h3>
 <p>Hoe kan je nu controleren of jouw circuit met LED werkt? Wat je in de bovenstande stappen hebt gedaan is precies dezelfde manier hoe de interne pin met de blauwe LED is opgebouwd. Dit betekent dat je in de code die je eerder hebt geschreven maar één waarde hoeft aan te passen, namelijk het pinnummer:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
 <span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
