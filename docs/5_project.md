@@ -2,7 +2,7 @@
 
 In dit deel ga je de microcontroller met aangesloten *actuatoren* (LED's) en *sensor* (temperatuurmeter) gebruiken waar de microcntroller een temperatuur gaat versturen over een netwerk.
 
-De ESP32 heeft ingebouwde Wifi connectiviteit en deze zal je later configureren, eerst ga je in meer detail kijken naar het probleem en de verschillende onderdelen van het systeem dat je zal moeten gaan uitwerken.
+De Pico heeft ingebouwde Wifi connectiviteit en deze zal je later configureren, eerst ga je in meer detail kijken naar het probleem en de verschillende onderdelen van het systeem dat je zal moeten gaan uitwerken.
 
 ## Architectuur
 
@@ -56,7 +56,7 @@ Je ziet hier nu al héél veel detail over de verschillende onderdelen en waar j
 
 -   het een client/server oplossing is waar gecommuniceerd wordt over HTTP,
 -   de client temperatuur als *json* geëncodeerd bericht naar de server stuurt,
--   de client bij elk verstuurd bericht activiteit aangeeft (*blauwe* led)
+-   de client bij elk verstuurd bericht activiteit aangeeft (*ingebouwde* led)
 -   de server een *json* geëncodeerd antwoord teruggeeft,
 -   als het antwoord aangeeft dat de temperatuur te hoog is de client een waarschuwing zal moeten tonen (*rode* led).
 
@@ -82,9 +82,9 @@ De bestanden `config.py`, `boot.py` en `main.py` zullen op de microcontroller ga
 
 ## Netwerk
 
-Als je kijkt naar de componenten van *device* (de ESP32 microcontroller) dan zal het je misschien zijn opgevallen dat naast de *client* die nog moet worden geschreven alleen de *connectiviteit* nog ontbreekt (Wifi), want de andere componenten (sensor en LED's) heb je in de vorige delen al uitgewerkt.
+Als je kijkt naar de componenten van *device* (de Pico microcontroller) dan zal het je misschien zijn opgevallen dat naast de *client* die nog moet worden geschreven alleen de *connectiviteit* nog ontbreekt (Wifi), want de andere componenten (sensor en LED's) heb je in de vorige delen al uitgewerkt.
 
-In deze stap ga je de Wifi van jouw machine als een mobile hotspot configureren en waar de ESP32 vervolgens gebruik van kan gaan maken. Je zal een netwerknaam en wachtwoord gaan opgeven, en noteer deze, je zal het later nodig hebben voor de ESP32 WiFi-configuratie.
+In deze stap ga je de Wifi van jouw machine als een mobile hotspot configureren en waar de Pico vervolgens gebruik van kan gaan maken. Je zal een netwerknaam en wachtwoord gaan opgeven, en noteer deze, je zal het later nodig hebben voor de Pico WiFi-configuratie.
 
 Een mobiele hotspot creëert een intern netwerk waar ook jouw machine een [*IP adres*](https://en.wikipedia.org/wiki/IP_address) op krijgt. Volg de instructies voor jouw besturingssysteem voor het aanmaken van een WiFi hotspot en hoe je het adres van jouw machine op dit netwerk kan bepalen, ook deze zal je later nodig hebben.
 
@@ -130,13 +130,13 @@ SERVER = "<address>"
 
 Let op, vervang hier `<name>`, `<password>` en `<address>` met jouw waarden!
 
-Plaats dit bestand nu op de microcontroller met `ampy`.
+Plaats dit bestand nu op de microcontroller.
 
 ### Connectiviteit
 
 Je eerder gezien dat het bestand `boot.py` altijd eerst door MicroPython wordt uitgevoerd en dit is een geschikte plek om een Wifi verbinding te maken met jouw hotspot.
 
-Open een bestand `boot.py` (als je deze nog niet in jouw project hebt) en neem het volgende over. Plaats het vervolgens met `ampy` op het bord.
+Open een bestand `boot.py` (als je deze nog niet in jouw project hebt) en neem het volgende over. Plaats het vervolgens met `` op het bord.
 
 ```python
 import sys
@@ -199,9 +199,12 @@ Later zal je een temperatuur over het netwerk gaan versturen, maar hoe vaak? Eé
 
 De client ga je schrijven in `main.py`, dit wordt het programma dat een temperatuur gaat versturen en zal reageren op een antwoord van een server.
 
-Je hebt in `main.py` al eerder code geschreven, onder andere voor het aansturen van een LED. Kopiëer dit eventeel naar een kladbestand want het bevat misschien fragmenten die je kan hergebruiken.
+Je hebt in `main.py` al eerder code geschreven, onder andere voor het aansturen van een LED. Kopieer dit evenveel naar een kladbestand want het bevat misschien fragmenten die je kan hergebruiken.
 
-De basis van de client is als volgt, jouw taak wordt om de verschillende onderdelen in te vullen:
+````{exercise}
+:label: exercise-client-main
+
+De basis van de client is als volgt en het is jouw taak wordt om de verschillende onderdelen verder in te vullen op de plek van de puntjes `...`.
 
 ```python
 from boot import connection
@@ -209,16 +212,29 @@ from boot import connection
 while connection.isconnected():
     # read temperature
 
+    ...
+
     # send temperature to server
 
-    # flash blue LED indicating temperature was sent
+    ...
+
+    # flash internal LED indicating temperature was sent
+
+    ...
 
     # read server response
 
-    # set or unset red LED if server tells us to do so
+    ...
+
+    # set or unset warning LED if server tells us to do so
+
+    ...
 
     # sleep a little until next temperature reading
+
+    ...
 ```
+````
 
 In de beschrijving van de architectuur heb je gezien dat berichten worden verstuurd over HTTP en dat voor het formaat JSON wordt gebruikt. We staan kort bij beide stil.
 
@@ -236,15 +252,16 @@ url = f"http://{config.SERVER}:{config.PORT}{config.ENDPOINT}"
 
 # POST data
 response = requests.post(url, json=data)
+
 # Answer recieved
 answer = response.json()
 ```
 
 Het bovenstaande fragment toont hoe je data met een HTTP POST request kan versturen naar een webadres (url). Je ziet ook dat een server-configuratie (het adres van jouw machine, de poort en endpoint, of route) wordt gebruikt, we staan later bij deze verdere details stil als we server gaan bespreken.
 
-Voor het versturen van data zal je jezelf het volgende moeten afvragen
+Voor het versturen van data zal je jezelf het volgende moeten afvragen:
 
--   wélke data ga ik versturen
+-   welke data ga ik versturen
 -   en in welk formaat?
 
 ### JSON
@@ -287,7 +304,12 @@ Aan jou de keus hoe je dit gaat vormgeven, de server zal er in ieder geval van m
 
 ## Server
 
-De client is nu klaar. Het enige dat nog nodig is is een server die temeratuurmetingen kan ontvangen en een JSON geencodeerd bericht terugstuurt. Je hebt eerder HTTP servers geschreven met [Flask](https://flask.palletsprojects.com/en/2.0.x/) en dat ga je ook hier gebruiken. Neem het volgende over in een bestand `app.py`
+De client is nu klaar. Het enige dat nog nodig is is een *server* die temeratuurmetingen kan ontvangen en een JSON geëncodeerd bericht terugstuurt. Je hebt eerder een HTTP server geschreven met [Flask](https://flask.palletsprojects.com/en/2.0.x/) en dat ga je ook hier gebruiken.
+
+````{exercise}
+:label: exercise-server-app
+
+Neem het volgende over in een bestand `app.py` en vul het ook hier weer op de plek van de puntjes (`...`) aan met jouw oplossing.
 
 ```python
 from flask import Flask, request, jsonify
@@ -304,21 +326,26 @@ def temperature():
     # if temperature exceeds a certain treshold (e.g. 20 °C),
     # reply with a warning so the client can set the red LED
 
+    ...
+
     # else just reply all is well and maybe signal that
     # the red LED should be switched off
+
+    ...
 
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
 ```
 
-Een *route* (of *endpoint*) hebben we al voor jou gedefiniëerd en deze zal je verder moeten invullen. Verder zie je een paar details die van belang zijn:
+Een *route* (of *endpoint*) hebben we al voor jou gedefinieerd en deze zal je verder moeten invullen. Verder zie je een paar details die van belang zijn:
 
 -   **host** is "0.0.0.0", dit betekent dat de server op alle adressen zal gaan luisteren, dus niet alleen naar standaard *localhost* ("127.0.0.1") maar óók naar het adres van jouw machine op de hotspot
 
 -   **port** is 5000 (de standaard poort die Flask gebruikt)
 
-De client heeft dit poortnummer nodig én het endpoint (`/temperature`) om een volledige url op te kunnen bouwen. Voeg deze waarden toe aan `config.py` van de client zodat je deze waarden kan gebruiken (en vergeet niet met `ampy` deze wijziging op de micocontroller te plaatsen!).
+De client heeft dit poortnummer nodig én het endpoint (`/temperature`) om een volledige url op te kunnen bouwen. Voeg deze waarden toe aan `config.py` van de client zodat je deze waarden kan gebruiken (en vergeet niet deze wijziging op de micocontroller te plaatsen!).
+````
 
 ### JSON
 
@@ -355,6 +382,7 @@ expected = ...
 
 # POST data
 response = requests.post(url, json=data)
+
 # Answer recieved
 answer = response.json()
 
@@ -376,4 +404,4 @@ pip install requests
 
 ## Tot slot
 
-Start nu de Flask `app.py` server en plaats `main.py` met `ampy` op de microcontroller. Als het goed is zal je zien dat de server berichten ontvangt van de microcontroller.
+Start nu de Flask `app.py` server en plaats `main.py` op de microcontroller. Als het goed is zal je zien dat de server berichten ontvangt van de microcontroller.

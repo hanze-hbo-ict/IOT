@@ -7,7 +7,6 @@ connection = network.WLAN(network.STA_IF)
 
 
 def connect():
-
     if connection.isconnected():
         print("Already connected")
         return

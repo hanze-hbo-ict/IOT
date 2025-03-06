@@ -3,7 +3,7 @@ author: Hanzehogeschool Groningen
 logo: assets/logo_iot_2.svg
 copyright: "CC BY-NC-SA 4.0"
 institute: Instituut voor Communicatie, Media & IT
-subtitle: Workshop ESP32 microcontroller en embedded systems
+subtitle: Workshop Pico microcontroller en embedded systems
 subject: Een kennismaking met microcontrollers en embedded systems
 description: Workshop IoT waar een client/server architectuur wordt uitgewerkt voor het meten en versturen van data.
 keywords: [microcontroller, SoC, esp32, MicroPython, IoT]
@@ -26,6 +26,8 @@ sphinx:
     html_show_copyright: true
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     html_extra_path: ["extra"]
+  extra_extensions:
+    - sphinx_exercise
 
 parse:
   myst_enable_extensions:
