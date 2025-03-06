@@ -16,7 +16,7 @@ De tweede manier is wat je kent van bijvoorbeeld IPython, een interactieve Pytho
 De micro USB aansluiting met het bord is een seriële connectie en deze is *bidirectioneel*, er kunnen zowel gegevens mee worden verstuurd als mee worden ontvangen. In het verleden werden seriële connecties gebruikt om bijvoorbeeld een muis of modem aan te sluiten, maar ook een beeldscherm (of *terminal*). Een beeldscherm kan natuurlijk niet op het bord worden aangesloten, maar kan wél met software worden nagebootst (*geëmuleerd*).
 
 ```{important}
-Onder Linux zal je jezelf misschien moeten toevoegen aan de groep `dialout` om gebruik te kunnen maken van de seriële poort. Als macOS gebruiker zal je misschien ook extra stappen moeten ondernemen als je geen poortnaam ziet, het kan dan zijn dat tóch nog een driver moet worden geïnstalleerd of dat permissies moeten worden gezet om de driver te mogen gebruiken. Lees in dit geval de [Pico documentatie](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html) voor meer informatie.
+Onder Linux zal je jezelf misschien moeten toevoegen aan de groep `dialout` om gebruik te kunnen maken van de seriële poort.
 ```
 
 ### Terminal
