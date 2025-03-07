@@ -368,14 +368,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="project">
 <h1><span class="section-number">5. </span>Project<a class="headerlink" href="#project" title="Link to this heading">#</a></h1>
-<p>In dit deel ga je de microcontroller met aangesloten <em>actuatoren</em> (LED’s) en <em>sensor</em> (temperatuurmeter) gebruiken waar de microcntroller een temperatuur gaat versturen over een netwerk.</p>
+<p>In dit deel ga je de microcontroller met aangesloten <em>actuatoren</em> (LED’s) en <em>sensor</em> (temperatuurmeter) gebruiken waar de microcontroller een temperatuur gaat versturen over een netwerk.</p>
 <p>De Pico heeft ingebouwde Wifi connectiviteit en deze zal je later configureren, eerst ga je in meer detail kijken naar het probleem en de verschillende onderdelen van het systeem dat je zal moeten gaan uitwerken.</p>
 <section id="architectuur">
 <h2><span class="section-number">5.1. </span>Architectuur<a class="headerlink" href="#architectuur" title="Link to this heading">#</a></h2>
 <p>Het beschrijven van een softwareoplossing kan op vele manieren, wij gebruiken hier het <a class="reference external" href="https://c4model.com/">C4 model</a> als hulpmiddel om het te visualiseren en waar we in een drietal stappen met steeds meer detail inzoomen op het probleem (en we zo komen tot een beschrijving van een <em>software architectuur</em>).</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Het <a class="reference external" href="https://c4model.com/">C4 model</a> model is een eenvoudige en gemakkelijk te leren benadering van software architectuur diagrammen die je ook kan gebruiken in andere projecten. Diagrammen helpen bij communicatie binnen teams, maar ook daar buiten, bijvoorbeeld met een opdrachtgever of andere belanghebbenden. De C4 <a class="reference external" href="https://en.wikipedia.org/wiki/C4_model">Wikipedia pagina</a> geeft een bekopt overzicht van dit model.</p>
+<p>Het <a class="reference external" href="https://c4model.com/">C4 model</a> model is een eenvoudige en gemakkelijk te leren benadering van software architectuur diagrammen die je ook kan gebruiken in andere projecten. Diagrammen helpen bij communicatie binnen teams, maar ook daar buiten, bijvoorbeeld met een opdrachtgever of andere belanghebbenden. De C4 <a class="reference external" href="https://en.wikipedia.org/wiki/C4_model">Wikipedia pagina</a> geeft een beknopt overzicht van dit model.</p>
 </div>
 <section id="context">
 <h3><span class="section-number">5.1.1. </span>Context<a class="headerlink" href="#context" title="Link to this heading">#</a></h3>
@@ -425,7 +425,7 @@ document.write(`
 <p>Dit bestand zal configuratie bevatten, onder andere voor een Wifi verbinding.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">boot.py</span></code></p>
-<p>Dit bestand zal de Wifi verbinding van de microcotroller opzetten.</p>
+<p>Dit bestand zal de Wifi verbinding van de microcontroller opzetten.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">main.py</span></code></p>
 <p>In dit bestand schrijf je de client die temperatuur gaat versturen.</p>
@@ -466,11 +466,11 @@ Linux</label><div class="sd-tab-content docutils">
 </div>
 <div class="admonition note">
 <p class="admonition-title">Notitie</p>
-<p>De bovenstaande instructies voor jouw systeem zijn algemeen en verwijzen naar comand line tools die altijd beschikbaar zijn.</p>
+<p>De bovenstaande instructies voor jouw systeem zijn algemeen en verwijzen naar command line tools die altijd beschikbaar zijn.</p>
 <p>Vanzelfsprekend bestaan grafische interfaces, bijvoorbeeld voor het bepalen van het IP adres van jouw systeem, maar wij gaan hier geen uitgebreide beschrijvingen van geven, deze verschillen te veel per besturingssysteem en bovendien ook vaak per versie.</p>
 <p>Met andere woorden, leer jouw systeem kennen en gebruik de gereedschappen waar je het meest vertrouwd en gemakkelijk mee bent.</p>
 </div>
-<p>Maak nu in jouw project een nieuw bestand <code class="docutils literal notranslate"><span class="pre">config.py</span></code> aan waar je de Wifi hotspot <strong>naam</strong> (of SSID, <em>Service Set Identifier</em>), <strong>wachtwoord</strong> en het IP <strong>adres</strong> van jouw machine in definiëert</p>
+<p>Maak nu in jouw project een nieuw bestand <code class="docutils literal notranslate"><span class="pre">config.py</span></code> aan waar je de Wifi hotspot <strong>naam</strong> (of SSID, <em>Service Set Identifier</em>), <strong>wachtwoord</strong> en het IP <strong>adres</strong> van jouw machine in definieert</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">WIFI_SSID</span> <span class="o">=</span> <span class="s2">&quot;&lt;name&gt;&quot;</span>
 <span class="n">WIFI_PASSWORD</span> <span class="o">=</span> <span class="s2">&quot;&lt;password&gt;&quot;</span>
 <span class="n">SERVER</span> <span class="o">=</span> <span class="s2">&quot;&lt;address&gt;&quot;</span>
@@ -602,7 +602,7 @@ Linux</label><div class="sd-tab-content docutils">
 </section>
 <section id="json">
 <h3><span class="section-number">5.3.2. </span>JSON<a class="headerlink" href="#json" title="Link to this heading">#</a></h3>
-<p>Je zag in het bovenstaande voorbeeld dat <em>twee</em> keer <em>json</em> gebruikt wordt, voor het versturen van data én voor het onvangen van een antwoord van de server. HTTP is een tekst gebaseerd protocol en dit betekent dat je niet zomaar een temperatuur (een <em>float</em>) kan versturen, het zal eerst moeten worden omgezet naar een <em>string</em> representatie.</p>
+<p>Je zag in het bovenstaande voorbeeld dat <em>twee</em> keer <em>json</em> gebruikt wordt, voor het versturen van data én voor het ontvangen van een antwoord van de server. HTTP is een tekst gebaseerd protocol en dit betekent dat je niet zomaar een temperatuur (een <em>float</em>) kan versturen, het zal eerst moeten worden omgezet naar een <em>string</em> representatie.</p>
 <p>Voor een enkele waarde is dit eenvoudig, maar wordt lastiger als het meer complex is, bijvoorbeeld in het geval van een <em>dictionary</em>. <a class="reference external" href="https://en.wikipedia.org/wiki/JSON">Javascript Object Notation</a> (JSON) is een formaat voor het <em>encoderen</em> van deze complexe structuren naar een string en omgekeerd (<em>decoderen</em>).</p>
 <p>Hier zie je een voorbeeld hoe deze omzetting werkt</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
@@ -623,7 +623,7 @@ Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Je ziet hier een <code class="docutils literal notranslate"><span class="pre">json</span></code> <em>named</em> parameter waarmee data word doorgegeven,  <code class="docutils literal notranslate"><span class="pre">urequests</span></code> zal hiermee jouw data JSON geencodeerd versturen. Je zult straks zien dat dit voor de server ook het geval is en daarmee jouw werk een stuk eenvoudiger maakt.</p>
+<p>Je ziet hier een <code class="docutils literal notranslate"><span class="pre">json</span></code> <em>named</em> parameter waarmee data word doorgegeven,  <code class="docutils literal notranslate"><span class="pre">urequests</span></code> zal hiermee jouw data JSON geëncodeerd versturen. Je zult straks zien dat dit voor de server ook het geval is en daarmee jouw werk een stuk eenvoudiger maakt.</p>
 <p>Tot zover over HTTP en JSON, de vraag die nog moet worden beantwoord is wát de data is die moet worden verstuurd. Bedenk dat naast de temperatuur je misschien meer informatie wilt versturen, bijvoorbeeld</p>
 <ul class="simple">
 <li><p>de status van de rode LED (aan of uit)</p></li>
@@ -671,12 +671,12 @@ Linux</label><div class="sd-tab-content docutils">
 <li><p><strong>host</strong> is “0.0.0.0”, dit betekent dat de server op alle adressen zal gaan luisteren, dus niet alleen naar standaard <em>localhost</em> (“127.0.0.1”) maar óók naar het adres van jouw machine op de hotspot</p></li>
 <li><p><strong>port</strong> is 5000 (de standaard poort die Flask gebruikt)</p></li>
 </ul>
-<p>De client heeft dit poortnummer nodig én het endpoint (<code class="docutils literal notranslate"><span class="pre">/temperature</span></code>) om een volledige url op te kunnen bouwen. Voeg deze waarden toe aan <code class="docutils literal notranslate"><span class="pre">config.py</span></code> van de client zodat je deze waarden kan gebruiken (en vergeet niet deze wijziging op de micocontroller te plaatsen!).</p>
+<p>De client heeft dit poortnummer nodig én het endpoint (<code class="docutils literal notranslate"><span class="pre">/temperature</span></code>) om een volledige url op te kunnen bouwen. Voeg deze waarden toe aan <code class="docutils literal notranslate"><span class="pre">config.py</span></code> van de client zodat je deze waarden kan gebruiken (en vergeet niet deze wijziging op de microcontroller te plaatsen!).</p>
 </section>
 </div>
 <section id="id1">
 <h3><span class="section-number">5.4.1. </span>JSON<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
-<p>De client verstuurt JSON geencodeerde data, en Flask kan deze data voor ons decoderen. Je kan zien dat we dit al voor jou hebben ingevuld (<code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">=</span> <span class="pre">request.json</span></code>), maar de server zal ook een JSON bericht terug moeten terugsturen.</p>
+<p>De client verstuurt JSON geëncodeerde data, en Flask kan deze data voor ons decoderen. Je kan zien dat we dit al voor jou hebben ingevuld (<code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">=</span> <span class="pre">request.json</span></code>), maar de server zal ook een JSON bericht terug moeten terugsturen.</p>
 <p>Net als bij de client zal je hier goed na moeten denken welke data je terug wilt sturen als antwoord voor de client. Op basis van dit antwoord zal de client bijvoorbeeld de rode LED aan moeten zetten (of niet).</p>
 <p>Gebruik <code class="docutils literal notranslate"><span class="pre">jsonify</span></code> om een JSON bericht terug te sturen, bijvoorbeeld</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="o">...</span>
