@@ -104,7 +104,7 @@ Voor de middelste aansluiting, de analoge output, zal ook net als bij de LED wee
 
 ## Nogmaals meten
 
-De sensor is nu aangesloten maar als je de vorige code gaat gebruiken zal je bijzondere waarden gaan vinden. De tmp36 is een heel andere sensor dan die van de Pico en relatie voltage en temperatuur zal anders worden bepaald. Ook hier zal documentatie moeten worden geraadpleegd en in de [documentatie](https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf) zal je een grafiek kunnen vinden die deze relatie duidelijk maat, zie  {numref}`tmp36-voltage-temp`.
+De sensor is nu aangesloten maar als je de vorige code gaat gebruiken zal je bijzondere waarden gaan vinden. De tmp36 is een heel andere sensor dan die van de Pico en relatie voltage en temperatuur zal anders worden bepaald. Ook hier zal documentatie moeten worden geraadpleegd en in de tmp36 [documentatie](https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf) zal je een grafiek kunnen vinden die deze relatie duidelijk maat, zie  {numref}`tmp36-voltage-temp`.
 
 ```{figure} ../images/tmp36_output_temperature.png
 :name: tmp36-voltage-temp

@@ -130,6 +130,6 @@ Voer het uit door op de *run*-knop in Thonny te klikken, dit eenvoudige programm
 
 ## Debuggen
 
-Het proces van code schrijven op jouw machine, het overzetten naar het bord en vervolgens laten uitvoeren zal je vaak gaan herhalen. Het is een lastig proces omdat je niet op jouw machine kan testen of het werkt. Probeer daarom vertrouwd te raken met de MicroPyton REPL, de interactieve prompt, om fragmenten uit te proberen die je later in jouw code kan opnemen.
+Het proces van code schrijven op jouw machine, het overzetten naar het bord en vervolgens laten uitvoeren zal je vaak gaan herhalen. Het is een lastig proces omdat je niet op jouw machine kan testen of het werkt. Probeer daarom vertrouwd te raken met de MicroPython REPL, de interactieve prompt, om fragmenten uit te proberen die je later in jouw code kan opnemen.
 
 Gebruik de seriële connectie (terminal) ook om foutmeldingen te laten tonen, bij het opnieuw opstarten of resetten van het bord zullen deze berichten zichtbaar worden. Het is om deze reden ook een goed idee om eventueel print statements in jouw code op te nemen, deze zullen ook zichtbaar zijn.

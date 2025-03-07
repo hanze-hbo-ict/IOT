@@ -1,6 +1,6 @@
 # Project
 
-In dit deel ga je de microcontroller met aangesloten *actuatoren* (LED's) en *sensor* (temperatuurmeter) gebruiken waar de microcntroller een temperatuur gaat versturen over een netwerk.
+In dit deel ga je de microcontroller met aangesloten *actuatoren* (LED's) en *sensor* (temperatuurmeter) gebruiken waar de microcontroller een temperatuur gaat versturen over een netwerk.
 
 De Pico heeft ingebouwde Wifi connectiviteit en deze zal je later configureren, eerst ga je in meer detail kijken naar het probleem en de verschillende onderdelen van het systeem dat je zal moeten gaan uitwerken.
 
@@ -9,7 +9,7 @@ De Pico heeft ingebouwde Wifi connectiviteit en deze zal je later configureren, 
 Het beschrijven van een softwareoplossing kan op vele manieren, wij gebruiken hier het [C4 model](https://c4model.com/) als hulpmiddel om het te visualiseren en waar we in een drietal stappen met steeds meer detail inzoomen op het probleem (en we zo komen tot een beschrijving van een *software architectuur*).
 
 ```{tip}
-Het [C4 model](https://c4model.com/) model is een eenvoudige en gemakkelijk te leren benadering van software architectuur diagrammen die je ook kan gebruiken in andere projecten. Diagrammen helpen bij communicatie binnen teams, maar ook daar buiten, bijvoorbeeld met een opdrachtgever of andere belanghebbenden. De C4 [Wikipedia pagina](https://en.wikipedia.org/wiki/C4_model) geeft een bekopt overzicht van dit model.
+Het [C4 model](https://c4model.com/) model is een eenvoudige en gemakkelijk te leren benadering van software architectuur diagrammen die je ook kan gebruiken in andere projecten. Diagrammen helpen bij communicatie binnen teams, maar ook daar buiten, bijvoorbeeld met een opdrachtgever of andere belanghebbenden. De C4 [Wikipedia pagina](https://en.wikipedia.org/wiki/C4_model) geeft een beknopt overzicht van dit model.
 ```
 
 ### Context
@@ -68,7 +68,7 @@ De componenten worden concreet in de code die je gaat schrijven en dit zal je in
 
 -   `boot.py`
 
-    Dit bestand zal de Wifi verbinding van de microcotroller opzetten.
+    Dit bestand zal de Wifi verbinding van de microcontroller opzetten.
 
 -   `main.py`
 
@@ -113,14 +113,14 @@ Bepaal het WiFi IP adres van jouw machine, bijvoorbeeld op de command line met  
 ````
 
 ```{note}
-De bovenstaande instructies voor jouw systeem zijn algemeen en verwijzen naar comand line tools die altijd beschikbaar zijn.
+De bovenstaande instructies voor jouw systeem zijn algemeen en verwijzen naar command line tools die altijd beschikbaar zijn.
 
 Vanzelfsprekend bestaan grafische interfaces, bijvoorbeeld voor het bepalen van het IP adres van jouw systeem, maar wij gaan hier geen uitgebreide beschrijvingen van geven, deze verschillen te veel per besturingssysteem en bovendien ook vaak per versie.
 
 Met andere woorden, leer jouw systeem kennen en gebruik de gereedschappen waar je het meest vertrouwd en gemakkelijk mee bent.
 ```
 
-Maak nu in jouw project een nieuw bestand `config.py` aan waar je de Wifi hotspot **naam** (of SSID, *Service Set Identifier*), **wachtwoord** en het IP **adres** van jouw machine in definiëert
+Maak nu in jouw project een nieuw bestand `config.py` aan waar je de Wifi hotspot **naam** (of SSID, *Service Set Identifier*), **wachtwoord** en het IP **adres** van jouw machine in definieert
 
 ```python
 WIFI_SSID = "<name>"
@@ -266,7 +266,7 @@ Voor het versturen van data zal je jezelf het volgende moeten afvragen:
 
 ### JSON
 
-Je zag in het bovenstaande voorbeeld dat *twee* keer *json* gebruikt wordt, voor het versturen van data én voor het onvangen van een antwoord van de server. HTTP is een tekst gebaseerd protocol en dit betekent dat je niet zomaar een temperatuur (een *float*) kan versturen, het zal eerst moeten worden omgezet naar een *string* representatie.
+Je zag in het bovenstaande voorbeeld dat *twee* keer *json* gebruikt wordt, voor het versturen van data én voor het ontvangen van een antwoord van de server. HTTP is een tekst gebaseerd protocol en dit betekent dat je niet zomaar een temperatuur (een *float*) kan versturen, het zal eerst moeten worden omgezet naar een *string* representatie.
 
 Voor een enkele waarde is dit eenvoudig, maar wordt lastiger als het meer complex is, bijvoorbeeld in het geval van een *dictionary*. [Javascript Object Notation](https://en.wikipedia.org/wiki/JSON) (JSON) is een formaat voor het *encoderen* van deze complexe structuren naar een string en omgekeerd (*decoderen*).
 
@@ -293,7 +293,7 @@ JSON wordt zo vaak gebruikt dat veel Python modulen het encoderen en decoderen v
 requests.post(url, json=data)
 ```
 
-Je ziet hier een `json` *named* parameter waarmee data word doorgegeven,  `urequests` zal hiermee jouw data JSON geencodeerd versturen. Je zult straks zien dat dit voor de server ook het geval is en daarmee jouw werk een stuk eenvoudiger maakt.
+Je ziet hier een `json` *named* parameter waarmee data word doorgegeven,  `urequests` zal hiermee jouw data JSON geëncodeerd versturen. Je zult straks zien dat dit voor de server ook het geval is en daarmee jouw werk een stuk eenvoudiger maakt.
 
 Tot zover over HTTP en JSON, de vraag die nog moet worden beantwoord is wát de data is die moet worden verstuurd. Bedenk dat naast de temperatuur je misschien meer informatie wilt versturen, bijvoorbeeld
 
@@ -344,12 +344,12 @@ Een *route* (of *endpoint*) hebben we al voor jou gedefinieerd en deze zal je ve
 
 -   **port** is 5000 (de standaard poort die Flask gebruikt)
 
-De client heeft dit poortnummer nodig én het endpoint (`/temperature`) om een volledige url op te kunnen bouwen. Voeg deze waarden toe aan `config.py` van de client zodat je deze waarden kan gebruiken (en vergeet niet deze wijziging op de micocontroller te plaatsen!).
+De client heeft dit poortnummer nodig én het endpoint (`/temperature`) om een volledige url op te kunnen bouwen. Voeg deze waarden toe aan `config.py` van de client zodat je deze waarden kan gebruiken (en vergeet niet deze wijziging op de microcontroller te plaatsen!).
 ````
 
 ### JSON
 
-De client verstuurt JSON geencodeerde data, en Flask kan deze data voor ons decoderen. Je kan zien dat we dit al voor jou hebben ingevuld (`data = request.json`), maar de server zal ook een JSON bericht terug moeten terugsturen.
+De client verstuurt JSON geëncodeerde data, en Flask kan deze data voor ons decoderen. Je kan zien dat we dit al voor jou hebben ingevuld (`data = request.json`), maar de server zal ook een JSON bericht terug moeten terugsturen.
 
 Net als bij de client zal je hier goed na moeten denken welke data je terug wilt sturen als antwoord voor de client. Op basis van dit antwoord zal de client bijvoorbeeld de rode LED aan moeten zetten (of niet).
 

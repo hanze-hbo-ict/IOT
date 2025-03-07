@@ -13,13 +13,13 @@
 
 'title Component diagram for Temperature Reader
 
-Container(Device, "Device", "ESP32", "Device capable of reading and sending temperature and acting on a message")
+Container(Device, "Device", "Pico", "Device capable of reading and sending temperature and acting on a message")
 Container(Service, "Service", "Host", "Service capable of accepting a temperature reading and sending an actionable message")
 
 Boundary(esp32, "Device", "Container") {
     Component(sensor, "Sensor", "tmp36", "Temperature sensor", $sprite=temperature_high)
     Component(warning, "Warning", "red led", "Temperature warning actuator", $sprite=exclamation_triangle)
-    Component(activity, "Activity", "blue led", "Temperature sending actuator", $sprite=flash)
+    Component(activity, "Activity", "internal led", "Temperature sending actuator", $sprite=flash)
     Component(client, Client, http, "Reads and sends a temperature and acts on a response", $sprite=python)
     Component(connectivity, Connectivity, wifi, "Network", $sprite=wifi)
 }

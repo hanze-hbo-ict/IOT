@@ -7,7 +7,7 @@
 Person(Integrator, "Integrator", "IoT Developer")
 
 System_Boundary(c1, "Temperature Reader") {
-    Container(Device, "Device", "ESP32", "Device capable of reading and sending temperature and acting on a message")
+    Container(Device, "Device", "Pico", "Device capable of reading and sending temperature and acting on a message")
     Container(Service, "Service", "Host", "Service capable of accepting a temperature reading and responding with an actionable message")
 }
 
