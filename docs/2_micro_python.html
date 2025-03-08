@@ -407,7 +407,7 @@ document.write(`
 <section id="de-module-machine">
 <h3><span class="section-number">2.2.1. </span>De module <code class="docutils literal notranslate"><span class="pre">machine</span></code><a class="headerlink" href="#de-module-machine" title="Link to this heading">#</a></h3>
 <p>De MicroPython module <a class="reference external" href="https://docs.micropython.org/en/v1.9.3/wipy/library/machine.html"><code class="docutils literal notranslate"><span class="pre">machine</span></code></a> bevat functies en klassen voor toegang tot de hardware, onder andere de klasse <a class="reference external" href="https://docs.micropython.org/en/v1.9.3/wipy/library/machine.Pin.html"><code class="docutils literal notranslate"><span class="pre">Pin</span></code></a> die alles te maken heeft met het kunnen gebruiken van de pins op het bord.</p>
-<p>Alle pins zijn genummerd, zoals je ook op de zijkant van het bord kan zien (bijvoorbeeld D32, D33 etc.). Over wát de verschillende pins (kunnen) doen volgt later meer.</p>
+<p>Alle pins zijn genummerd, over wát de verschillende pins zijn (per nummer) en wat ze precies kunnen volgt later meer.</p>
 <p>Importeer nu de klasse <code class="docutils literal notranslate"><span class="pre">Pin</span></code> uit de module <code class="docutils literal notranslate"><span class="pre">machine</span></code>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; from machine import Pin
 </pre></div>
@@ -426,10 +426,14 @@ document.write(`
 </pre></div>
 </div>
 <p>Gefeliciteerd, je hebt jouw eerste handeling op de Pico uitgevoerd! Maar je kan je voorstellen dat je dit niet steeds handmatig wilt gaan herhalen, en het is nu tijd om een eerste programma te schrijven, dit op de Pico te plaatsen en vervolgens te laten uitvoeren.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In plaats van de methoden <code class="docutils literal notranslate"><span class="pre">on</span></code> en <code class="docutils literal notranslate"><span class="pre">off</span></code> zou je hier ook de methode <code class="docutils literal notranslate"><span class="pre">toggle</span></code> kunnen gebruiken. Ongeacht de staat van de LED (aan of uit) zal deze methode voor jou de LED omzetten naar de tegenovergestelde staat.</p>
+</div>
 </section>
 <section id="bestanden">
 <h3><span class="section-number">2.2.2. </span>Bestanden<a class="headerlink" href="#bestanden" title="Link to this heading">#</a></h3>
-<p>MicroPython heeft een klein bestandssysteem waar je jouw bestanden op kan plaatsen. Vraag Thonny nu een een bestand te openen en je zal een dialoog zien waar het jou vraagt te kiezen <em>waar</em> je dit wilt doen, op jouw computer of op de Pico, zie <a class="reference internal" href="#thonny-location"><span class="std std-numref">Fig. 2.3</span></a>.</p>
+<p>MicroPython heeft een klein bestandssysteem waar je jouw bestanden op kan plaatsen. Open met Thonny nu een een bestand en het zal je vragen <em>waar</em> je dit wilt doen, op jouw computer of op de Pico, zie <a class="reference internal" href="#thonny-location"><span class="std std-numref">Fig. 2.3</span></a>.</p>
 <figure class="align-default" id="thonny-location">
 <img alt="../_images/thonny_2.png" src="../_images/thonny_2.png" />
 <figcaption>
@@ -446,11 +450,11 @@ document.write(`
 </li>
 </ul>
 <p>Deze bestanden zijn al dan niet aanwezig, en zullen door jou moeten worden toegevoegd of aangepast! Als je nieuwsgierig bent naar de inhoud van deze bestanden kan je ze natuurlijk openen maar zullen nog niet veel bevatten.</p>
-<p>Het wordt jouw taak om deze bestanden te gaan bewerken en dat ga je op <em>jouw computer</em> doen.</p>
+<p>Het wordt jouw taak om deze bestanden te gaan bewerken en dat ga je eerst op <em>jouw computer</em> doen om ze later over te zetten op de microcontroller.</p>
 </section>
 <section id="een-project">
 <h3><span class="section-number">2.2.3. </span>Een project<a class="headerlink" href="#een-project" title="Link to this heading">#</a></h3>
-<p>Het is nu tijd om een projectomgeving op te zetten, een directory waar je Python code gaat schrijven voor deze workshop. Maak in deze directory een nieuw bestand <code class="docutils literal notranslate"><span class="pre">main.py</span></code> aan en kopieer daar het volgende in:</p>
+<p>Het is nu tijd om een projectomgeving op te zetten, een directory (of <em>Map</em>) op jouw computer waar je Python code gaat schrijven voor deze workshop. Maak in deze directory een nieuw bestand <code class="docutils literal notranslate"><span class="pre">main.py</span></code> aan en kopieer daar het volgende in:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">time</span><span class="w"> </span><span class="kn">import</span> <span class="n">sleep</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pin</span>
 
