@@ -55,7 +55,7 @@ Standaard staat deze ingebouwde LED uit, in de volgende stap ga je deze LED aan-
 
 De MicroPython module [`machine`](https://docs.micropython.org/en/v1.9.3/wipy/library/machine.html) bevat functies en klassen voor toegang tot de hardware, onder andere de klasse [`Pin`](https://docs.micropython.org/en/v1.9.3/wipy/library/machine.Pin.html) die alles te maken heeft met het kunnen gebruiken van de pins op het bord.
 
-Alle pins zijn genummerd, zoals je ook op de zijkant van het bord kan zien (bijvoorbeeld D32, D33 etc.). Over wát de verschillende pins (kunnen) doen volgt later meer.
+Alle pins zijn genummerd, over wát de verschillende pins zijn (per nummer) en wat ze precies kunnen volgt later meer.
 
 Importeer nu de klasse `Pin` uit de module `machine`:
 
@@ -85,9 +85,13 @@ en vervolgens weer uit:
 
 Gefeliciteerd, je hebt jouw eerste handeling op de Pico uitgevoerd! Maar je kan je voorstellen dat je dit niet steeds handmatig wilt gaan herhalen, en het is nu tijd om een eerste programma te schrijven, dit op de Pico te plaatsen en vervolgens te laten uitvoeren.
 
+```{tip}
+In plaats van de methoden `on` en `off` zou je hier ook de methode `toggle` kunnen gebruiken. Ongeacht de staat van de LED (aan of uit) zal deze methode voor jou de LED omzetten naar de tegenovergestelde staat.
+```
+
 ### Bestanden
 
-MicroPython heeft een klein bestandssysteem waar je jouw bestanden op kan plaatsen. Vraag Thonny nu een een bestand te openen en je zal een dialoog zien waar het jou vraagt te kiezen *waar* je dit wilt doen, op jouw computer of op de Pico, zie {numref}`thonny-location`.
+MicroPython heeft een klein bestandssysteem waar je jouw bestanden op kan plaatsen. Open met Thonny nu een een bestand en het zal je vragen *waar* je dit wilt doen, op jouw computer of op de Pico, zie {numref}`thonny-location`.
 
 ```{figure} ../images/thonny_2.png
 :name: thonny-location
@@ -107,11 +111,11 @@ Kies voor het openen op de Pico en je zal dan een of twee van de volgende bestan
 
 Deze bestanden zijn al dan niet aanwezig, en zullen door jou moeten worden toegevoegd of aangepast! Als je nieuwsgierig bent naar de inhoud van deze bestanden kan je ze natuurlijk openen maar zullen nog niet veel bevatten.
 
-Het wordt jouw taak om deze bestanden te gaan bewerken en dat ga je op *jouw computer* doen.
+Het wordt jouw taak om deze bestanden te gaan bewerken en dat ga je eerst op *jouw computer* doen om ze later over te zetten op de microcontroller.
 
 ### Een project
 
-Het is nu tijd om een projectomgeving op te zetten, een directory waar je Python code gaat schrijven voor deze workshop. Maak in deze directory een nieuw bestand `main.py` aan en kopieer daar het volgende in:
+Het is nu tijd om een projectomgeving op te zetten, een directory (of *Map*) op jouw computer waar je Python code gaat schrijven voor deze workshop. Maak in deze directory een nieuw bestand `main.py` aan en kopieer daar het volgende in:
 
 ```python
 from time import sleep
