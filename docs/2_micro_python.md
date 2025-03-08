@@ -91,7 +91,7 @@ In plaats van de methoden `on` en `off` zou je hier ook de methode `toggle` kunn
 
 ### Bestanden
 
-MicroPython heeft een klein bestandssysteem waar je jouw bestanden op kan plaatsen. Open met Thonny nu een een bestand en het zal je vragen *waar* je dit wilt doen, op jouw computer of op de Pico, zie {numref}`thonny-location`.
+MicroPython heeft een klein bestandssysteem waar je jouw bestanden op kan plaatsen. Open met Thonny nu een bestand en het zal je vragen *waar* je dit wilt doen, op jouw computer of op de Pico, zie {numref}`thonny-location`.
 
 ```{figure} ../images/thonny_2.png
 :name: thonny-location
