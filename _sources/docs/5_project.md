@@ -253,7 +253,7 @@ url = f"http://{config.SERVER}:{config.PORT}{config.ENDPOINT}"
 # POST data
 response = requests.post(url, json=data)
 
-# Answer recieved
+# Answer received
 answer = response.json()
 ```
 
@@ -383,7 +383,7 @@ expected = ...
 # POST data
 response = requests.post(url, json=data)
 
-# Answer recieved
+# Answer received
 answer = response.json()
 
 # test
