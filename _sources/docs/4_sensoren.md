@@ -40,7 +40,7 @@ Definieer nu dit verhoudingsgetal en vermenigvuldig het met de 16-bit waarde en 
 ```python
 prop = 3.3 / 65535
 
-v_out = adc.read_u16() * prop
+v_out = sensor.read_u16() * prop
 ```
 
 Het resultaat `v_out` is een waarde in millivolt en de vraag is nu hoe dit voltage kan worden omgezet naar een temperatuur. In de documentatie kan je vervolgens het volgende lezen:

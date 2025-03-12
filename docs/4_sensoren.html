@@ -384,7 +384,7 @@ In de <a class="reference external" href="https://datasheets.raspberrypi.com/rp2
 <p>Definieer nu dit verhoudingsgetal en vermenigvuldig het met de 16-bit waarde en bewaar het resultaat.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">prop</span> <span class="o">=</span> <span class="mf">3.3</span> <span class="o">/</span> <span class="mi">65535</span>
 
-<span class="n">v_out</span> <span class="o">=</span> <span class="n">adc</span><span class="o">.</span><span class="n">read_u16</span><span class="p">()</span> <span class="o">*</span> <span class="n">prop</span>
+<span class="n">v_out</span> <span class="o">=</span> <span class="n">sensor</span><span class="o">.</span><span class="n">read_u16</span><span class="p">()</span> <span class="o">*</span> <span class="n">prop</span>
 </pre></div>
 </div>
 <p>Het resultaat <code class="docutils literal notranslate"><span class="pre">v_out</span></code> is een waarde in millivolt en de vraag is nu hoe dit voltage kan worden omgezet naar een temperatuur. In de documentatie kan je vervolgens het volgende lezen:</p>
