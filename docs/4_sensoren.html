@@ -465,7 +465,7 @@ T = (100 \times V_{out}) - 50
 <span class="n">sensor</span> <span class="o">=</span> <span class="n">ADC</span><span class="p">(</span><span class="mi">26</span><span class="p">)</span>  <span class="c1"># gewijzigde pin</span>
 <span class="n">prop</span> <span class="o">=</span> <span class="mf">3.3</span> <span class="o">/</span> <span class="mi">65535</span>
 
-<span class="n">v_out</span> <span class="o">=</span> <span class="n">adc</span><span class="o">.</span><span class="n">read_u16</span><span class="p">()</span> <span class="o">*</span> <span class="n">prop</span>
+<span class="n">v_out</span> <span class="o">=</span> <span class="n">sensor</span><span class="o">.</span><span class="n">read_u16</span><span class="p">()</span> <span class="o">*</span> <span class="n">prop</span>
 
 <span class="n">temp</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">v_out</span><span class="p">)</span> <span class="o">-</span> <span class="mi">50</span>  <span class="c1"># gewijzigde berekening</span>
 
