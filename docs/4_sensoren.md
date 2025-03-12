@@ -40,7 +40,7 @@ Definieer nu dit verhoudingsgetal en vermenigvuldig het met de 16-bit waarde en 
 ```python
 prop = 3.3 / 65535
 
-v_out = adc.read_u16() * prop
+v_out = sensor.read_u16() * prop
 ```
 
 Het resultaat `v_out` is een waarde in millivolt en de vraag is nu hoe dit voltage kan worden omgezet naar een temperatuur. In de documentatie kan je vervolgens het volgende lezen:
@@ -104,7 +104,7 @@ Voor de middelste aansluiting, de analoge output, zal ook net als bij de LED wee
 
 ## Nogmaals meten
 
-De sensor is nu aangesloten maar als je de vorige code gaat gebruiken zal je bijzondere waarden gaan vinden. De tmp36 is een heel andere sensor dan die van de Pico en relatie voltage en temperatuur zal anders worden bepaald. Ook hier zal documentatie moeten worden geraadpleegd en in de tmp36 [documentatie](https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf) zal je een grafiek kunnen vinden die deze relatie duidelijk maat, zie  {numref}`tmp36-voltage-temp`.
+De sensor is nu aangesloten maar als je de vorige code gaat gebruiken zal je bijzondere waarden gaan vinden. De tmp36 is een heel andere sensor dan die van de Pico en relatie voltage en temperatuur zal anders worden bepaald. Ook hier zal documentatie moeten worden geraadpleegd en in de tmp36 [documentatie](https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf) zal je een grafiek kunnen vinden die deze relatie duidelijk maakt, zie  {numref}`tmp36-voltage-temp`.
 
 ```{figure} ../images/tmp36_output_temperature.png
 :name: tmp36-voltage-temp
@@ -131,7 +131,7 @@ from machine import ADC
 sensor = ADC(26)  # gewijzigde pin
 prop = 3.3 / 65535
 
-v_out = adc.read_u16() * prop
+v_out = sensor.read_u16() * prop
 
 temp = (100 * v_out) - 50  # gewijzigde berekening
 
