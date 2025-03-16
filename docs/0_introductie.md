@@ -1,10 +1,14 @@
-![Hanze University of Applied Sciences](/assets/logo-int-black-wordmark.svg)
 
 # Internet of Things
 
-Welkom bij de workshop Internet of Things! In deze workshop zal je gaan kennismaken met een *microcontroller*, een compacte geïntegreerde chip die is ontworpen om specifieke handelingen in een [*embedded system*](https://en.wikipedia.org/wiki/Embedded_system) uit te voeren, bijvoorbeeld het meten en versturen van temperatuur of een gesproken boodschap omzetten naar een online bestelling ...
+```{image} ../assets/logo-int-black-wordmark.svg
+:name: Hanzehogeschool Groningen
+:align: left
+```
 
-```{figure} /images/xkcd_listening.png
+Welkom bij de workshop Internet of Things! In deze workshop zal je gaan kennismaken met een [microcontroller](https://en.wikipedia.org/wiki/Microcontroller), een compacte geïntegreerde chip die is ontworpen om specifieke handelingen in een [*embedded system*](https://en.wikipedia.org/wiki/Embedded_system) uit te voeren, bijvoorbeeld het meten en versturen van temperatuur of een gesproken boodschap omzetten naar een online bestelling ...
+
+```{figure} ../images/xkcd_listening.png
 :name: XKCD Listening
 
 *Sure, you could just ask, but this also takes care of the host gift thing.* -- [XKCD Listening](https://xkcd.com/1807/)
@@ -14,12 +18,12 @@ In het bijzonder zal je gaan kennismaken met [Raspberry Pi Pico](https://www.ras
 
 In deze workshop ga je het volgende doen:
 
--   De Pico microcontroller leren kennen
--   Een LED (*Light Emitting Diode*, een zuinige kleine lamp) aansluiten op de microcontroller
+-   De Raspberry Pi Pico microcontroller leren kennen
+-   Een [LED](https://en.wikipedia.org/wiki/Light-emitting_diode) (*Light Emitting Diode*, een zuinige kleine lamp) aansluiten op de microcontroller
 -   Een temperatuursensor op de microcontroller aansluiten
 -   Een programma schrijven voor
-    -   het aan- of uitzetten van de LED
-    -   het lezen van temperatuur van de temperatuursensor
+    -   het aan- of uitzetten van een LED
+    -   het lezen van temperatuur van een temperatuursensor
     -   het versturen van temperatuur over een netwerk
 
-Je zal gaan programmeren in een taal waar je al bekend mee bent: Python!
+Je gaat de microcontroller programmeren in een taal waar je al bekend mee bent: Python!

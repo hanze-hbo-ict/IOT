@@ -1,6 +1,6 @@
 # Voorbereiding
 
-Voor deze workshop heb je *hardware*, *software*, *firmware* én *documentatie* nodig. De hardware is (onder andere) de Pico microcontroller, de software heeft alles te maken met het voorbereiden en kunnen gebruiken van deze hardware met jouw systeem (jouw machine en ontwikkelomgeving) en de firmware om de microcontroller te kunnen besturen. Documentatie tot slot geeft jou informatie over de microcontroller, bijvoorbeeld over functionaliteit en waar en hoe sensoren of LED's kunnen worden aangesloten.
+Voor deze workshop heb je *hardware*, *software*, *firmware* en *documentatie* nodig. De hardware is (onder andere) de microcontroller, de software heeft alles te maken met het voorbereiden en kunnen gebruiken van deze hardware met jouw systeem (jouw machine en ontwikkelomgeving) en de firmware om de microcontroller te kunnen besturen. Documentatie tot slot geeft jou informatie over de microcontroller, bijvoorbeeld over functionaliteit en hoe sensoren of LED's kunnen worden aangesloten.
 
 ## Hardware
 
@@ -27,23 +27,23 @@ In deze workshop gebruiken we [MicroPython](https://micropython.org/), maar [Cir
 
 ## Software
 
-Je zal jouw systeem én de microcontroller eerst moeten voorbereiden voor gebruik en je gaat daar de volgende stappen voor doorlopen
+Je zal jouw systeem én de microcontroller eerst moeten voorbereiden voor gebruik en je gaat daar de volgende stappen voor doorlopen:
 
--   *Software* installeren op jouw machine
--   *Firmware* plaatsen op de Pico
+-   *software* installeren op jouw machine
+-   *firmware* plaatsen op de microcontroller
 
 ### Ontwikkelomgeving
 
-Je gaat in deze workshop Python code schrijven voor het aansturen van de microcontroller. Later zal je een Python versie op de microcontroller installeren die speciaal voor dit type processoren geschikt is, [MicroPython](https://micropython.org/).
+Je gaat in deze workshop Python code schrijven voor het aansturen van de microcontroller. Later zal je een Python versie op de microcontroller installeren (*firmware*) die speciaal voor dit type processoren geschikt is, [MicroPython](https://en.wikipedia.org/wiki/MicroPython).
 
-Als editor gaan we in deze workshop [Thonny](https://thonny.org/) gebruiken. Thonny noemt zichzelf een *Python IDE for beginners* maar laat je niet verrassen, het biedt bijzonder veel functionaliteit en integreert uitstekend met de Pico!
+Als editor gaan we in deze workshop [Thonny](https://en.wikipedia.org/wiki/Thonny) gebruiken. Thonny noemt zichzelf een *Python IDE for beginners* maar laat je niet verrassen, het biedt bijzonder veel functionaliteit en integreert uitstekend met de Pico!
 
-Download en installeer nu [Thonny](https://thonny.org/) voor jouw systeem, dit zal in de meeste gevallen de *installer* versie zijn (Linux gebruikers zullen misschien een andere keuze willen maken).
+Download en installeer nu [Thonny](https://thonny.org/) voor jouw systeem, dit zal in de meeste gevallen de *installer* versie zijn.
 
 ```{note}
-Waarom deze editor en niet bijvoorbeeld [Visual Studio Code](https://code.visualstudio.com/) (VSCode) of [PyCharm](https://www.jetbrains.com/pycharm/)? We willen het in deze workshop eenvoudig houden en Thonny biedt meer dan genoeg functionaliteit om snel en eenvoudig aan de slag te gaan. Bovendien zal je in veel online tutorials ook Thonny gebruikt zien worden.
+Waarom Thonny en niet bijvoorbeeld [Visual Studio Code](https://code.visualstudio.com/) (VSCode) of [PyCharm](https://www.jetbrains.com/pycharm/)? We willen het in deze workshop eenvoudig houden en Thonny biedt meer dan genoeg functionaliteit om snel en eenvoudig aan de slag te gaan. Bovendien zal je in veel online tutorials ook Thonny gebruikt zien worden.
 
-Dit wil niet zeggen dat je andere editors *niet* mag gebruiken! VSCode biedt bijvoorbeeld met de [MicroPico](https://marketplace.visualstudio.com/items?itemName=paulober.pico-w-go) extensie prima ondersteuning voor het werken met de Pico en ook PyCharm geeft goede ondersteuning door middel van de MicroPython Plugin.
+Dit wil niet zeggen dat je andere editors niet mag gebruiken! VSCode biedt bijvoorbeeld met de [MicroPico](https://marketplace.visualstudio.com/items?itemName=paulober.pico-w-go) extensie prima ondersteuning en PyCharm ook met de [MicroPython Plugin](https://plugins.jetbrains.com/plugin/9777-micropython).
 ```
 
 ## Firmware
@@ -57,7 +57,7 @@ MicroPython is *firmware*, dat wil zeggen dat het software is die in de hardware
 De MicroPython firmware is microcontroller specifiek, download deze nu eerst voor de [Raspberry Pico W](https://micropython.org/download/rp2-pico-w/rp2-pico-w-latest.uf2).
 
 ```{attention}
-In de Hanze IoT kit is een Raspberry Pico W microcontroller opgenomen met een RP2040 processor. Inmiddels (sinds november 2024) is een Raspberry Pico W versie 2 uitgebracht met een RP2350 processor. Functioneel zijn ze gelijk, maar mocht jij toevallig deze versie hebben dan zal je rekening moeten houden met een andere [MicroPython](https://www.raspberrypi.com/documentation/microcontrollers/micropython.html) firmware versie.
+In de Hanze IoT kit is een Raspberry Pico W microcontroller opgenomen met een [RP2040](https://en.wikipedia.org/wiki/RP2040) processor. Inmiddels (sinds november 2024) is een Raspberry Pico W versie 2 uitgebracht met een [RP2350](https://en.wikipedia.org/wiki/RP2350) processor. Functioneel zijn ze gelijk, maar mocht jij toevallig deze versie hebben dan zal je rekening moeten houden met een andere [MicroPython](https://www.raspberrypi.com/documentation/microcontrollers/micropython.html) firmware versie.
 ```
 
 ### Firmware flashen
@@ -70,18 +70,21 @@ Je zal nu de MicroPython firmware die je eerder hebt gedownload naar het permane
 4. Kopieer de firmware die je eerder hebt gedownload naar deze schijf
 5. De microcontroller zal herstarten en is nu klaar voor gebruik
 
-<video src="https://www.raspberrypi.com/documentation/microcontrollers/images/MicroPython.webm" width="100%" controls="">
-Your browser does not support the video tag.
-</video>
+:::{figure} ../images/MicroPython.mp4
+:name: firmware-install
+MicroPython firmware installatie
+:::
 
-Het aansluiten van de Pico met de BOOTSEL knop ingedrukt is alleen noodzakelijk voor het flashen van de firmware, in alle volgende stappen zal dit niet meer nodig zijn.
+```{note}
+Het aansluiten van de Pico met de BOOTSEL knop ingedrukt is alleen noodzakelijk voor het plaatsen van de firmware, in alle volgende stappen zal dit niet meer nodig zijn.
+```
 
 Jouw Pico is nu klaar voor gebruik!
 
 ## Documentatie
 
-Tijdens deze workshop zullen we hier en daar verwijzen naar de (technische) documentatie van de microcontroller. Ook als je met een eigen project verder gaat zal je ongetwijfeld dingen moeten gaan opzoeken over de functionaliteit.
+Tijdens deze workshop zullen we regelmatig verwijzen naar de (technische) documentatie van de microcontroller. Ook als je met een eigen project verder gaat zal je ongetwijfeld dingen moeten gaan opzoeken over de functionaliteit.
 
-De technische documentatie van de Raspberry Pi Pico W kan je via deze [link](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf) vinden, we adviseren je om deze te bookmarken.
+De technische documentatie van de microcontroller kan je via deze [link](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf) vinden, we adviseren je om deze te bookmarken.
 
 

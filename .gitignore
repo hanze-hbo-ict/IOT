@@ -124,7 +124,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# build output
+# MyST build outputs
 _build/
 
 .vscode/

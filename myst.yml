@@ -1,0 +1,31 @@
+version: 1
+project:
+  title: Internet of Things
+  # authors:
+  #   - name: Hanzehogeschool Groningen
+  license:
+    content:
+      id: CC-BY-NC-SA-4.0
+  exclude:
+    - README.md
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: exports/workshop.pdf
+  toc:
+    - file: docs/0_introductie.md
+    - file: docs/1_voorbereiding.md
+    - file: docs/2_micro_python.md
+    - file: docs/3_aansluitingen.md
+    - file: docs/4_sensoren.md
+    - file: docs/5_project.md
+    # - file: docs/6_uitwerkingen.md
+site:
+  options:
+    logo: assets/logo_iot.svg
+    logo_dark: assets/logo_iot_dark.svg
+    logo_text: Internet of Things
+    numbered_references: true
+    allowDangerousHtml: true
+
+  template: book-theme

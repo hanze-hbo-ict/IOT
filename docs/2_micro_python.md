@@ -19,6 +19,8 @@ De micro USB aansluiting met het bord is een seriële connectie en deze is *bidi
 Onder Linux zal je jezelf misschien moeten toevoegen aan de groep `dialout` om gebruik te kunnen maken van de seriële poort.
 ```
 
+Je zal straks zien dat Thonny een *terminal*  ...
+
 ### Terminal
 
 Het is tijd om Thonny op te starten nu je de microcontroller hebt aangesloten.
@@ -30,7 +32,7 @@ Het is tijd om Thonny op te starten nu je de microcontroller hebt aangesloten.
 Thonny editor en terminal
 ```
 
-Rechtsonder zal je zien dat Thonny is verbonden met de microcontroller en je zal ook een *shell* geopend zien waar je een interactieve Python prompt ziet (`>>>`). Probeer dit nu uit door de volgende Python code te typen om de wereld te begroeten!
+In {numref}`thonny-terminal` zal je rechtsonder kunnen zien dat Thonny is verbonden met de microcontroller en in het terminal venster is een [shell](https://en.wikipedia.org/wiki/Shell_(computing)) is geopend waar je een interactieve Python prompt ziet (`>>>`). Probeer dit nu uit door de volgende Python code te typen om de wereld te begroeten!
 
 ```console
 >>> print("Hello world!")
@@ -39,7 +41,7 @@ Hello world!
 
 ## MicroPython
 
-Zoals eerder is gezegd, MicroPython heeft een aantal modulen die heel specifiek zijn voor een microcontroller als de Pico, onder andere voor het kunnen gebruiken van de pins. Twee van deze pins zijn *intern* aangesloten, dat wil zeggen dat je ze niet een fysieke pin hebben op het bord.
+Zoals eerder is gezegd, MicroPython heeft een aantal modulen die heel specifiek zijn voor een microcontroller als de Pico, onder andere voor het kunnen gebruiken van de pins. Twee van deze pins zijn *intern* aangesloten, dat wil zeggen dat ze niet een fysieke pin hebben op het bord.
 
 De microcontroller heeft hier een interne LED op aangesloten maar ook een temperatuursensor (waar we later mee gaan kennismaken). Als je goed op het bord kijkt dan zal je daar een ingebouwde LED kunnen ontdekken (naast de USB-aansluiting, zie {numref}`pico-devkit`)
 
@@ -53,7 +55,7 @@ Standaard staat deze ingebouwde LED uit, in de volgende stap ga je deze LED aan-
 
 ### De module `machine`
 
-De MicroPython module [`machine`](https://docs.micropython.org/en/v1.9.3/wipy/library/machine.html) bevat functies en klassen voor toegang tot de hardware, onder andere de klasse [`Pin`](https://docs.micropython.org/en/v1.9.3/wipy/library/machine.Pin.html) die alles te maken heeft met het kunnen gebruiken van de pins op het bord.
+De MicroPython module [`machine`](https://docs.micropython.org/en/latest/library/machine.html) bevat functies en klassen voor toegang tot de hardware, onder andere de klasse [`Pin`](https://docs.micropython.org/en/latest/library/machine.Pin.html) die alles te maken heeft met het kunnen gebruiken van de pins op het bord.
 
 Alle pins zijn genummerd, over wát de verschillende pins zijn (per nummer) en wat ze precies kunnen volgt later meer.
 
@@ -86,7 +88,7 @@ en vervolgens weer uit:
 Gefeliciteerd, je hebt jouw eerste handeling op de Pico uitgevoerd! Maar je kan je voorstellen dat je dit niet steeds handmatig wilt gaan herhalen, en het is nu tijd om een eerste programma te schrijven, dit op de Pico te plaatsen en vervolgens te laten uitvoeren.
 
 ```{tip}
-In plaats van de methoden `on` en `off` zou je hier ook de methode `toggle` kunnen gebruiken. Ongeacht de staat van de LED (aan of uit) zal deze methode voor jou de LED omzetten naar de tegenovergestelde staat.
+In plaats van de methoden `on` en `off` zou je hier ook de methode `toggle` kunnen gebruiken. Ongeacht de staat van de LED (aan of uit) zal deze methode voor jou de LED omzetten naar een tegenovergestelde staat.
 ```
 
 ### Bestanden
