@@ -19,8 +19,6 @@ De micro USB aansluiting met het bord is een seriële connectie en deze is *bidi
 Onder Linux zal je jezelf misschien moeten toevoegen aan de groep `dialout` om gebruik te kunnen maken van de seriële poort.
 ```
 
-Je zal straks zien dat Thonny een *terminal*  ...
-
 ### Terminal
 
 Het is tijd om Thonny op te starten nu je de microcontroller hebt aangesloten.
