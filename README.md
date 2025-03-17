@@ -1,3 +1,3 @@
 # IOT
 
-IOT Workshop.
+Hanze IOT Workshop.
