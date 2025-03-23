@@ -61,7 +61,7 @@ Je hebt nu een sensor kunnen gebruiken en uitlezen. In de volgende stap ga je ee
 
 ## Voorbereiding
 
-In tegenstelling tot een LED die aangesloten werd op een GPIO-pin (die aan- en uit kon worden gezet) is een continue stroomtoevoer voor een sensor een betere keus. Op het bord zie je een **3V3** pin die deze stroomtoevoer biedt (zie ook figuur {numref}`pico-devkit` voor meer detail).
+In tegenstelling tot een LED die aangesloten werd op een GPIO-pin (die aan- en uit kon worden gezet) is een continue stroomtoevoer voor een sensor een betere keus. Op het bord zie je een **3V3** pin die deze stroomtoevoer biedt (zie ook {numref}`pico-devkit` voor meer detail).
 
 ```{figure} ../circuits/pico_w_step_6.png
 :name: 3v3-connect-wire
@@ -91,7 +91,7 @@ Let goed op hoe je de sensor plaatst en waar je de stroom- en aarding op gaat aa
 temp36 in- en output
 ```
 
-Plaats de sensor op het bord en sluit de in- en output aan, zie figuur {numref}`tmp36-in-out`.
+Plaats de sensor op het bord en sluit de in- en output aan, zie {numref}`tmp36-in-out`.
 
 
 ```{figure} ../circuits/pico_w_step_8.png

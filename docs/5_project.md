@@ -14,7 +14,7 @@ Het [C4 model](https://c4model.com/) model is een eenvoudige en gemakkelijk te l
 
 ### Context
 
-Met context wordt het grotere beeld van het systeem bedoeld en in het bijzonder de relatie met gebruikers en andere systemen, zie figuur {numref}`c4-iot-context`.
+Met context wordt het grotere beeld van het systeem bedoeld en in het bijzonder de relatie met gebruikers en andere systemen, zie {numref}`c4-iot-context`.
 
 ```{figure} ../diagrams/c4_iot_context.svg
 :name: c4-iot-context
@@ -36,7 +36,7 @@ Een systeem valt uiteen in onderling verbonden *containers*, waar een container 
 Container diagram
 ```
 
-In figuur {numref}`c4-iot-container` kan je zien dat het probleem uit *twee* afzonderlijke (maar van elkaar afhankelijke) onderdelen bestaat. Ten eerste heb je te maken met een apparaat (de microcontroller) dat temperatuur moet lezen en versturen, en ook zal moeten kunnen reageren op een antwoord.
+In {numref}`c4-iot-container` kan je zien dat het probleem uit *twee* afzonderlijke (maar van elkaar afhankelijke) onderdelen bestaat. Ten eerste heb je te maken met een apparaat (de microcontroller) dat temperatuur moet lezen en versturen, en ook zal moeten kunnen reageren op een antwoord.
 
 Ten tweede heb je te maken met een dienst die de metingen kan ontvangen en reageert met een antwoord. Deze dienst zal in de praktijk een andere machine zijn (en meer concreet, jouw machine!).
 
@@ -44,7 +44,7 @@ Ten tweede heb je te maken met een dienst die de metingen kan ontvangen en reage
 
 Containers zijn tot slot te ontleden in onderling samenhangende *componenten*, waar de individuele componenten eventueel weer te relateren zijn aan andere containers of systemen.
 
-In ons geval blijven verdere relaties beperkt en kan het in een enkel diagram worden weergegeven, zoals je in figuur {numref}`c4-iot-component` kan zien.
+In ons geval blijven verdere relaties beperkt en kan het in een enkel diagram worden weergegeven, zoals je in {numref}`c4-iot-component` kan zien.
 
 ```{figure} ../diagrams/c4_iot_component.svg
 :name: c4-iot-component

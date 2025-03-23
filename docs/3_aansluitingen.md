@@ -14,7 +14,7 @@ Als een elektronische schakeling wordt opgebouwd dan is daar normaal gesproken e
 
 Het ontwerpen van een printplaat gebeurt alleen als er veel identieke elektronische circuits moeten worden opgebouwd en ook alleen als het zeker is dat het ontwerp correct is.
 
-In deze workshop ga je geen printplaat ontwerpen, maar ga je gebruik maken van een *breadboard* (zie figuur {numref}`breadboard`) voor het flexibel plaatsen van de Pico microcontroller en het aansluiten van een sensor en actuator.
+In deze workshop ga je geen printplaat ontwerpen, maar ga je gebruik maken van een *breadboard* (zie {numref}`breadboard`) voor het flexibel plaatsen van de Pico microcontroller en het aansluiten van een sensor en actuator.
 
 ```{figure} ../images/breadboard_half.png
 :name: breadboard
@@ -22,7 +22,7 @@ In deze workshop ga je geen printplaat ontwerpen, maar ga je gebruik maken van e
 Een half-size *breadboard*
 ```
 
-Je ziet op een breadboard veel gaatjes waar pinnen en draden in kunnen worden gestoken, maar aan de buitenkant zie je niet zien hoe de contacten lopen. De contacten worden gevormd door metalen strips die de gaatjes onderling verbinden per rij, in figuur {numref}`breadboard` zie je een aantal van deze strips waar de *richting* van de verbinding van de rijen zijn aangegeven met rode lijnen.
+Je ziet op een breadboard veel gaatjes waar pinnen en draden in kunnen worden gestoken, maar aan de buitenkant zie je niet zien hoe de contacten lopen. De contacten worden gevormd door metalen strips die de gaatjes onderling verbinden per rij, in {numref}`breadboard` zie je een aantal van deze strips waar de *richting* van de verbinding van de rijen zijn aangegeven met rode lijnen.
 
 De buitenste gaatjes zijn *horizontaal* met elkaar verbonden en de binnenste gaatjes zijn *verticaal* met elkaar verbonden. Je ziet ook dat de binnenste gaatjes verdeeld zijn over twee vlakken die worden gescheiden door een "ravijn".
 
@@ -78,7 +78,7 @@ Een LED heeft twee pinnen en als je goed kijkt zie je dat één langer is dan de
 Een LED aansluiten
 ```
 
-Plaats nu een LED op het board, bijvoorbeeld zoals in figuur {numref}`led-connect`. Je ziet in deze figuur nu ook dat verticaal twee rijen groen gemarkeerd zijn om aan te geven dat deze gaatjes met elkaar in verbinding staan.
+Plaats nu een LED op het board, bijvoorbeeld zoals in {numref}`led-connect`. Je ziet in deze figuur nu ook dat verticaal twee rijen groen gemarkeerd zijn om aan te geven dat deze gaatjes met elkaar in verbinding staan.
 
 ```{figure} ../circuits/pico_w_step_3.png
 :name: ground-led
@@ -86,7 +86,7 @@ Plaats nu een LED op het board, bijvoorbeeld zoals in figuur {numref}`led-connec
 Een LED aansluiten op aarding
 ```
 
-Een volgende stap is om de LED aan te sluiten op de aarding, verbind met een kabel de horizontale aarding die je eerder hebt aangelegd met de korte kant van de led, zie figuur {numref}`ground-led`.
+Een volgende stap is om de LED aan te sluiten op de aarding, verbind met een kabel de horizontale aarding die je eerder hebt aangelegd met de korte kant van de led, zie {numref}`ground-led`.
 
 ```{figure} ../circuits/pico_w_step_4.png
 :name: led-resistor
@@ -96,12 +96,12 @@ Een weerstand plaatsen
 
 LED's hebben weerstand nodig om de stroom die er doorheen gaat te beperken zodat ze niet beschadigd raken. Elke LED heeft een stroomsterkte die niet mag worden overschreden en weerstanden hebben de mogelijkheid de stroom te beperken tot onder de maximaal toegestane stroom voor de LED.
 
-Plaats nu een weerstand op het bord zoals aangegeven in figuur {numref}`led-resistor`. Je kunt elke weerstandswaarde tussen 220 Ω en 500 Ω gebruiken, en de LED zal helder oplichten.
+Plaats nu een weerstand op het bord zoals aangegeven in {numref}`led-resistor`. Je kunt elke weerstandswaarde tussen 220 Ω en 500 Ω gebruiken, en de LED zal helder oplichten.
 
 ```{attention}
 Weerstanden hebben kleurcodes die de weerstandswaarde in Ω (Ohm) aangeven. Gebruik bijvoorbeeld [https://resistorcolorcodecalc.com](https://resistorcolorcodecalc.com/) om te bepalen welke weerstand je nodig hebt.
 
-In figuur {numref}`led-resistor` zie je dat de kleurcode rood-rood-bruin wordt gebruikt wat gelijk staat aan 220 Ω.
+In {numref}`led-resistor` zie je dat de kleurcode rood-rood-bruin wordt gebruikt wat gelijk staat aan 220 Ω.
 ```
 
 Het circuit is nu bijna compleet, de weerstand zal nog moeten worden aangesloten op een pin van de Pico die stroom kan leveren, maar welke pin?
@@ -114,7 +114,7 @@ De Pico biedt heel véél aansluitingsmogelijkheden en sommige pins kunnen ook n
 Aansluiten op een GPIO pin
 ```
 
-Als laatste stap sluit je nu de weerstand aan op een GPIO pin, in figuur {numref}`power-led` kan je zien dat wij hebben gekozen voor pin GP15.
+Als laatste stap sluit je nu de weerstand aan op een GPIO pin, in {numref}`power-led` kan je zien dat wij hebben gekozen voor pin GP15.
 
 ```{note}
 Het kiezen van de juiste pin blijft lastig, naast het pinout diagram dat we hier aanbieden kan het behulpzaam zijn om online gidsen door te nemen waar in verder detail wordt beschreven wat elke pin doet (of kan doen), bijvoorbeeld [Raspberry Pi Pico and Pico W Pinout Guide: GPIOs Explained](https://randomnerdtutorials.com/raspberry-pi-pico-w-pinout-gpios/#Raspberry-Pi-Pico-W-Pinout-Diagram).
