@@ -347,6 +347,10 @@ Een *route* (of *endpoint*) hebben we al voor jou gedefinieerd en deze zal je ve
 De client heeft dit poortnummer nodig én het endpoint (`/temperature`) om een volledige url op te kunnen bouwen. Voeg deze waarden toe aan `config.py` van de client zodat je deze waarden kan gebruiken (en vergeet niet deze wijziging op de microcontroller te plaatsen!).
 ````
 
+```{important}
+De server zal op jouw machine naar verkeer op poort 5000 gaan luisteren en deze zal van buitenaf bereikbaar moeten zijn. Het kan zijn dat een *firewall* op jouw systeem verkeer op deze poort niet toelaat. Let hier op wanneer je de client (de microcontroller) verbinding laat maken met jouw server en pas eventueel de configuratie van de firewall aan!
+```
+
 ### JSON
 
 De client verstuurt JSON geëncodeerde data, en Flask kan deze data voor ons decoderen. Je kan zien dat we dit al voor jou hebben ingevuld (`data = request.json`), maar de server zal ook een JSON bericht terug moeten terugsturen.
