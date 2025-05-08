@@ -127,4 +127,8 @@ dmypy.json
 # MyST build outputs
 _build/
 
+# editor config
 .vscode/
+
+# local virtual env
+.venv

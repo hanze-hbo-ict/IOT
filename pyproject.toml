@@ -1,0 +1,10 @@
+[project]
+name = "itvp20iot1"
+version = "1.1.0"
+description = "Hanzehogeschool IOT Workshop"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "jupyter-book>=2.0.0a0",
+    "sphinx-exercise>=1.0.1",
+]
