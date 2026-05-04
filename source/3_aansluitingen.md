@@ -16,7 +16,7 @@ Het ontwerpen van een printplaat gebeurt alleen als er veel identieke elektronis
 
 In deze workshop ga je geen printplaat ontwerpen, maar ga je gebruik maken van een *breadboard* (zie {numref}`breadboard`) voor het flexibel plaatsen van de Pico microcontroller en het aansluiten van een sensor en actuator.
 
-```{figure} ../images/breadboard_half.png
+```{figure} _static/images/breadboard_half.png
 :name: breadboard
 
 Een half-size *breadboard*
@@ -28,7 +28,7 @@ De buitenste gaatjes zijn *horizontaal* met elkaar verbonden en de binnenste gaa
 
 ### De microcontroller plaatsen
 
-```{figure} ../circuits/pico_w_step_0.png
+```{figure} _static/circuits/pico_w_step_0.png
 :name: breadboard-placement
 
 Plaatsing op het breadboard
@@ -40,7 +40,7 @@ Plaats nu de Pico op het breadboard zoals aangegeven in {numref}`breadboard-plac
 
 Net als bij een lamp in jouw huis zal stroom naar de lamp moeten gaan en worden aangesloten op aarding zodat er een compleet circuit is. Ook op de microcontroller moeten we zo'n circuit gaan opbouwen met stroom en aarding. In {numref}`pinout-diagram` zie je meer over de welke functie elke pin kan vervullen, maar sommigen staan ook vast.
 
-```{figure} ../images/pico2w-pinout.svg
+```{figure} _static/images/pico2w-pinout.svg
 :name: pinout-diagram
 
 Pinout diagram
@@ -50,7 +50,7 @@ Bijvoorbeeld, bij pin 3 en 28 zie je GND staan wat voor aarding staat. Bij pin 3
 
 ### Aarding aansluiten
 
-```{figure} ../circuits/pico_w_step_1.png
+```{figure} _static/circuits/pico_w_step_1.png
 :name: ground-connect
 
 Aansluiten van aarding
@@ -64,7 +64,7 @@ Dit tot zover de eerste voorbereiding, je gaat nu een LED aansluiten op dit circ
 
 De basis is gereed, nu ga je een LED aansluiten en het circuit verder compleet maken.
 
-```{figure} ../images/red_led.png
+```{figure} _static/images/red_led.png
 :name: red-led
 
 Een LED diode
@@ -72,7 +72,7 @@ Een LED diode
 
 Een LED heeft twee pinnen en als je goed kijkt zie je dat één langer is dan de ander en dit heeft een reden. Op de **lange** kant wordt spanning aangesloten ($+$) en op de **korte** kant de aarding ($-$).
 
-```{figure} ../circuits/pico_w_step_2.png
+```{figure} _static/circuits/pico_w_step_2.png
 :name: led-connect
 
 Een LED aansluiten
@@ -80,7 +80,7 @@ Een LED aansluiten
 
 Plaats nu een LED op het board, bijvoorbeeld zoals in {numref}`led-connect`. Je ziet in deze figuur nu ook dat verticaal twee rijen groen gemarkeerd zijn om aan te geven dat deze gaatjes met elkaar in verbinding staan.
 
-```{figure} ../circuits/pico_w_step_3.png
+```{figure} _static/circuits/pico_w_step_3.png
 :name: ground-led
 
 Een LED aansluiten op aarding
@@ -88,7 +88,7 @@ Een LED aansluiten op aarding
 
 Een volgende stap is om de LED aan te sluiten op de aarding, verbind met een kabel de horizontale aarding die je eerder hebt aangelegd met de korte kant van de led, zie {numref}`ground-led`.
 
-```{figure} ../circuits/pico_w_step_4.png
+```{figure} _static/circuits/pico_w_step_4.png
 :name: led-resistor
 
 Een weerstand plaatsen
@@ -108,7 +108,7 @@ Het circuit is nu bijna compleet, de weerstand zal nog moeten worden aangesloten
 
 De Pico biedt heel véél aansluitingsmogelijkheden en sommige pins kunnen ook nog eens verschillende rollen spelen. In het geval van een LED waar je stroom nodig hebt zal je op zoek moeten gaan naar een van de *General Purpose I/O* (GPIO) pins. In {numref}`pinout-diagram` vind je per pin welke mogelijkheid het biedt .
 
-```{figure} ../circuits/pico_w_step_5.png
+```{figure} _static/circuits/pico_w_step_5.png
 :name: power-led
 
 Aansluiten op een GPIO pin

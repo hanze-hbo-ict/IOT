@@ -4,8 +4,8 @@
 
 Net als met Python op jouw systeem kan je MicroPython op twee manieren gebruiken:
 
--   code in een bestand uitvoeren
--   interactief code uitvoeren
+- code in een bestand uitvoeren
+- interactief code uitvoeren
 
 Bij de eerste manier schrijf je de code voor jouw programma in een bestand en laat je het vervolgens uitvoeren. Dit is wat je straks gaat doen om bijvoorbeeld een LED te bedienen of een sensor op het bord uit te lezen.
 
@@ -23,8 +23,7 @@ Onder Linux zal je jezelf misschien moeten toevoegen aan de groep `dialout` om g
 
 Het is tijd om Thonny op te starten nu je de microcontroller hebt aangesloten.
 
-
-```{figure} ../images/thonny_1.png
+```{figure} _static/images/thonny_1.png
 :name: thonny-terminal
 
 Thonny editor en terminal
@@ -43,7 +42,7 @@ Zoals eerder is gezegd, MicroPython heeft een aantal modulen die heel specifiek 
 
 De microcontroller heeft hier een interne LED op aangesloten maar ook een temperatuursensor (waar we later mee gaan kennismaken). Als je goed op het bord kijkt dan zal je daar een ingebouwde LED kunnen ontdekken (naast de USB-aansluiting, zie {numref}`pico-devkit`)
 
-```{figure} ../circuits/pico_w.png
+```{figure} _static/circuits/pico_w.png
 :name: pico-devkit
 
 Raspberry Pico W
@@ -93,7 +92,7 @@ In plaats van de methoden `on` en `off` zou je hier ook de methode `toggle` kunn
 
 MicroPython heeft een klein bestandssysteem waar je jouw bestanden op kan plaatsen. Open met Thonny nu een bestand en het zal je vragen *waar* je dit wilt doen, op jouw computer of op de Pico, zie {numref}`thonny-location`.
 
-```{figure} ../images/thonny_2.png
+```{figure} _static/images/thonny_2.png
 :name: thonny-location
 
 Lokaal of op Pico openen
@@ -101,11 +100,11 @@ Lokaal of op Pico openen
 
 Kies voor het openen op de Pico en je zal dan een of twee van de volgende bestandsnamen zien:
 
--   `boot.py`
+- `boot.py`
 
     Als dit bestand aanwezig is dan zal het altijd als eerste worden uitgevoerd bij het opstarten van de microcontroller. Dit is een goede plek om code uit te laten voeren die *altijd* nodig is, bijvoorbeeld voor het configureren van een draadloze netwerkverbinding.
 
--   `main.py`
+- `main.py`
 
     Als dit bestand aanwezig is dan zal het worden uitgevoerd *nadat* `boot.py` is uitgevoerd. Dit is de plek waar jij jouw programma zal gaan schrijven.
 

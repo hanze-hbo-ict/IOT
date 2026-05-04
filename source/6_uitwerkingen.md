@@ -4,7 +4,7 @@
 
 ````{solution} exercise-client-main
 ```{include} ../socket/http/main.py
-:lang: python
+:code: python
 ```
 ````
 
@@ -12,6 +12,6 @@
 
 ````{solution} exercise-server-app
 ```{include} ../socket/http/app.py
-:lang: python
+:code: python
 ```
 ````

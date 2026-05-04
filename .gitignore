@@ -132,3 +132,7 @@ _build/
 
 # local virtual env
 .venv
+
+# Sphinx build output
+build/
+source/.jupyter_cache/

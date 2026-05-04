@@ -63,7 +63,7 @@ Je hebt nu een sensor kunnen gebruiken en uitlezen. In de volgende stap ga je ee
 
 In tegenstelling tot een LED die aangesloten werd op een GPIO-pin (die aan- en uit kon worden gezet) is een continue stroomtoevoer voor een sensor een betere keus. Op het bord zie je een **3V3** pin die deze stroomtoevoer biedt (zie ook {numref}`pico-devkit` voor meer detail).
 
-```{figure} ../circuits/pico_w_step_6.png
+```{figure} _static/circuits/pico_w_step_6.png
 :name: 3v3-connect-wire
 
 3V3 kabel aansluiten
@@ -73,7 +73,7 @@ Sluit deze pin nu aan op het bord, zie {numref}`3v3-connect-wire`.
 
 ## Temperatuursensor
 
-```{figure} ../images/tmp36.png
+```{figure} _static/images/tmp36.png
 :name: tmp36-sensor
 
 tmp36 temperatuursensor
@@ -85,7 +85,7 @@ De temperatuursensor heeft 3 aansluitingen, als je de kant met het label voor je
 Let goed op hoe je de sensor plaatst en waar je de stroom- en aarding op gaat aansluiten, keer je deze aansluitingen om dan zal de sensor gaan opwarmen!
 ```
 
-```{figure} ../circuits/pico_w_step_7.png
+```{figure} _static/circuits/pico_w_step_7.png
 :name: tmp36-in-out
 
 temp36 in- en output
@@ -94,7 +94,7 @@ temp36 in- en output
 Plaats de sensor op het bord en sluit de in- en output aan, zie {numref}`tmp36-in-out`.
 
 
-```{figure} ../circuits/pico_w_step_8.png
+```{figure} _static/circuits/pico_w_step_8.png
 :name: tmp36-analog-out
 
 temp36 analoge output
@@ -106,7 +106,7 @@ Voor de middelste aansluiting, de analoge output, zal ook net als bij de LED wee
 
 De sensor is nu aangesloten maar als je de vorige code gaat gebruiken zal je bijzondere waarden gaan vinden. De tmp36 is een heel andere sensor dan die van de Pico en relatie voltage en temperatuur zal anders worden bepaald. Ook hier zal documentatie moeten worden geraadpleegd en in de tmp36 [documentatie](https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf) zal je een grafiek kunnen vinden die deze relatie duidelijk maakt, zie  {numref}`tmp36-voltage-temp`.
 
-```{figure} ../images/tmp36_output_temperature.png
+```{figure} _static/images/tmp36_output_temperature.png
 :name: tmp36-voltage-temp
 
 Relatie output voltage en temperatuur

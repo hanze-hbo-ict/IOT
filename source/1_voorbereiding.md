@@ -6,15 +6,14 @@ Voor deze workshop heb je *hardware*, *software*, *firmware* en *documentatie* n
 
 Je hebt het volgende nodig om deze workshop te kunnen volgen
 
--   [Raspberry Pico WH](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#picow-technical-specification) ontwikkelbord
--   5mm LED
--   Eén weerstand (minimaal 220 $\Omega$)
--   [tmp36](https://www.analog.com/en/products/tmp36.html) temperatuursensor
--   Een [breadboard](https://en.wikipedia.org/wiki/Breadboard) (*half-size*)
--   Minimaal 7 draadverbindingen (*jumper wires*)
+- [Raspberry Pico WH](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#picow-technical-specification) ontwikkelbord
+- 5mm LED
+- Eén weerstand (minimaal 220 $\Omega$)
+- [tmp36](https://www.analog.com/en/products/tmp36.html) temperatuursensor
+- Een [breadboard](https://en.wikipedia.org/wiki/Breadboard) (*half-size*)
+- Minimaal 7 draadverbindingen (*jumper wires*)
 
 Al deze onderdelen zal je kunnen vinden in de aanbevolen Hanze IoT workshop [configuratie](https://www.okaphone.com/artikel.xhtml?id=499374).
-
 
 ```{important}
 Het kan zijn dat je al een ontwikkelbord hebt, misschien een [ESP32](https://www.espressif.com/en/products/socs/esp32) of een [Arduino](https://www.arduino.cc/). Je kan deze gebruiken voor de workshop, maar houd wel rekening met het volgende:
@@ -29,8 +28,8 @@ In deze workshop gebruiken we [MicroPython](https://micropython.org/), maar [Cir
 
 Je zal jouw systeem én de microcontroller eerst moeten voorbereiden voor gebruik en je gaat daar de volgende stappen voor doorlopen:
 
--   *software* installeren op jouw machine
--   *firmware* plaatsen op de microcontroller
+- *software* installeren op jouw machine
+- *firmware* plaatsen op de microcontroller
 
 ### Ontwikkelomgeving
 
@@ -70,8 +69,11 @@ Je zal nu de MicroPython firmware die je eerder hebt gedownload naar het permane
 4. Kopieer de firmware die je eerder hebt gedownload naar deze schijf
 5. De microcontroller zal herstarten en is nu klaar voor gebruik
 
-:::{figure} ../images/MicroPython.mp4
-:name: firmware-install
+
+:::{card}
+```{video} https://www.raspberrypi.com/documentation/microcontrollers/images/MicroPython.webm
+:width: 100%
+
 MicroPython firmware installatie
 :::
 
@@ -86,5 +88,3 @@ Jouw Pico is nu klaar voor gebruik!
 Tijdens deze workshop zullen we regelmatig verwijzen naar de (technische) documentatie van de microcontroller. Ook als je met een eigen project verder gaat zal je ongetwijfeld dingen moeten gaan opzoeken over de functionaliteit.
 
 De technische documentatie van de microcontroller kan je via deze [link](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf) vinden, we adviseren je om deze te bookmarken.
-
-

@@ -1,14 +1,13 @@
-
 # Internet of Things
 
-```{image} ../assets/logo-int-black-wordmark.svg
+```{image} _static/logo-int-black-wordmark.svg
 :name: Hanzehogeschool Groningen
 :align: left
 ```
 
 Welkom bij de workshop Internet of Things! In deze workshop zal je gaan kennismaken met een [microcontroller](https://en.wikipedia.org/wiki/Microcontroller), een compacte geïntegreerde chip die is ontworpen om specifieke handelingen in een [*embedded system*](https://en.wikipedia.org/wiki/Embedded_system) uit te voeren, bijvoorbeeld het meten en versturen van temperatuur of een gesproken boodschap omzetten naar een online bestelling ...
 
-```{figure} ../images/xkcd_listening.png
+```{figure} _static/images/xkcd_listening.png
 :name: XKCD Listening
 
 *Sure, you could just ask, but this also takes care of the host gift thing.* -- [XKCD Listening](https://xkcd.com/1807/)
@@ -18,12 +17,12 @@ In het bijzonder zal je gaan kennismaken met [Raspberry Pi Pico](https://www.ras
 
 In deze workshop ga je het volgende doen:
 
--   De Raspberry Pi Pico microcontroller leren kennen
--   Een [LED](https://en.wikipedia.org/wiki/Light-emitting_diode) (*Light Emitting Diode*, een zuinige kleine lamp) aansluiten op de microcontroller
--   Een temperatuursensor op de microcontroller aansluiten
--   Een programma schrijven voor
-    -   het aan- of uitzetten van een LED
-    -   het lezen van temperatuur van een temperatuursensor
-    -   het versturen van temperatuur over een netwerk
+- De Raspberry Pi Pico microcontroller leren kennen
+- Een [LED](https://en.wikipedia.org/wiki/Light-emitting_diode) (*Light Emitting Diode*, een zuinige kleine lamp) aansluiten op de microcontroller
+- Een temperatuursensor op de microcontroller aansluiten
+- Een programma schrijven voor
+  - het aan- of uitzetten van een LED
+  - het lezen van temperatuur van een temperatuursensor
+  - het versturen van temperatuur over een netwerk
 
 Je gaat de microcontroller programmeren in een taal waar je al bekend mee bent: Python!

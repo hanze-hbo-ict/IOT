@@ -16,7 +16,7 @@ Het [C4 model](https://c4model.com/) model is een eenvoudige en gemakkelijk te l
 
 Met context wordt het grotere beeld van het systeem bedoeld en in het bijzonder de relatie met gebruikers en andere systemen, zie {numref}`c4-iot-context`.
 
-```{figure} ../diagrams/c4_iot_context.svg
+```{figure} _static/diagrams/c4_iot_context.svg
 :name: c4-iot-context
 
 Systeem context diagram
@@ -30,7 +30,7 @@ De opdracht van het systeem is ook beperkt, namelijk het lezen van een temperatu
 
 Een systeem valt uiteen in onderling verbonden *containers*, waar een container bijvoorbeeld een toepassing of gegevensopslag vertegenwoordigt.
 
-```{figure} ../diagrams/c4_iot_container.svg
+```{figure} _static/diagrams/c4_iot_container.svg
 :name: c4-iot-container
 
 Container diagram
@@ -46,7 +46,7 @@ Containers zijn tot slot te ontleden in onderling samenhangende *componenten*, w
 
 In ons geval blijven verdere relaties beperkt en kan het in een enkel diagram worden weergegeven, zoals je in {numref}`c4-iot-component` kan zien.
 
-```{figure} ../diagrams/c4_iot_component.svg
+```{figure} _static/diagrams/c4_iot_component.svg
 :name: c4-iot-component
 
 Componenten diagram
@@ -54,27 +54,27 @@ Componenten diagram
 
 Je ziet hier nu al héél veel detail over de verschillende onderdelen en waar je onder andere al kan afleiden dat
 
--   het een client/server oplossing is waar gecommuniceerd wordt over HTTP,
--   de client temperatuur als *json* geëncodeerd bericht naar de server stuurt,
--   de client bij elk verstuurd bericht activiteit aangeeft (*ingebouwde* led)
--   de server een *json* geëncodeerd antwoord teruggeeft,
--   als het antwoord aangeeft dat de temperatuur te hoog is de client een waarschuwing zal moeten tonen (*rode* led).
+- het een client/server oplossing is waar gecommuniceerd wordt over HTTP,
+- de client temperatuur als *json* geëncodeerd bericht naar de server stuurt,
+- de client bij elk verstuurd bericht activiteit aangeeft (*ingebouwde* led)
+- de server een *json* geëncodeerd antwoord teruggeeft,
+- als het antwoord aangeeft dat de temperatuur te hoog is de client een waarschuwing zal moeten tonen (*rode* led).
 
 De componenten worden concreet in de code die je gaat schrijven en dit zal je in de volgende bestanden gaan doen
 
--   `config.py`
+- `config.py`
 
     Dit bestand zal configuratie bevatten, onder andere voor een Wifi verbinding.
 
--   `boot.py`
+- `boot.py`
 
     Dit bestand zal de Wifi verbinding van de microcontroller opzetten.
 
--   `main.py`
+- `main.py`
 
     In dit bestand schrijf je de client die temperatuur gaat versturen.
 
--   `app.py`
+- `app.py`
 
     Dit bestand zal de server bevatten die temperatuur van de client gaat ontvangen.
 
@@ -261,8 +261,8 @@ Het bovenstaande fragment toont hoe je data met een HTTP POST request kan verstu
 
 Voor het versturen van data zal je jezelf het volgende moeten afvragen:
 
--   welke data ga ik versturen
--   en in welk formaat?
+- welke data ga ik versturen
+- en in welk formaat?
 
 ### JSON
 
@@ -297,8 +297,8 @@ Je ziet hier een `json` *named* parameter waarmee data word doorgegeven,  `urequ
 
 Tot zover over HTTP en JSON, de vraag die nog moet worden beantwoord is wát de data is die moet worden verstuurd. Bedenk dat naast de temperatuur je misschien meer informatie wilt versturen, bijvoorbeeld
 
--   de status van de rode LED (aan of uit)
--   het tijdstip van de meting
+- de status van de rode LED (aan of uit)
+- het tijdstip van de meting
 
 Aan jou de keus hoe je dit gaat vormgeven, de server zal er in ieder geval van moeten weten!
 

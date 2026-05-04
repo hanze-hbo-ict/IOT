@@ -1,0 +1,8 @@
+root: 0_introductie
+entries:
+  - file: 1_voorbereiding
+  - file: 2_micro_python
+  - file: 3_aansluitingen
+  - file: 4_sensoren
+  - file: 5_project
+  - file: 6_uitwerkingen
